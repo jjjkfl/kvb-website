@@ -1,96 +1,74 @@
-// Enhanced Counter Functions
+// Animated Counters for Impact Metrics
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all counters
-    initEnhancedCounters();
-    initROICalculator();
+    initAnimatedCounters();
+    initSustainabilityDashboard();
 });
 
-function initEnhancedCounters() {
-    const counters = document.querySelectorAll('.metric-value');
+function initAnimatedCounters() {
+    const counters = document.querySelectorAll('.metric-value[data-count]');
     
-    counters.forEach(counter => {
-        // Format large numbers
-        const value = parseInt(counter.getAttribute('data-count'));
-        if (value > 1000) {
-            counter.setAttribute('data-original', value);
-            // Add plus sign for large numbers
-            if (!counter.textContent.includes('+')) {
-                counter.textContent = '0';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.dataset.count);
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                        
+                        // Add plus sign for large numbers
+                        if (target >= 1000) {
+                            counter.textContent += '+';
+                        }
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
             }
-        }
-    });
-}
-
-function initROICalculator() {
-    const calculator = document.getElementById('roi-calculator');
-    if (!calculator) return;
-    
-    const lpgInput = calculator.querySelector('#lpg-usage');
-    const firewoodInput = calculator.querySelector('#firewood-usage');
-    const calculateBtn = calculator.querySelector('#calculate-roi');
-    const resultsDiv = calculator.querySelector('#roi-results');
-    
-    calculateBtn.addEventListener('click', function() {
-        const lpgUsage = parseFloat(lpgInput.value) || 0;
-        const firewoodUsage = parseFloat(firewoodInput.value) || 0;
-        
-        if (lpgUsage === 0 && firewoodUsage === 0) {
-            resultsDiv.innerHTML = '<p class="error">Please enter at least one fuel usage value</p>';
-            return;
-        }
-        
-        // Calculate savings (simplified calculation)
-        const lpgSavings = lpgUsage * 85 * 12; // 85 rupees per kg, 12 months
-        const firewoodSavings = firewoodUsage * 15 * 12; // 15 rupees per kg, 12 months
-        const totalSavings = lpgSavings + firewoodSavings;
-        
-        // Calculate CO2 reduction
-        const co2Reduction = (lpgUsage * 3.15 * 12) + (firewoodUsage * 1.5 * 12); // kg CO2 per kg fuel
-        
-        // Calculate payback period (assuming average system cost of 10 lakhs)
-        const systemCost = 1000000;
-        const paybackYears = systemCost / totalSavings;
-        
-        // Display results
-        resultsDiv.innerHTML = `
-            <div class="roi-results-grid">
-                <div class="roi-result">
-                    <h4>Annual Savings</h4>
-                    <p class="roi-value">₹${totalSavings.toLocaleString()}</p>
-                </div>
-                <div class="roi-result">
-                    <h4>CO₂ Reduction</h4>
-                    <p class="roi-value">${co2Reduction.toLocaleString()} kg/year</p>
-                </div>
-                <div class="roi-result">
-                    <h4>Payback Period</h4>
-                    <p class="roi-value">${paybackYears.toFixed(1)} years</p>
-                </div>
-                <div class="roi-result">
-                    <h4>Monthly Savings</h4>
-                    <p class="roi-value">₹${(totalSavings / 12).toLocaleString()}</p>
-                </div>
-            </div>
-            <p class="roi-note">Note: Calculations are estimates. Contact us for a detailed assessment.</p>
-        `;
-        
-        // Animate results
-        const values = resultsDiv.querySelectorAll('.roi-value');
-        values.forEach((value, index) => {
-            value.style.opacity = '0';
-            value.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                value.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                value.style.opacity = '1';
-                value.style.transform = 'translateY(0)';
-            }, index * 100);
         });
-    });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => observer.observe(counter));
 }
 
-// Export for use in other modules
-window.KVBCounters = {
-    initEnhancedCounters,
-    initROICalculator
-};
+function initSustainabilityDashboard() {
+    // Simulated live data for sustainability dashboard
+    const dashboardValues = {
+        'co2-saved': 1250,
+        'fuel-saved': 850,
+        'energy-generated': 3240
+    };
+    
+    // Update values every 10 seconds
+    setInterval(() => {
+        Object.keys(dashboardValues).forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                // Simulate small random increments
+                dashboardValues[id] += Math.floor(Math.random() * 10);
+                element.textContent = dashboardValues[id].toLocaleString();
+                
+                // Add pulse animation
+                element.classList.add('pulse');
+                setTimeout(() => element.classList.remove('pulse'), 500);
+            }
+        });
+    }, 10000);
+    
+    // Initialize with current values
+    Object.keys(dashboardValues).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = dashboardValues[id].toLocaleString();
+        }
+    });
+}

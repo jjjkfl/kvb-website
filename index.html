@@ -3,476 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KVB Green Energies - Renewable Energy & Smart Agriculture</title>
+    <title>KVB Green Energies - Engineering the Future of Renewable Energy & Smart Agriculture</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Multi-Audience Navigation -->
+    <div class="audience-nav">
         <div class="container">
-            <div class="nav-brand">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">KVB</div>
-                    <div class="logo-text">
-                        <span class="logo-main">KVB Green Energies</span>
-                        <span class="logo-tagline">Innovating Energy. Transforming Agriculture.</span>
-                    </div>
-                </a>
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="institution">Government/Institution</button>
+            <button class="audience-btn" data-audience="farmer">Farmer</button>
+            <button class="audience-btn" data-audience="industry">Industry</button>
+            <button class="audience-btn" data-audience="partner">Partner</button>
+            <button class="audience-btn" data-audience="investor">Investor</button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="KVB Green Energies">
+                <div class="tagline">Innovating Energy. Transforming Agriculture.</div>
             </div>
-            
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-dropdown">
-                        <a href="solutions.html" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-menu">
-                            <a href="solutions/solar-thermal.html">Solar Thermal Systems</a>
-                            <a href="solutions/energy-storage.html">Energy Storage</a>
-                            <a href="solutions/smart-agriculture.html">Smart Agriculture</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="solutions.html">Solutions</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h4>Solar Thermal Systems</h4>
+                                <a href="solutions/solar-thermal-systems/solar-scheffler-dish.html">Solar Scheffler Dish</a>
+                                <a href="solutions/solar-thermal-systems/solar-steam-cooking-systems.html">Solar Steam Cooking</a>
+                                <a href="solutions/solar-thermal-systems/parabolic-cookers.html">Parabolic Cookers</a>
+                                <a href="solutions/solar-thermal-systems/industrial-solar-thermal.html">Industrial Solar Thermal</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4>Energy Storage</h4>
+                                <a href="solutions/energy-storage/ptc-thermal-systems.html">PTC Thermal Systems</a>
+                                <a href="solutions/energy-storage/sand-battery-storage.html">Sand Battery Storage</a>
+                                <a href="solutions/energy-storage/biomass-hybrid-heating.html">Biomass Hybrid Heating</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h4>Smart Agriculture</h4>
+                                <a href="solutions/smart-agriculture/hybrid-solar-tunnel-dryers.html">Hybrid Solar Dryers</a>
+                                <a href="solutions/smart-agriculture/soil-to-sale-platform.html">Soil-to-Sale Platform</a>
+                                <a href="solutions/smart-agriculture/ai-crop-quality-detection.html">AI Crop Detection</a>
+                                <a href="solutions/smart-agriculture/microgreen-systems.html">Microgreen Systems</a>
+                            </div>
                         </div>
                     </li>
-                    <li><a href="innovation-lab.html" class="nav-link">Innovation Lab</a></li>
-                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-                    <li><a href="clients.html" class="nav-link">Clients</a></li>
-                    <li><a href="blog.html" class="nav-link">Knowledge Center</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="innovation-lab.html">Innovation Lab</a></li>
+                    <li><a href="clients-partnerships.html">Clients</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact-partnerships.html">Contact</a></li>
                 </ul>
-                
-                <div class="nav-cta">
-                    <a href="contact.html#demo" class="btn btn-primary">Request Demo</a>
-                </div>
+            </nav>
+            <div class="header-cta">
+                <a href="contact-partnerships.html#request-demo" class="btn-primary">Request Demo</a>
+                <button class="menu-toggle">☰</button>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-video-container">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="assets/videos/hero-background.mp4" type="video/mp4">
-                <source src="assets/videos/hero-background.webm" type="video/webm">
-                <!-- Fallback image -->
-                <img src="assets/images/hero/hero-fallback.jpg" alt="Solar installation background">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                <source src="assets/videos/hero-video.webm" type="video/webm">
             </video>
-            <div class="video-overlay"></div>
+            <div class="hero-overlay"></div>
         </div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Engineering the Future of Renewable Energy & Smart Agriculture</h1>
-                <p class="hero-subtitle">Solar Thermal Systems • Energy Storage • Intelligent Agri Technologies</p>
-                <p class="hero-microtext">Trusted by Government Institutions, Universities & National Organizations</p>
-                
-                <div class="hero-buttons">
-                    <a href="solutions.html" class="btn btn-primary btn-large">Explore Solutions</a>
-                    <a href="contact.html#partner" class="btn btn-secondary btn-large">Partner With Us</a>
-                </div>
-                
-                <!-- Audience Path Selector -->
-                <div class="audience-selector">
-                    <p class="selector-label">I am a:</p>
-                    <div class="selector-buttons">
-                        <button class="audience-btn" data-audience="government">Government Institution</button>
-                        <button class="audience-btn" data-audience="farmer">Farmer / Agri Industry</button>
-                        <button class="audience-btn" data-audience="industry">Food Processing Company</button>
-                        <button class="audience-btn" data-audience="investor">Investor / Partner</button>
-                        <button class="audience-btn" data-audience="research">Research Institution</button>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Engineering the Future of Renewable Energy & Smart Agriculture</h1>
+            <p class="hero-subtitle">Solar Thermal Systems • Energy Storage • Intelligent Agri Technologies</p>
+            <div class="hero-buttons">
+                <a href="solutions.html" class="btn-primary btn-large">Explore Solutions</a>
+                <a href="contact-partnerships.html" class="btn-secondary btn-large">Partner With Us</a>
             </div>
+            <p class="hero-trust">Trusted by Government Institutions, Universities & National Organizations</p>
         </div>
-        
         <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+            <span>Scroll to explore</span>
+            <div class="arrow-down"></div>
         </div>
     </section>
 
-    <!-- Who We Are Section -->
-    <section class="section section-light" id="who-we-are">
+    <!-- What We Do - 3 Pillars -->
+    <section class="pillars-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Who We Are</h2>
-                <p class="section-subtitle">National Leader in Clean Energy Technology</p>
-            </div>
-            
-            <div class="content-block">
-                <p class="lead-text">KVB Green Energies is a clean energy and smart agriculture technology company developing high-impact renewable systems for communities, industries, and farmers. We design solar thermal infrastructure, advanced energy storage, and intelligent crop technologies that reduce fossil fuel dependence and increase sustainable productivity.</p>
-                
-                <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <i class="fas fa-sun"></i>
-                        </div>
-                        <h3>Clean Energy Systems</h3>
-                        <p>Solar thermal and steam technologies replacing fossil fuels in large-scale cooking and industrial heat applications.</p>
-                    </div>
-                    
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>Smart Agriculture Technologies</h3>
-                        <p>Advanced solar drying, crop processing, and intelligent quality systems that increase farmer income.</p>
-                    </div>
-                    
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h3>Research & Innovation</h3>
-                        <p>Next-generation energy storage, AI crop systems, and integrated soil-to-sale agriculture platforms.</p>
-                    </div>
+            <h2 class="section-title">What We Do</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">☀️</div>
+                    <h3>Clean Energy Systems</h3>
+                    <p>Solar thermal and steam technologies replacing fossil fuels in large-scale cooking and industrial heat applications.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>Smart Agriculture Technologies</h3>
+                    <p>Advanced solar drying, crop processing, and intelligent quality systems that increase farmer income.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔬</div>
+                    <h3>Research & Innovation</h3>
+                    <p>Next-generation energy storage, AI crop systems, and integrated soil-to-sale agriculture platforms.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Overview -->
-    <section class="section section-dark" id="solutions-overview">
+    <!-- Product Ecosystem -->
+    <section class="ecosystem-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Complete Renewable Energy Ecosystem</h2>
-                <p class="section-subtitle">Engineered for Performance, Durability & Sustainability</p>
-            </div>
-            
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="assets/images/products/solar-steam.jpg" alt="Solar Steam Cooking System">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Solar Steam Cooking Systems</h3>
-                        <p>Clean, large-scale cooking powered by the sun for institutional kitchens.</p>
-                        <a href="products/solar-steam-cooking.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <h2 class="section-title">Complete Solution Ecosystem</h2>
+            <div class="ecosystem-grid">
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🔥</div>
+                    <h4>Solar Steam Cooking</h4>
                 </div>
-                
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="assets/images/products/scheffler-dish.jpg" alt="Solar Scheffler Dish">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Solar Scheffler Thermal</h3>
-                        <p>High-efficiency solar concentrators for industrial heating applications.</p>
-                        <a href="products/scheffler-dish.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🥘</div>
+                    <h4>Solar Scheffler Thermal</h4>
                 </div>
-                
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="assets/images/products/solar-dryer.jpg" alt="Solar Tunnel Dryer">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Hybrid Solar Tunnel Dryers</h3>
-                        <p>Advanced drying technology for agricultural produce and food processing.</p>
-                        <a href="products/solar-dryer.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🌾</div>
+                    <h4>Hybrid Solar Dryers</h4>
                 </div>
-                
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="assets/images/products/energy-storage.jpg" alt="Energy Storage">
-                    </div>
-                    <div class="solution-content">
-                        <h3>PTC & Sand Battery Storage</h3>
-                        <p>Innovative thermal energy storage solutions for 24/7 renewable heat.</p>
-                        <a href="products/energy-storage.html" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🔋</div>
+                    <h4>PTC & Sand Battery</h4>
                 </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="solutions.html" class="btn btn-primary btn-large">View All Solutions</a>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🌿</div>
+                    <h4>Biomass Integration</h4>
+                </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🤖</div>
+                    <h4>AI Crop Detection</h4>
+                </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-icon">🏢</div>
+                    <h4>Microgreen Automation</h4>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- National Trust Section -->
-    <section class="section section-light" id="national-trust">
+    <!-- Prestige Wall - Client Logos -->
+    <section class="prestige-wall">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Trusted by India's Leading Institutions</h2>
-                <p class="section-subtitle">Our technologies are deployed where reliability is critical</p>
-            </div>
-            
-            <div class="prestige-wall">
-                <div class="logos-scroll">
-                    <div class="logo-item">
-                        <img src="assets/images/clients/indian-army.png" alt="Indian Army">
-                        <span>Indian Army</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/nabard.png" alt="NABARD">
-                        <span>NABARD</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/icar.png" alt="ICAR">
-                        <span>ICAR</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/unido.png" alt="UNIDO">
-                        <span>UNIDO</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/uas-bengaluru.png" alt="UAS Bengaluru">
-                        <span>UAS Bengaluru</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/coffee-board.png" alt="Coffee Board">
-                        <span>Coffee Board</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="assets/images/clients/yashada.png" alt="YASHADA">
-                        <span>YASHADA</span>
-                    </div>
+            <h2 class="section-title">Trusted by India's Leading Institutions</h2>
+            <div class="prestige-scroll">
+                <div class="prestige-track">
+                    <!-- Client logos will be dynamically loaded -->
                 </div>
-            </div>
-            
-            <div class="client-categories">
-                <div class="category-tag">Indian Army</div>
-                <div class="category-tag">Universities</div>
-                <div class="category-tag">Government Departments</div>
-                <div class="category-tag">Religious Institutions</div>
-                <div class="category-tag">Food Processing Industries</div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Metrics -->
-    <section class="section section-gradient" id="impact-metrics">
+    <!-- Impact Metrics with Counters -->
+    <section class="impact-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Real Impact, Measurable Results</h2>
-                <p class="section-subtitle">Over the past years, KVB systems have achieved:</p>
-            </div>
-            
+            <h2 class="section-title">Our Impact in Numbers</h2>
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <div class="metric-value" data-count="8500">0</div>
+                    <div class="metric-value" data-count="1000">0</div>
                     <div class="metric-label">Tons of CO₂ Reduced</div>
                 </div>
-                
                 <div class="metric-card">
-                    <div class="metric-value" data-count="120">0</div>
-                    <div class="metric-label">Institutional Projects</div>
+                    <div class="metric-value" data-count="500">0</div>
+                    <div class="metric-label">Institutions Powered</div>
                 </div>
-                
                 <div class="metric-card">
-                    <div class="metric-value" data-count="45">0</div>
-                    <div class="metric-label">Lakhs Liters LPG Saved</div>
+                    <div class="metric-value" data-count="70">0</div>
+                    <div class="metric-label">% LPG Savings</div>
                 </div>
-                
                 <div class="metric-card">
-                    <div class="metric-value" data-count="2500">0</div>
+                    <div class="metric-value" data-count="10000">0</div>
                     <div class="metric-label">Farmers Supported</div>
                 </div>
             </div>
-            
-            <p class="impact-statement">We measure success through real impact on the environment and communities.</p>
+        </div>
+    </section>
+
+    <!-- Sustainability Dashboard -->
+    <section class="sustainability-dashboard">
+        <div class="container">
+            <h2 class="section-title">Live Sustainability Impact</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-item">
+                    <div class="dashboard-value" id="co2-saved">0</div>
+                    <div class="dashboard-label">kg CO₂ Saved Today</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-value" id="fuel-saved">0</div>
+                    <div class="dashboard-label">kg Fuel Saved Today</div>
+                </div>
+                <div class="dashboard-item">
+                    <div class="dashboard-value" id="energy-generated">0</div>
+                    <div class="dashboard-label">kWh Generated Today</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Innovation Preview -->
-    <section class="section section-light" id="innovation-preview">
+    <section class="innovation-preview">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Building Tomorrow's Infrastructure Today</h2>
-                <p class="section-subtitle">KVB is actively developing future technologies</p>
-            </div>
-            
+            <h2 class="section-title">Building Tomorrow's Infrastructure Today</h2>
             <div class="innovation-grid">
                 <div class="innovation-item">
-                    <div class="innovation-icon">
-                        <i class="fas fa-battery-full"></i>
-                    </div>
-                    <h3>Thermal Energy Storage</h3>
-                    <p>Advanced sand battery systems for 24/7 renewable heat availability</p>
+                    <h4>Thermal Energy Storage</h4>
+                    <p>Sand battery technology for continuous renewable heat</p>
                 </div>
-                
                 <div class="innovation-item">
-                    <div class="innovation-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI Crop Grading Systems</h3>
-                    <p>Intelligent quality detection for agricultural produce</p>
+                    <h4>AI Crop Grading</h4>
+                    <p>Intelligent quality detection systems</p>
                 </div>
-                
                 <div class="innovation-item">
-                    <div class="innovation-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Soil-to-Sale Platforms</h3>
-                    <p>Digital agriculture platforms connecting farmers to markets</p>
+                    <h4>Soil-to-Sale Platforms</h4>
+                    <p>Complete digital agriculture ecosystems</p>
                 </div>
-                
                 <div class="innovation-item">
-                    <div class="innovation-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Microgreen Smart Farms</h3>
-                    <p>Automated vertical farming systems for urban agriculture</p>
+                    <h4>Microgreen Automation</h4>
+                    <p>Smart vertical farming systems</p>
                 </div>
             </div>
-            
-            <div class="text-center">
-                <a href="innovation-lab.html" class="btn btn-secondary">Explore Innovation Lab</a>
-            </div>
+            <a href="innovation-lab.html" class="btn-secondary">Explore Innovation Lab →</a>
         </div>
     </section>
 
-    <!-- Sustainability Message -->
-    <section class="section section-dark sustainability-message" id="sustainability">
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
         <div class="container">
-            <div class="message-content">
-                <h2 class="message-title">Every kilogram of firewood and LPG burned releases harmful CO₂</h2>
-                <p class="message-text">Our mission is to replace fossil fuel dependency with renewable thermal energy and intelligent agricultural systems that protect the environment while strengthening livelihoods.</p>
-                
-                <div class="comparison-grid">
-                    <div class="comparison-item negative">
-                        <div class="comparison-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <h3>Traditional Methods</h3>
-                        <ul>
-                            <li>High CO₂ emissions</li>
-                            <li>Expensive fuel costs</li>
-                            <li>Environmental damage</li>
-                            <li>Health hazards</li>
-                        </ul>
+            <h2 class="section-title">Calculate Your Savings & Impact</h2>
+            <div class="calculator-grid">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="fuel-type">Current Fuel Type</label>
+                        <select id="fuel-type">
+                            <option value="lpg">LPG</option>
+                            <option value="firewood">Firewood</option>
+                            <option value="electric">Electric</option>
+                            <option value="diesel">Diesel</option>
+                        </select>
                     </div>
-                    
-                    <div class="comparison-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                    <div class="input-group">
+                        <label for="daily-usage">Daily Usage (kg/L)</label>
+                        <input type="number" id="daily-usage" min="1" value="10">
                     </div>
-                    
-                    <div class="comparison-item positive">
-                        <div class="comparison-icon">
-                            <i class="fas fa-sun"></i>
-                        </div>
-                        <h3>KVB Solutions</h3>
-                        <ul>
-                            <li>Zero emissions</li>
-                            <li>Free solar energy</li>
-                            <li>Sustainable approach</li>
-                            <li>Healthier communities</li>
-                        </ul>
+                    <div class="input-group">
+                        <label for="days-operating">Days Operating/Month</label>
+                        <input type="number" id="days-operating" min="1" max="30" value="25">
                     </div>
+                    <button id="calculate-roi" class="btn-primary">Calculate Savings</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="section section-cta" id="footer-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Switch to Renewable Energy?</h2>
-                <p class="cta-subtitle">Join hundreds of institutions already benefiting from clean energy solutions</p>
-                
-                <div class="cta-buttons">
-                    <a href="contact.html#visit" class="btn btn-primary btn-large">
-                        <i class="fas fa-map-marker-alt"></i> Request Site Visit
-                    </a>
-                    <a href="contact.html#expert" class="btn btn-secondary btn-large">
-                        <i class="fas fa-user-tie"></i> Talk to Our Experts
-                    </a>
-                    <a href="contact.html#partner" class="btn btn-outline btn-large">
-                        <i class="fas fa-handshake"></i> Partner with KVB
-                    </a>
+                <div class="calculator-results">
+                    <h3>Your Potential Impact</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-label">Monthly Savings</div>
+                            <div class="result-value" id="monthly-savings">₹ 0</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">CO₂ Reduction</div>
+                            <div class="result-value" id="co2-reduction">0 kg</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Payback Period</div>
+                            <div class="result-value" id="payback-period">0 months</div>
+                        </div>
+                    </div>
+                    <a href="contact-partnerships.html#technical-inquiry" class="btn-secondary">Get Custom Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col footer-about">
+                <div class="footer-col">
                     <div class="footer-logo">
-                        <div class="logo-icon">KVB</div>
-                        <div class="footer-logo-text">
-                            <h3>KVB Green Energies</h3>
-                            <p>Innovating Energy. Transforming Agriculture.</p>
-                        </div>
+                        <img src="assets/images/logo-white.png" alt="KVB Green Energies">
+                        <p class="tagline">Innovating Energy. Transforming Agriculture.</p>
                     </div>
-                    <p class="footer-description">National leader in solar thermal energy and smart agriculture technology, developing sustainable infrastructure for communities, industries, and farmers.</p>
+                    <p>National leader in solar thermal energy and smart agriculture technology.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">▶️</a>
                     </div>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="solutions.html">Our Solutions</a></li>
+                        <li><a href="innovation-lab.html">Innovation Lab</a></li>
                         <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="blog.html">Knowledge Center</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="solutions/solar-thermal.html">Solar Thermal Systems</a></li>
-                        <li><a href="solutions/energy-storage.html">Energy Storage</a></li>
-                        <li><a href="solutions/smart-agriculture.html">Smart Agriculture</a></li>
-                        <li><a href="innovation-lab.html">Innovation Lab</a></li>
-                        <li><a href="sustainability.html">Sustainability Impact</a></li>
+                    <ul>
+                        <li><a href="solutions/solar-thermal-systems/solar-steam-cooking-systems.html">Solar Cooking</a></li>
+                        <li><a href="solutions/solar-thermal-systems/solar-scheffler-dish.html">Solar Thermal</a></li>
+                        <li><a href="solutions/smart-agriculture/hybrid-solar-tunnel-dryers.html">Solar Drying</a></li>
+                        <li><a href="solutions/energy-storage/sand-battery-storage.html">Energy Storage</a></li>
+                        <li><a href="solutions/smart-agriculture/ai-crop-quality-detection.html">AI Agriculture</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Corporate Office: Bengaluru, Karnataka</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@kvbgreenenergies.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp: +91 98765 43210</span>
+                        <p>📞 <a href="tel:+911234567890">+91 12345 67890</a></p>
+                        <p>✉️ <a href="mailto:info@kvbgrenenergies.com">info@kvbgrenenergies.com</a></p>
+                        <p>📍 Address Line 1, City, State, India</p>
+                    </div>
+                    <div class="footer-cta">
+                        <h4>Ready to switch to renewable energy?</h4>
+                        <div class="cta-buttons">
+                            <a href="contact-partnerships.html#site-visit" class="btn-small">Request Site Visit</a>
+                            <a href="contact-partnerships.html#experts" class="btn-small">Talk to Experts</a>
+                            <a href="contact-partnerships.html#partner" class="btn-small">Partner with KVB</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <div class="footer-bottom-left">
-                    <p>&copy; <span id="current-year">2024</span> KVB Green Energies. All rights reserved.</p>
-                </div>
-                
-                <div class="footer-bottom-right">
+                <p>© 2024 KVB Green Energies. All rights reserved.</p>
+                <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
                     <a href="sitemap.html">Sitemap</a>
@@ -481,10 +351,17 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/911234567890" class="whatsapp-float" target="_blank">
+        <div class="whatsapp-icon">💬</div>
+        <span>Chat on WhatsApp</span>
+    </a>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/counters.js"></script>
-    <script src="js/navigation.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/whatsapp.js"></script>
 </body>
 </html>

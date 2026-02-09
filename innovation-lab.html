@@ -3,189 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovation Lab - KVB Green Energies</title>
+    <title>Innovation Lab - Future Technologies | KVB Green Energies</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/innovation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <!-- Same navigation as index.html -->
-    </nav>
+    <!-- Audience Navigation (Same as homepage) -->
+    <div class="audience-nav">
+        <div class="container">
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="institution">Government/Institution</button>
+            <button class="audience-btn" data-audience="researcher">Researcher</button>
+            <button class="audience-btn" data-audience="industry">Industry</button>
+            <button class="audience-btn" data-audience="partner">Partner</button>
+            <button class="audience-btn" data-audience="investor">Investor</button>
+        </div>
+    </div>
+
+    <!-- Header (Same as homepage) -->
 
     <!-- Innovation Lab Hero -->
-    <section class="page-hero innovation-hero">
+    <section class="innovation-hero">
         <div class="container">
-            <h1 class="page-title">Innovation Lab</h1>
-            <p class="page-subtitle">Developing Next-Generation Renewable & Agricultural Technologies</p>
-        </div>
-    </section>
-
-    <!-- Lab Overview -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="lab-overview">
-                <div class="lab-content">
-                    <h2>Research-Driven Engineering</h2>
-                    <p class="lead-text">KVB's Innovation Lab is dedicated to developing next-generation renewable and agricultural technologies that transform energy infrastructure and food systems.</p>
-                    <p>Our lab focuses on bridging the gap between academic research and real-world applications, creating scalable solutions for India's energy and agricultural challenges.</p>
-                </div>
-                <div class="lab-stats">
+            <div class="innovation-hero-content">
+                <h1 class="innovation-title">Innovation Lab</h1>
+                <p class="innovation-subtitle">Engineering Tomorrow's Energy & Agriculture Technologies Today</p>
+                <p class="innovation-description">Where research-driven engineering meets scalable sustainable solutions</p>
+                <div class="innovation-stats">
                     <div class="stat-item">
-                        <div class="stat-value">15+</div>
-                        <div class="stat-label">Active Research Projects</div>
+                        <div class="stat-value" data-count="15">0</div>
+                        <div class="stat-label">Active R&D Projects</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-value">8</div>
+                        <div class="stat-value" data-count="8">0</div>
                         <div class="stat-label">University Collaborations</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-value">5</div>
+                        <div class="stat-value" data-count="5">0</div>
                         <div class="stat-label">Patents Filed</div>
                     </div>
+                </div>
+            </div>
+            <div class="innovation-hero-visual">
+                <div class="tech-animation">
+                    <div class="tech-circle solar">☀️</div>
+                    <div class="tech-circle storage">🔋</div>
+                    <div class="tech-circle ai">🤖</div>
+                    <div class="tech-circle agri">🌱</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Focus Areas -->
-    <section class="section section-dark">
+    <section class="focus-areas">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Current Focus Areas</h2>
-                <p class="section-subtitle">Transforming energy infrastructure through research-driven engineering</p>
-            </div>
-            
-            <div class="focus-areas-grid">
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-battery-full"></i>
-                        </div>
-                        <h3>Thermal Energy Storage</h3>
+            <h2 class="section-title">Current R&D Focus Areas</h2>
+            <div class="focus-grid">
+                <div class="focus-card" data-tech="thermal-storage">
+                    <div class="focus-icon">🔥</div>
+                    <h3>Thermal Energy Storage</h3>
+                    <p>Sand battery technology for continuous renewable heat storage and dispatch</p>
+                    <div class="focus-status">
+                        <span class="status-pilot">Pilot Phase</span>
+                        <span class="status-duration">18 months</span>
                     </div>
-                    <div class="focus-content">
-                        <p>Developing sand battery systems for 24/7 renewable heat availability with unprecedented cost efficiency.</p>
-                        <ul class="focus-features">
-                            <li>Sand-based thermal storage</li>
-                            <li>500-600°C operating temperature</li>
-                            <li>Week-long storage capability</li>
+                    <div class="focus-details">
+                        <h4>Key Innovations:</h4>
+                        <ul>
+                            <li>High-density thermal storage (up to 600°C)</li>
+                            <li>72-hour heat retention</li>
+                            <li>Modular scalable design</li>
                             <li>90% round-trip efficiency</li>
                         </ul>
-                        <div class="focus-status">
-                            <span class="status-badge pilot">Pilot Stage</span>
-                        </div>
+                        <button class="btn-small tech-details-btn">View Technical Details</button>
                     </div>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-sun"></i>
-                        </div>
-                        <h3>PTC Solar Heat Systems</h3>
+                <div class="focus-card" data-tech="ai-agriculture">
+                    <div class="focus-icon">🤖</div>
+                    <h3>AI-Powered Crop Systems</h3>
+                    <p>Intelligent quality detection and yield optimization using computer vision</p>
+                    <div class="focus-status">
+                        <span class="status-development">Development</span>
+                        <span class="status-duration">12 months</span>
                     </div>
-                    <div class="focus-content">
-                        <p>Advanced parabolic trough collectors for medium-temperature industrial process heat applications.</p>
-                        <ul class="focus-features">
-                            <li>80-400°C temperature range</li>
-                            <li>Tracking accuracy 0.1°</li>
-                            <li>Modular scalable design</li>
-                            <li>Hybrid operation ready</li>
-                        </ul>
-                        <div class="focus-status">
-                            <span class="status-badge commercial">Commercial Stage</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <h3>Biomass Hybrid Systems</h3>
-                    </div>
-                    <div class="focus-content">
-                        <p>Integrated solar-biomass thermal systems for 100% renewable, grid-independent heat supply.</p>
-                        <ul class="focus-features">
-                            <li>Automated fuel feeding</li>
-                            <li>Emission control systems</li>
-                            <li>Intelligent load balancing</li>
-                            <li>Carbon negative operation</li>
-                        </ul>
-                        <div class="focus-status">
-                            <span class="status-badge development">Development Stage</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>AI Crop Quality Detection</h3>
-                    </div>
-                    <div class="focus-content">
-                        <p>Computer vision systems for automatic grading, sorting, and quality assessment of agricultural produce.</p>
-                        <ul class="focus-features">
-                            <li>Deep learning algorithms</li>
-                            <li>Real-time processing</li>
-                            <li>99%+ accuracy rate</li>
+                    <div class="focus-details">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Real-time crop quality grading</li>
+                            <li>Disease detection algorithm</li>
+                            <li>Yield prediction models</li>
                             <li>Mobile app integration</li>
                         </ul>
-                        <div class="focus-status">
-                            <span class="status-badge pilot">Pilot Stage</span>
-                        </div>
+                        <button class="btn-small tech-details-btn">View AI Models</button>
                     </div>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3>Soil-to-Sale Platforms</h3>
+                <div class="focus-card" data-tech="soil-to-sale">
+                    <div class="focus-icon">📱</div>
+                    <h3>Soil-to-Sale Digital Platform</h3>
+                    <p>Complete agricultural value chain integration from farm to market</p>
+                    <div class="focus-status">
+                        <span class="status-prototype">Prototype</span>
+                        <span class="status-duration">24 months</span>
                     </div>
-                    <div class="focus-content">
-                        <p>Digital agriculture platforms connecting farmers directly to markets with AI-driven insights.</p>
-                        <ul class="focus-features">
-                            <li>Farm management system</li>
-                            <li>Market price analytics</li>
+                    <div class="focus-details">
+                        <h4>Platform Modules:</h4>
+                        <ul>
+                            <li>Farm management dashboard</li>
+                            <li>Market price intelligence</li>
                             <li>Logistics optimization</li>
-                            <li>Blockchain traceability</li>
+                            <li>Farmer financing integration</li>
                         </ul>
-                        <div class="focus-status">
-                            <span class="status-badge development">Development Stage</span>
-                        </div>
+                        <button class="btn-small tech-details-btn">View Platform Demo</button>
                     </div>
                 </div>
                 
-                <div class="focus-card">
-                    <div class="focus-header">
-                        <div class="focus-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>Microgreen Automation</h3>
+                <div class="focus-card" data-tech="microgreen-automation">
+                    <div class="focus-icon">🏢</div>
+                    <h3>Microgreen Automation</h3>
+                    <p>Vertical farming systems with IoT monitoring and automated harvesting</p>
+                    <div class="focus-status">
+                        <span class="status-pilot">Pilot Phase</span>
+                        <span class="status-duration">9 months</span>
                     </div>
-                    <div class="focus-content">
-                        <p>Fully automated vertical farming systems for urban agriculture and high-value crop production.</p>
-                        <ul class="focus-features">
-                            <li>Climate controlled environment</li>
-                            <li>Automated nutrient delivery</li>
-                            <li>LED spectrum optimization</li>
-                            <li>Remote monitoring & control</li>
+                    <div class="focus-details">
+                        <h4>Automation Features:</h4>
+                        <ul>
+                            <li>Climate control automation</li>
+                            <li>Nutrient dosing system</li>
+                            <li>Harvesting robotics</li>
+                            <li>Energy optimization</li>
                         </ul>
-                        <div class="focus-status">
-                            <span class="status-badge commercial">Commercial Stage</span>
-                        </div>
+                        <button class="btn-small tech-details-btn">View Automation Demo</button>
                     </div>
                 </div>
             </div>
@@ -193,125 +145,130 @@
     </section>
 
     <!-- University Collaborations -->
-    <section class="section section-light">
+    <section class="university-collaborations">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">University Collaborations</h2>
-                <p class="section-subtitle">Partnering with leading academic institutions for cutting-edge research</p>
+            <h2 class="section-title">University & Research Partnerships</h2>
+            <div class="collaboration-grid">
+                <div class="collab-card">
+                    <div class="university-logo">🎓</div>
+                    <h3>IIT Dharwad</h3>
+                    <p class="collab-topic">Thermal Storage Materials Research</p>
+                    <div class="collab-duration">Ongoing since 2022</div>
+                    <div class="collab-output">
+                        <span class="output-badge">2 Research Papers</span>
+                        <span class="output-badge">1 Patent</span>
+                    </div>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="university-logo">🌾</div>
+                    <h3>UAS Bengaluru</h3>
+                    <p class="collab-topic">Agricultural AI Algorithms</p>
+                    <div class="collab-duration">Ongoing since 2021</div>
+                    <div class="collab-output">
+                        <span class="output-badge">3 Field Trials</span>
+                        <span class="output-badge">1 Commercial Product</span>
+                    </div>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="university-logo">⚡</div>
+                    <h3>KLE Tech University</h3>
+                    <p class="collab-topic">Solar Thermal Efficiency Optimization</p>
+                    <div class="collab-duration">Ongoing since 2020</div>
+                    <div class="collab-output">
+                        <span class="output-badge">5% Efficiency Gain</span>
+                        <span class="output-badge">1 Technology Transfer</span>
+                    </div>
+                </div>
+                
+                <div class="collab-card">
+                    <div class="university-logo">🔬</div>
+                    <h3>UHS Bagalkot</h3>
+                    <p class="collab-topic">Performance Testing & Validation</p>
+                    <div class="collab-duration">Ongoing since 2019</div>
+                    <div class="collab-output">
+                        <span class="output-badge">50+ Tests Completed</span>
+                        <span class="output-badge">MNRE Certification</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="university-grid">
-                <div class="university-card">
-                    <div class="university-logo">
-                        <img src="assets/images/universities/iit.png" alt="IIT Dharwad">
-                    </div>
-                    <h3>IIT Dharwad</h3>
-                    <p>Thermal energy storage research and material science collaboration</p>
-                    <div class="research-areas">
-                        <span class="research-tag">Thermal Storage</span>
-                        <span class="research-tag">Material Science</span>
-                    </div>
-                </div>
-                
-                <div class="university-card">
-                    <div class="university-logo">
-                        <img src="assets/images/universities/uas.png" alt="UAS Bengaluru">
-                    </div>
-                    <h3>UAS Bengaluru</h3>
-                    <p>Agricultural technology development and field testing</p>
-                    <div class="research-areas">
-                        <span class="research-tag">Agri Tech</span>
-                        <span class="research-tag">Crop Science</span>
-                    </div>
-                </div>
-                
-                <div class="university-card">
-                    <div class="university-logo">
-                        <img src="assets/images/universities/kle.png" alt="KLE Tech University">
-                    </div>
-                    <h3>KLE Tech University</h3>
-                    <p>Mechanical engineering and solar thermal system optimization</p>
-                    <div class="research-areas">
-                        <span class="research-tag">Mechanical Engineering</span>
-                        <span class="research-tag">Solar Thermal</span>
-                    </div>
-                </div>
-                
-                <div class="university-card">
-                    <div class="university-logo">
-                        <img src="assets/images/universities/uhs.png" alt="UHS Bagalkot">
-                    </div>
-                    <h3>UHS Bagalkot</h3>
-                    <p>Performance testing and certification of solar thermal systems</p>
-                    <div class="research-areas">
-                        <span class="research-tag">Testing</span>
-                        <span class="research-tag">Certification</span>
-                    </div>
-                </div>
+            <div class="collaboration-cta">
+                <p>Interested in research collaboration?</p>
+                <a href="contact-partnerships.html#research-collab" class="btn-primary">Propose Research Partnership</a>
             </div>
         </div>
     </section>
 
     <!-- Pilot Projects -->
-    <section class="section section-dark">
+    <section class="pilot-projects">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pilot Projects</h2>
-                <p class="section-subtitle">Testing innovative technologies in real-world environments</p>
-            </div>
-            
-            <div class="pilot-projects">
-                <div class="pilot-project">
-                    <div class="pilot-image">
-                        <img src="assets/images/pilots/sand-battery-pilot.jpg" alt="Sand Battery Pilot">
-                    </div>
-                    <div class="pilot-content">
-                        <h3>Sand Battery Thermal Storage</h3>
-                        <div class="pilot-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Cooperative Dairy, North Karnataka</span>
-                        </div>
-                        <p>First commercial-scale sand battery installation providing overnight thermal storage for milk processing.</p>
-                        <div class="pilot-results">
-                            <div class="result">
-                                <div class="result-value">12 hours</div>
-                                <div class="result-label">Storage Duration</div>
-                            </div>
-                            <div class="result">
-                                <div class="result-value">85%</div>
-                                <div class="result-label">System Efficiency</div>
-                            </div>
-                            <div class="result">
-                                <div class="result-value">100%</div>
-                                <div class="result-label">LPG Replacement</div>
+            <h2 class="section-title">Active Pilot Projects</h2>
+            <div class="pilot-timeline">
+                <div class="timeline-track">
+                    <div class="timeline-item active">
+                        <div class="timeline-date">Q1 2024</div>
+                        <div class="timeline-content">
+                            <h4>Sand Battery - Community Kitchen</h4>
+                            <p>72-hour thermal storage pilot at Sri Siddharodhmath, Hubli</p>
+                            <div class="pilot-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">600°C</span>
+                                    <span class="metric-label">Storage Temp</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">5,000</span>
+                                    <span class="metric-label">Meals/Day</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">95%</span>
+                                    <span class="metric-label">Efficiency</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="pilot-project">
-                    <div class="pilot-image">
-                        <img src="assets/images/pilots/ai-crop-pilot.jpg" alt="AI Crop Pilot">
-                    </div>
-                    <div class="pilot-content">
-                        <h3>AI Crop Grading System</h3>
-                        <div class="pilot-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Turmeric Processing Unit, Tamil Nadu</span>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Q3 2024</div>
+                        <div class="timeline-content">
+                            <h4>AI Crop Grading - Coffee Board</h4>
+                            <p>Computer vision system for coffee bean quality grading in Balehonnur</p>
+                            <div class="pilot-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">10,000</span>
+                                    <span class="metric-label">Beans/Minute</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">99%</span>
+                                    <span class="metric-label">Accuracy</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">50%</span>
+                                    <span class="metric-label">Time Saved</span>
+                                </div>
+                            </div>
                         </div>
-                        <p>Computer vision system for automatic grading of turmeric fingers based on color, size, and quality.</p>
-                        <div class="pilot-results">
-                            <div class="result">
-                                <div class="result-value">99.2%</div>
-                                <div class="result-label">Accuracy Rate</div>
-                            </div>
-                            <div class="result">
-                                <div class="result-value">10x</div>
-                                <div class="result-label">Faster Processing</div>
-                            </div>
-                            <div class="result">
-                                <div class="result-value">15%</div>
-                                <div class="result-label">Price Premium</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Q4 2024</div>
+                        <div class="timeline-content">
+                            <h4>Microgreen Farm - Urban Pilot</h4>
+                            <p>Automated vertical farming system in Bengaluru urban center</p>
+                            <div class="pilot-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">200</span>
+                                    <span class="metric-label">Kg/Month</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">90%</span>
+                                    <span class="metric-label">Less Water</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">0</span>
+                                    <span class="metric-label">Pesticides</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -321,103 +278,75 @@
     </section>
 
     <!-- Future Roadmap -->
-    <section class="section section-light">
+    <section class="future-roadmap">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Innovation Roadmap</h2>
-                <p class="section-subtitle">Building tomorrow's infrastructure today</p>
-            </div>
-            
-            <div class="roadmap">
-                <div class="roadmap-item current">
-                    <div class="roadmap-year">2024</div>
-                    <div class="roadmap-content">
-                        <h3>Commercial Scale-up</h3>
-                        <ul>
-                            <li>Scale sand battery to 1 MWh capacity</li>
-                            <li>Launch AI crop grading as commercial product</li>
-                            <li>Expand PTC manufacturing capacity</li>
-                        </ul>
+            <h2 class="section-title">Technology Roadmap</h2>
+            <div class="roadmap-container">
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <h3>Phase 1: Foundation (2024-2025)</h3>
+                        <div class="phase-status current">Current</div>
                     </div>
+                    <ul class="phase-objectives">
+                        <li>✓ Sand battery commercial prototype</li>
+                        <li>✓ AI agriculture MVP launch</li>
+                        <li>✓ Soil-to-sale platform beta</li>
+                        <li>→ 5 patent filings</li>
+                        <li>→ 3 university MoUs</li>
+                    </ul>
                 </div>
                 
-                <div class="roadmap-item future">
-                    <div class="roadmap-year">2025</div>
-                    <div class="roadmap-content">
-                        <h3>Technology Integration</h3>
-                        <ul>
-                            <li>Integrated solar+storage+agriculture systems</li>
-                            <li>Launch soil-to-sale digital platform</li>
-                            <li>Begin international pilot projects</li>
-                        </ul>
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <h3>Phase 2: Scale (2025-2026)</h3>
+                        <div class="phase-status upcoming">Upcoming</div>
                     </div>
+                    <ul class="phase-objectives">
+                        <li>Thermal storage grid integration</li>
+                        <li>AI platform nationwide deployment</li>
+                        <li>Export-ready product certification</li>
+                        <li>International research partnerships</li>
+                        <li>Series A funding round</li>
+                    </ul>
                 </div>
                 
-                <div class="roadmap-item future">
-                    <div class="roadmap-year">2026</div>
-                    <div class="roadmap-content">
-                        <h3>Global Expansion</h3>
-                        <ul>
-                            <li>Export technology to Southeast Asia</li>
-                            <li>Establish R&D center in Europe</li>
-                            <li>Launch microgreen franchise model</li>
-                        </ul>
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <h3>Phase 3: Global (2027+)</h3>
+                        <div class="phase-status future">Future</div>
                     </div>
+                    <ul class="phase-objectives">
+                        <li>International market entry</li>
+                        <li>Advanced energy storage systems</li>
+                        <li>Full-stack agriculture platform</li>
+                        <li>Climate tech spin-off ventures</li>
+                        <li>IPO preparation</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Opportunities -->
-    <section class="section section-gradient">
+    <!-- Innovation CTA -->
+    <section class="innovation-cta">
         <div class="container">
-            <div class="research-opportunities">
-                <div class="opportunities-content">
-                    <h2>Collaborate with Our Innovation Lab</h2>
-                    <p>We welcome partnerships with researchers, universities, and industry partners for joint innovation projects.</p>
-                    
-                    <div class="opportunities-list">
-                        <div class="opportunity">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Student Projects & Internships</h4>
-                                <p>Hands-on experience in renewable energy R&D</p>
-                            </div>
-                        </div>
-                        <div class="opportunity">
-                            <i class="fas fa-flask"></i>
-                            <div>
-                                <h4>Joint Research Projects</h4>
-                                <p>Collaborative research with funding opportunities</p>
-                            </div>
-                        </div>
-                        <div class="opportunity">
-                            <i class="fas fa-industry"></i>
-                            <div>
-                                <h4>Industry Partnerships</h4>
-                                <p>Technology commercialization and scaling</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="opportunities-cta">
-                    <a href="contact.html#research" class="btn btn-primary btn-large">
-                        <i class="fas fa-handshake"></i> Explore Collaboration
-                    </a>
-                    <a href="assets/documents/innovation-lab-brochure.pdf" class="btn btn-secondary btn-large" download>
-                        <i class="fas fa-download"></i> Download Research Portfolio
-                    </a>
+            <div class="cta-content">
+                <h2>Join Our Innovation Journey</h2>
+                <p>Be part of building sustainable energy and agriculture infrastructure for tomorrow</p>
+                <div class="cta-buttons">
+                    <a href="contact-partnerships.html#investor" class="btn-primary">Invest in Innovation</a>
+                    <a href="contact-partnerships.html#research-collab" class="btn-secondary">Collaborate on R&D</a>
+                    <a href="contact-partnerships.html#pilot-program" class="btn-secondary">Host Pilot Project</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
+    <!-- Footer (Same as homepage) -->
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/innovation.js"></script>
+    <script src="js/counters.js"></script>
 </body>
 </html>

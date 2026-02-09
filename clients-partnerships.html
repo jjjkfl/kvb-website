@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients & Partnerships | KVB Green Energies</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/clients.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Audience Navigation -->
+    <div class="audience-nav">
+        <div class="container">
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="client">Existing Client</button>
+            <button class="audience-btn" data-audience="prospect">Prospective Client</button>
+            <button class="audience-btn" data-audience="partner">Partner</button>
+            <button class="audience-btn" data-audience="government">Government</button>
+        </div>
+    </div>
+
+    <!-- Header (Same as homepage) -->
+
+    <!-- Clients Hero -->
+    <section class="clients-hero">
+        <div class="container">
+            <h1>Trusted by India's Leading Institutions</h1>
+            <p class="hero-subtitle">150+ installations across 8 states, serving diverse sectors with renewable energy solutions</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value" data-count="150">0</div>
+                    <div class="stat-label">Installations</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" data-count="8">0</div>
+                    <div class="stat-label">States</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" data-count="25">0</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" data-count="50">0</div>
+                    <div class="stat-label">M+ Meals/Day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive India Map -->
+    <section class="client-map-section">
+        <div class="container">
+            <h2 class="section-title">Our National Presence</h2>
+            <div class="map-container">
+                <div id="india-map"></div>
+                <div class="map-legend">
+                    <h4>Installation Types</h4>
+                    <div class="legend-item">
+                        <span class="legend-dot military"></span>
+                        <span>Military & Defense</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot education"></span>
+                        <span>Educational Institutions</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot religious"></span>
+                        <span>Religious Institutions</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot government"></span>
+                        <span>Government Departments</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot agriculture"></span>
+                        <span>Agriculture Organizations</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot industry"></span>
+                        <span>Food Industries</span>
+                    </div>
+                </div>
+            </div>
+            <div class="map-controls">
+                <button class="map-filter active" data-filter="all">All Clients</button>
+                <button class="map-filter" data-filter="military">Defense</button>
+                <button class="map-filter" data-filter="education">Education</button>
+                <button class="map-filter" data-filter="religious">Religious</button>
+                <button class="map-filter" data-filter="government">Government</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Categories -->
+    <section class="client-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="government">
+                    Government & Defense
+                </button>
+                <button class="category-tab" data-category="education">
+                    Universities & Research
+                </button>
+                <button class="category-tab" data-category="religious">
+                    Religious Institutions
+                </button>
+                <button class="category-tab" data-category="industry">
+                    Food Industries
+                </button>
+                <button class="category-tab" data-category="agriculture">
+                    Agri Organizations
+                </button>
+            </div>
+            
+            <div class="category-content active" id="government">
+                <div class="client-grid">
+                    <div class="client-card">
+                        <div class="client-logo">⚔️</div>
+                        <div class="client-info">
+                            <h3>Indian Army, Chennai</h3>
+                            <p class="client-location">Chennai, Tamil Nadu</p>
+                            <p class="client-installation">500-meal solar cooking system</p>
+                            <div class="client-metrics">
+                                <span class="metric">65% LPG savings</span>
+                                <span class="metric">120 tons CO₂/year</span>
+                            </div>
+                            <button class="view-case-study" data-client="army-chennai">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="client-card">
+                        <div class="client-logo">⚓</div>
+                        <div class="client-info">
+                            <h3>INS Mandovi</h3>
+                            <p class="client-location">Goa</p>
+                            <p class="client-installation">Naval base solar kitchen</p>
+                            <div class="client-metrics">
+                                <span class="metric">70% fuel reduction</span>
+                                <span class="metric">Operational since 2021</span>
+                            </div>
+                            <button class="view-case-study" data-client="ins-mandovi">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="client-card">
+                        <div class="client-logo">🏛️</div>
+                        <div class="client-info">
+                            <h3>YASHADA</h3>
+                            <p class="client-location">Pune, Maharashtra</p>
+                            <p class="client-installation">Government training institute</p>
+                            <div class="client-metrics">
+                                <span class="metric">Solar steam cooking</span>
+                                <span class="metric">300 trainees/day</span>
+                            </div>
+                            <button class="view-case-study" data-client="yashada">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-content" id="education">
+                <div class="client-grid">
+                    <div class="client-card">
+                        <div class="client-logo">🎓</div>
+                        <div class="client-info">
+                            <h3>UAS Bengaluru</h3>
+                            <p class="client-location">Bengaluru, Karnataka</p>
+                            <p class="client-installation">Agricultural university mess</p>
+                            <div class="client-metrics">
+                                <span class="metric">1000 students</span>
+                                <span class="metric">Research collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="client-card">
+                        <div class="client-logo">🔬</div>
+                        <div class="client-info">
+                            <h3>UHS Bagalkot</h3>
+                            <p class="client-location">Bagalkot, Karnataka</p>
+                            <p class="client-installation">Performance testing lab</p>
+                            <div class="client-metrics">
+                                <span class="metric">MNRE certification</span>
+                                <span class="metric">R&D partnership</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="client-card">
+                        <div class="client-logo">🌾</div>
+                        <div class="client-info">
+                            <h3>Dantiwada Agriculture University</h3>
+                            <p class="client-location">Gujarat</p>
+                            <p class="client-installation">Solar drying systems</p>
+                            <div class="client-metrics">
+                                <span class="metric">Crop research</span>
+                                <span class="metric">Farmer training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Similar structure for other categories -->
+        </div>
+    </section>
+
+    <!-- Prestigious Clients Wall -->
+    <section class="prestige-wall-full">
+        <div class="container">
+            <h2 class="section-title">Our Esteemed Clients</h2>
+            <div class="prestige-grid">
+                <div class="prestige-column">
+                    <h3>Defense & Government</h3>
+                    <ul class="client-list">
+                        <li>Indian Army -- Chennai</li>
+                        <li>INS Mandovi -- Goa</li>
+                        <li>YASHADA -- Pune</li>
+                        <li>NABARD -- Bagalkot</li>
+                        <li>MEDA -- Maharashtra</li>
+                        <li>GEDA -- Goa</li>
+                    </ul>
+                </div>
+                
+                <div class="prestige-column">
+                    <h3>Educational & Research</h3>
+                    <ul class="client-list">
+                        <li>UAS Bengaluru</li>
+                        <li>UHS Bagalkot</li>
+                        <li>KLE Tech University</li>
+                        <li>IIT Dharwad</li>
+                        <li>Keladi University -- Shivamogga</li>
+                        <li>Dantiwada Agriculture University</li>
+                        <li>ICAR -- Goa</li>
+                    </ul>
+                </div>
+                
+                <div class="prestige-column">
+                    <h3>Religious & Community</h3>
+                    <ul class="client-list">
+                        <li>Sri Siddharodhmath -- Hubli</li>
+                        <li>Sri Siddaganga Math -- Tumkur</li>
+                        <li>Prakruti -- Karwar</li>
+                        <li>Multiple community kitchens</li>
+                        <li>Mid-day meal programs</li>
+                    </ul>
+                </div>
+                
+                <div class="prestige-column">
+                    <h3>Agriculture & Industry</h3>
+                    <ul class="client-list">
+                        <li>Coffee Board -- Balehonnur</li>
+                        <li>Sugati Ingredients -- Challakere</li>
+                        <li>Nithya Foods -- Puttur</li>
+                        <li>Spice processing units</li>
+                        <li>Food parks & clusters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Models -->
+    <section class="partnership-models">
+        <div class="container">
+            <h2 class="section-title">Partnership Opportunities</h2>
+            <div class="partnership-grid">
+                <div class="partnership-card">
+                    <div class="partnership-icon">🤝</div>
+                    <h3>Government Partnership</h3>
+                    <p>Implement solar thermal systems in government institutions, schools, and public facilities</p>
+                    <ul class="partnership-features">
+                        <li>Turnkey project implementation</li>
+                        <li>Subsidy facilitation</li>
+                        <li>Maintenance contracts</li>
+                        <li>Performance monitoring</li>
+                    </ul>
+                    <a href="contact-partnerships.html#government" class="btn-small">Explore Partnership</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">🎓</div>
+                    <h3>University Collaboration</h3>
+                    <p>Joint research, student projects, and technology development partnerships</p>
+                    <ul class="partnership-features">
+                        <li>Research MoUs</li>
+                        <li>Internship programs</li>
+                        <li>Joint publications</li>
+                        <li>Technology transfer</li>
+                    </ul>
+                    <a href="contact-partnerships.html#university" class="btn-small">Collaborate with Us</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">🏭</div>
+                    <h3>Industry Alliance</h3>
+                    <p>Deploy solar thermal solutions for industrial heating and processing needs</p>
+                    <ul class="partnership-features">
+                        <li>Customized solutions</li>
+                        <li>ROI analysis</li>
+                        <li>Installation support</li>
+                        <li>Training programs</li>
+                    </ul>
+                    <a href="contact-partnerships.html#industry" class="btn-small">Request Alliance</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">🌍</div>
+                    <h3>Dealer Network</h3>
+                    <p>Join our nationwide dealer and installer network for solar thermal systems</p>
+                    <ul class="partnership-features">
+                        <li>Territory exclusivity</li>
+                        <li>Technical training</li>
+                        <li>Marketing support</li>
+                        <li>After-sales service</li>
+                    </ul>
+                    <a href="contact-partnerships.html#dealer" class="btn-small">Become a Dealer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Carousel -->
+    <section class="client-testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p>"The solar steam cooking system at our institution has reduced our LPG consumption by 65%. The system is reliable, efficient, and has significantly reduced our carbon footprint."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Indian Army, Chennai</div>
+                            <div class="author-role">Defense Establishment</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"Our collaboration with KVB on solar drying technology has been instrumental in our agricultural research. The systems perform excellently in field conditions."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">UAS Bengaluru</div>
+                            <div class="author-role">Agricultural University</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"The solar cooking system at our math has been serving thousands of devotees daily with clean, sustainable energy. It's a perfect example of tradition meeting technology."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Sri Siddharodhmath, Hubli</div>
+                            <div class="author-role">Religious Institution</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-prev">←</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="carousel-next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership CTA -->
+    <section class="partnership-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Partner with KVB?</h2>
+                <p>Join our network of successful partnerships and create sustainable impact together</p>
+                <div class="cta-buttons">
+                    <a href="contact-partnerships.html#new-client" class="btn-primary">Become a Client</a>
+                    <a href="contact-partnerships.html#partner" class="btn-secondary">Explore Partnerships</a>
+                    <a href="case-studies.html" class="btn-secondary">View Case Studies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+</html>
