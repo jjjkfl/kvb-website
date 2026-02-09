@@ -1,16 +1,21 @@
-/* components.css - Agriculture Components */
+/* components.css - Enhanced Agriculture Components */
 
-/* Solar Panel Card */
+/* Solar Panel Card - Enhanced */
 .solar-panel-card {
-    background: linear-gradient(145deg, #ffffff, #f0f7f0);
+    background: linear-gradient(145deg, 
+        rgba(255, 255, 255, 0.95),
+        rgba(240, 247, 240, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     box-shadow: 
-        0 20px 40px rgba(11, 61, 145, 0.1),
-        inset 0 0 0 1px rgba(253, 184, 19, 0.1);
+        var(--shadow-medium),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
     transition: all var(--transition-bounce);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(253, 184, 19, 0.1);
 }
 
 .solar-panel-card::before {
@@ -19,32 +24,84 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
-    transform: translateX(-100%);
-    transition: transform var(--transition-slow);
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(253, 184, 19, 0.05) 0%,
+        rgba(76, 175, 80, 0.05) 100%
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.solar-panel-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 1s ease;
 }
 
 .solar-panel-card:hover::before {
-    transform: translateX(0);
+    opacity: 1;
+}
+
+.solar-panel-card:hover::after {
+    left: 100%;
 }
 
 .solar-panel-card:hover {
-    transform: translateY(-15px) rotateX(5deg);
+    transform: 
+        translateY(-15px) 
+        rotateX(5deg) 
+        scale(1.02);
     box-shadow: 
-        0 40px 80px rgba(11, 61, 145, 0.2),
-        inset 0 0 0 1px rgba(253, 184, 19, 0.2);
+        var(--shadow-deep),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Farm Field Card */
+.solar-panel-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.solar-panel-icon {
+    font-size: 2.5rem;
+    color: var(--solar-yellow);
+    animation: pulseGlow 3s ease-in-out infinite;
+    background: var(--gradient-sun);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Farm Field Card - Enhanced */
 .farm-field-card {
-    background: linear-gradient(145deg, #f5f9f5, #e8f5e9);
+    background: linear-gradient(145deg, 
+        rgba(245, 249, 245, 0.95),
+        rgba(232, 245, 233, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
     background-clip: padding-box;
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-bounce);
 }
 
 .farm-field-card::before {
@@ -54,28 +111,60 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, var(--forest-green), var(--leaf-green), var(--sun-gold));
+    background: var(--gradient-forest);
     border-radius: inherit;
     z-index: -1;
     opacity: 0;
     transition: opacity var(--transition-slow);
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+.farm-field-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(76, 175, 80, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity var(--transition-base);
 }
 
 .farm-field-card:hover::before {
     opacity: 1;
 }
 
-.farm-field-card:hover {
-    transform: translateY(-10px) scale(1.02);
+.farm-field-card:hover::after {
+    opacity: 1;
 }
 
-/* Water Irrigation System */
+.farm-field-card:hover {
+    transform: 
+        translateY(-12px) 
+        scale(1.03);
+    box-shadow: 
+        var(--shadow-deep),
+        0 0 40px rgba(76, 175, 80, 0.2);
+}
+
+/* Water Irrigation System - Enhanced */
 .irrigation-system {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background: linear-gradient(135deg, 
+        rgba(227, 242, 253, 0.95),
+        rgba(187, 222, 251, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(33, 150, 243, 0.2);
+    box-shadow: var(--shadow-medium);
 }
 
 .irrigation-system::before {
@@ -86,14 +175,40 @@
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(90deg, transparent 50%, rgba(33, 150, 243, 0.1) 50%),
-        linear-gradient(90deg, rgba(33, 150, 243, 0.1) 50%, transparent 50%);
-    background-size: 20px 100%;
-    animation: waterFlow 10s linear infinite;
-    opacity: 0.5;
+        linear-gradient(
+            90deg, 
+            transparent 45%, 
+            rgba(33, 150, 243, 0.15) 50%, 
+            transparent 55%
+        ),
+        linear-gradient(
+            90deg, 
+            rgba(33, 150, 243, 0.1) 45%, 
+            transparent 50%, 
+            rgba(33, 150, 243, 0.1) 55%
+        );
+    background-size: 40px 100%, 20px 100%;
+    animation: waterFlow 15s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
 }
 
-/* Crop Growth Timeline */
+.irrigation-system::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(33, 150, 243, 0.1) 0%,
+        transparent 50%
+    );
+    animation: waterReflection 4s ease-in-out infinite;
+}
+
+/* Enhanced Crop Timeline */
 .crop-timeline {
     position: relative;
     padding-left: var(--space-xl);
@@ -103,75 +218,155 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 12px;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(to bottom, var(--leaf-green), var(--forest-green), var(--earth-brown));
+    background: linear-gradient(
+        to bottom,
+        var(--leaf-green),
+        var(--forest-green),
+        var(--harvest-gold),
+        var(--earth-brown)
+    );
     border-radius: 2px;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
 }
 
 .timeline-milestone {
     position: relative;
     margin-bottom: var(--space-xl);
     padding-left: var(--space-lg);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-bounce);
+}
+
+.timeline-milestone:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
 }
 
 .timeline-milestone::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -6px;
-    width: 16px;
-    height: 16px;
-    background: var(--leaf-green);
+    top: 50%;
+    left: -8px;
+    width: 20px;
+    height: 20px;
+    background: var(--gradient-forest);
     border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px var(--leaf-green);
-    animation: pulseGlow 2s infinite;
+    border: 4px solid white;
+    box-shadow: 
+        0 0 0 3px var(--leaf-green),
+        0 0 20px rgba(76, 175, 80, 0.4);
+    transform: translateY(-50%);
+    animation: pulseGlow 3s ease-in-out infinite;
+    transition: all var(--transition-base);
 }
 
-/* Weather Forecast Card */
+.timeline-milestone:hover::before {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 
+        0 0 0 4px var(--leaf-green),
+        0 0 30px rgba(76, 175, 80, 0.6);
+}
+
+/* Enhanced Weather Forecast Card */
 .weather-card {
-    background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+    background: linear-gradient(135deg, 
+        rgba(187, 222, 251, 0.95),
+        rgba(227, 242, 253, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-medium);
 }
 
 .weather-card::before {
     content: '☀️';
     position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 8rem;
+    top: -40px;
+    right: -40px;
+    font-size: 12rem;
     opacity: 0.1;
-    animation: sunGlow 5s ease-in-out infinite;
+    animation: sunGlow 8s ease-in-out infinite;
+    filter: blur(10px);
+}
+
+.weather-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 80% 20%,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
 }
 
 .weather-data {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .weather-item {
     text-align: center;
-    padding: var(--space-md);
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-base);
 }
 
-/* Soil Health Monitor */
+.weather-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Soil Health Monitor - Enhanced */
 .soil-health {
-    background: linear-gradient(135deg, var(--earth-brown), var(--soil-dark));
+    background: linear-gradient(135deg, 
+        var(--earth-brown),
+        var(--soil-dark));
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.soil-health::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, 
+            transparent 45%, 
+            rgba(255, 255, 255, 0.05) 50%, 
+            transparent 55%
+        );
+    background-size: 50px 50px;
+    animation: patternFlow 30s linear infinite;
+    opacity: 0.3;
 }
 
 .soil-health::after {
@@ -181,34 +376,50 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../assets/images/patterns/soil-texture.png');
-    opacity: 0.1;
-    animation: patternFlow 20s linear infinite;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    animation: sunPulse 6s ease-in-out infinite;
 }
 
 .soil-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: var(--space-md);
     margin-top: var(--space-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .soil-metric {
     text-align: center;
-    padding: var(--space-md);
-    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-base);
 }
 
-/* Harvest Yield Display */
+.soil-metric:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Harvest Yield Display */
 .harvest-yield {
-    background: linear-gradient(135deg, var(--harvest-orange), #ffb74d);
+    background: linear-gradient(135deg, 
+        var(--harvest-orange),
+        #ffb74d);
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-medium);
 }
 
 .harvest-yield::before {
@@ -218,34 +429,83 @@
     left: -50%;
     right: -50%;
     bottom: -50%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: sunPulse 3s ease-in-out infinite;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 70%
+    );
+    animation: sunPulse 4s ease-in-out infinite;
+}
+
+.harvest-yield::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+    background-size: 100% 100%;
+    opacity: 0.5;
 }
 
 .yield-chart {
-    height: 200px;
+    height: 250px;
     position: relative;
     margin-top: var(--space-lg);
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
+    z-index: 1;
 }
 
 .yield-bar {
-    position: absolute;
-    bottom: 0;
-    width: 40px;
-    background: linear-gradient(to top, var(--forest-green), var(--leaf-green));
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    animation: heightGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    flex: 1;
+    background: linear-gradient(
+        to top,
+        var(--forest-green),
+        var(--leaf-green)
+    );
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 20px;
     transform-origin: bottom;
+    animation: heightGrow 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
 }
 
-/* Renewable Energy Display */
+.yield-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        transparent,
+        rgba(255, 255, 255, 0.3)
+    );
+    animation: lightBeam 3s linear infinite;
+}
+
+.yield-bar:nth-child(1) { animation-delay: 0.1s; }
+.yield-bar:nth-child(2) { animation-delay: 0.2s; }
+.yield-bar:nth-child(3) { animation-delay: 0.3s; }
+.yield-bar:nth-child(4) { animation-delay: 0.4s; }
+.yield-bar:nth-child(5) { animation-delay: 0.5s; }
+
+/* Renewable Energy Display - Enhanced */
 .energy-display {
-    background: linear-gradient(135deg, #0B3D91, #1565C0);
+    background: var(--gradient-ocean);
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-deep);
 }
 
 .energy-display::before {
@@ -253,55 +513,119 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 4rem;
-    animation: pulseGlow 2s ease-in-out infinite;
+    font-size: 5rem;
+    animation: 
+        pulseGlow 3s ease-in-out infinite,
+        float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.energy-display::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+        );
 }
 
 .energy-metrics {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: var(--space-lg);
-    gap: var(--space-md);
+    gap: var(--space-xl);
+    position: relative;
+    z-index: 1;
 }
 
 .energy-metric {
     text-align: center;
     flex: 1;
+    min-width: 150px;
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-bounce);
+}
+
+.energy-metric:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .energy-value {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     display: block;
     line-height: 1;
     margin-bottom: var(--space-xs);
+    background: linear-gradient(to right, white, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Smart Agriculture Dashboard */
+/* Smart Agriculture Dashboard - Enhanced */
 .agri-dashboard {
-    background: var(--card-bg);
+    background: linear-gradient(145deg, 
+        rgba(255, 255, 255, 0.95),
+        rgba(245, 245, 245, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     box-shadow: var(--shadow-deep);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(253, 184, 19, 0.1);
+}
+
+.agri-dashboard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--solar-yellow),
+        transparent
+    );
 }
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
 }
 
 .dashboard-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
     text-align: center;
-    transition: all var(--transition-natural);
+    transition: all var(--transition-bounce);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(11, 61, 145, 0.1);
 }
 
 .dashboard-item::before {
@@ -320,17 +644,55 @@
     transform: translateX(0);
 }
 
-.dashboard-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-leaf);
+.dashboard-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(253, 184, 19, 0.05) 0%,
+        rgba(76, 175, 80, 0.05) 100%
+    );
+    opacity: 0;
+    transition: opacity var(--transition-base);
 }
 
-/* Live Farm Feed */
+.dashboard-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: var(--shadow-medium);
+    background: white;
+}
+
+.dashboard-item:hover::after {
+    opacity: 1;
+}
+
+/* Live Farm Feed - Enhanced */
 .live-feed {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    height: 400px;
+    height: 450px;
+    box-shadow: var(--shadow-deep);
+}
+
+.live-feed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(11, 61, 145, 0.1) 0%,
+        rgba(58, 125, 68, 0.1) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 .live-feed-overlay {
@@ -338,71 +700,87 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        transparent 100%
+    );
     padding: var(--space-xl);
     color: white;
     transform: translateY(100%);
-    transition: transform var(--transition-slow);
+    transition: transform var(--transition-bounce);
+    z-index: 2;
 }
 
 .live-feed:hover .live-feed-overlay {
     transform: translateY(0);
 }
 
-/* Crop Rotation Planner */
-.crop-planner {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    border-radius: var(--radius-xl);
-    padding: var(--space-xl);
-    position: relative;
+.live-feed-overlay::before {
+    content: '🔴 LIVE';
+    position: absolute;
+    top: -25px;
+    left: var(--space-xl);
+    background: #ff0000;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    animation: pulse 2s infinite;
 }
 
-.planner-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--space-md);
-    margin-top: var(--space-lg);
-}
-
-.planner-season {
-    text-align: center;
-    padding: var(--space-lg);
-    background: white;
-    border-radius: var(--radius-lg);
-    transition: all var(--transition-natural);
-}
-
-.planner-season:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-leaf);
-}
-
-/* Sustainable Impact Meter */
+/* Impact Meter - Enhanced */
 .impact-meter {
-    background: linear-gradient(135deg, var(--forest-green), var(--leaf-green));
+    background: var(--gradient-forest);
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-deep);
+}
+
+.impact-meter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            45deg,
+            transparent 45%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 55%
+        );
+    background-size: 30px 30px;
+    animation: patternFlow 40s linear infinite;
+    opacity: 0.2;
 }
 
 .meter-track {
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin: var(--space-lg) 0;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-pill);
+    margin: var(--space-xl) 0;
     position: relative;
     overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .meter-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
-    border-radius: 10px;
-    animation: progressGrow 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    background: var(--gradient-sun);
+    border-radius: var(--radius-pill);
+    animation: 
+        progressGrow 3s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+        progressPulse 2s ease-in-out infinite;
     position: relative;
     overflow: hidden;
+    width: 0%;
 }
 
 .meter-fill::after {
@@ -412,69 +790,137 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: lightBeam 2s linear infinite;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: lightBeam 2.5s linear infinite;
 }
 
-/* Community Impact Stories */
+/* Community Story - Enhanced */
 .community-story {
     background: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-cloud);
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-bounce);
+    border: 1px solid rgba(11, 61, 145, 0.1);
+}
+
+.community-story:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-deep);
+}
+
+.community-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-sun);
+    border-radius: 0 0 0 100px;
+    opacity: 0.1;
 }
 
 .story-avatar {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--leaf-green);
     margin-bottom: var(--space-lg);
-    animation: float 3s ease-in-out infinite;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+    box-shadow: var(--shadow-medium);
+}
+
+.story-avatar::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: var(--gradient-forest);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .story-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.community-story:hover .story-avatar img {
+    transform: scale(1.1);
 }
 
 .story-quote {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-style: italic;
-    color: var(--text-dark);
+    color: var(--dark-charcoal);
     margin-bottom: var(--space-lg);
     position: relative;
-    padding-left: var(--space-lg);
+    padding-left: var(--space-xl);
+    line-height: 1.8;
 }
 
 .story-quote::before {
     content: '"';
     position: absolute;
-    top: -20px;
+    top: -30px;
     left: 0;
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--leaf-green);
     opacity: 0.3;
+    font-family: var(--heading-font);
 }
 
-/* Technology Integration Display */
+/* Tech Integration Display - Enhanced */
 .tech-integration {
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    background: linear-gradient(135deg, 
+        rgba(245, 245, 245, 0.95),
+        rgba(224, 224, 224, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-medium);
 }
 
 .integration-flow {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: var(--space-lg);
+    margin-top: var(--space-xl);
     position: relative;
+}
+
+.integration-flow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--leaf-green) 0%,
+        var(--solar-yellow) 50%,
+        var(--water-blue) 100%
+    );
+    z-index: 1;
+    opacity: 0.3;
 }
 
 .flow-step {
@@ -482,68 +928,83 @@
     padding: var(--space-lg);
     background: white;
     border-radius: var(--radius-lg);
-    width: 120px;
+    width: 140px;
     position: relative;
     z-index: 2;
-    transition: all var(--transition-natural);
-}
-
-.flow-step:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-deep);
+    transition: all var(--transition-bounce);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(11, 61, 145, 0.1);
 }
 
 .flow-step::before {
     content: '';
     position: absolute;
     top: 50%;
-    right: -60px;
-    width: 60px;
-    height: 2px;
-    background: var(--leaf-green);
+    right: -70px;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--leaf-green), var(--solar-yellow));
     z-index: 1;
+    transform: translateY(-50%);
 }
 
 .flow-step:last-child::before {
     display: none;
 }
 
-/* Education & Training Module */
-.training-module {
-    background: linear-gradient(135deg, #fff3e0, #ffecb3);
-    border-radius: var(--radius-xl);
-    padding: var(--space-xl);
-    position: relative;
-    overflow: hidden;
+.flow-step:hover {
+    transform: translateY(-15px) scale(1.1);
+    box-shadow: var(--shadow-deep);
+    z-index: 3;
 }
 
-.module-progress {
-    height: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin: var(--space-lg) 0;
-    position: relative;
-    overflow: hidden;
+.flow-step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: var(--gradient-sun);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(253, 184, 19, 0.3);
 }
 
-.module-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
-    border-radius: 5px;
-    animation: progressGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-/* Seasonal Planning Calendar */
+/* Enhanced Seasonal Calendar */
 .seasonal-calendar {
     background: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
-    box-shadow: var(--shadow-cloud);
+    box-shadow: var(--shadow-deep);
+    position: relative;
+    overflow: hidden;
+}
+
+.seasonal-calendar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #c8e6c9,
+        #fff9c4,
+        #ffcc80,
+        #bbdefb
+    );
 }
 
 .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
 }
@@ -552,179 +1013,432 @@
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
     text-align: center;
-    transition: all var(--transition-natural);
+    transition: all var(--transition-bounce);
     position: relative;
     overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.season-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .season-card.spring {
     background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+    color: #2e7d32;
 }
 
 .season-card.summer {
     background: linear-gradient(135deg, #fff9c4, #fff59d);
+    color: #f57f17;
 }
 
 .season-card.autumn {
     background: linear-gradient(135deg, #ffcc80, #ffb74d);
+    color: #e65100;
 }
 
 .season-card.winter {
     background: linear-gradient(135deg, #bbdefb, #90caf9);
+    color: #1565c0;
 }
 
 .season-card:hover {
-    transform: translateY(-8px) scale(1.05);
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: var(--shadow-deep);
+    z-index: 2;
 }
 
-/* Water Conservation Display */
+.season-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-md);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Enhanced Water Conservation Display */
 .water-conservation {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background: linear-gradient(135deg, 
+        rgba(227, 242, 253, 0.95),
+        rgba(187, 222, 251, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.water-conservation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(33, 150, 243, 0.1) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(33, 150, 243, 0.1) 0%,
+            transparent 50%
+        );
 }
 
 .water-drop {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: var(--water-blue);
     border-radius: 50% 50% 50% 0;
-    opacity: 0.2;
-    animation: waterDrop 3s ease-in-out infinite;
+    opacity: 0.15;
+    animation: 
+        waterDrop 4s ease-in-out infinite,
+        float 6s ease-in-out infinite;
+}
+
+.water-drop:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.water-drop:nth-child(3) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.water-drop:nth-child(4) {
+    top: 40%;
+    left: 40%;
+    animation-delay: 1.5s;
 }
 
 @keyframes waterDrop {
     0%, 100% {
-        transform: translateY(0) scale(1);
-        opacity: 0.2;
+        transform: 
+            translateY(0) 
+            scale(1) 
+            rotate(-45deg);
+        opacity: 0.15;
     }
     50% {
-        transform: translateY(-20px) scale(1.1);
-        opacity: 0.4;
+        transform: 
+            translateY(-30px) 
+            scale(1.2) 
+            rotate(-30deg);
+        opacity: 0.3;
     }
 }
 
-/* Carbon Footprint Calculator */
+/* Carbon Calculator - Enhanced */
 .carbon-calculator {
-    background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+    background: linear-gradient(135deg, 
+        rgba(224, 242, 241, 0.95),
+        rgba(178, 223, 219, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-medium);
+}
+
+.carbon-calculator::before {
+    content: '🌱';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+    animation: leafFloat 8s ease-in-out infinite;
+}
+
+.calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .calculator-input {
     background: white;
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
-    margin-bottom: var(--space-lg);
+    border: 2px solid rgba(46, 125, 50, 0.1);
+    transition: all var(--transition-base);
+}
+
+.calculator-input:focus-within {
+    border-color: var(--leaf-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    transform: translateY(-3px);
 }
 
 .calculator-result {
-    background: var(--forest-green);
+    background: var(--gradient-forest);
     color: white;
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
     text-align: center;
     margin-top: var(--space-lg);
-    animation: pulseGlow 3s ease-in-out infinite;
+    animation: 
+        bounceIn 1s cubic-bezier(0.4, 0, 0.2, 1),
+        pulseGlow 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Smart Irrigation Control */
+.calculator-result::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 55%
+    );
+    animation: lightBeam 4s linear infinite;
+}
+
+/* Smart Irrigation Control - Enhanced */
 .irrigation-control {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: linear-gradient(135deg, 
+        rgba(232, 245, 233, 0.95),
+        rgba(200, 230, 201, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-medium);
 }
 
 .control-slider {
     width: 100%;
-    height: 20px;
-    background: linear-gradient(90deg, var(--water-blue), var(--leaf-green));
-    border-radius: 10px;
-    margin: var(--space-lg) 0;
+    height: 25px;
+    background: linear-gradient(
+        90deg, 
+        var(--water-blue), 
+        var(--leaf-green)
+    );
+    border-radius: var(--radius-pill);
+    margin: var(--space-xl) 0;
     position: relative;
+    box-shadow: 
+        inset 0 2px 10px rgba(0, 0, 0, 0.1),
+        0 5px 20px rgba(33, 150, 243, 0.2);
 }
 
 .slider-handle {
     position: absolute;
     top: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: var(--shadow-deep);
+    box-shadow: 
+        var(--shadow-deep),
+        0 0 0 5px rgba(33, 150, 243, 0.1);
     cursor: grab;
-    transition: all var(--transition-natural);
+    transition: all var(--transition-bounce);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-handle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--gradient-sun);
+    border-radius: 50%;
+}
+
+.slider-handle:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 
+        0 20px 50px rgba(33, 150, 243, 0.4),
+        0 0 0 5px rgba(33, 150, 243, 0.2);
 }
 
 .slider-handle:active {
     cursor: grabbing;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.95);
 }
 
-/* Harvest Prediction Model */
+/* Harvest Prediction Model - Enhanced */
 .harvest-prediction {
-    background: linear-gradient(135deg, #fff3e0, #ffecb3);
+    background: linear-gradient(135deg, 
+        rgba(255, 243, 224, 0.95),
+        rgba(255, 236, 179, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-medium);
+}
+
+.harvest-prediction::before {
+    content: '📈';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
 }
 
 .prediction-chart {
-    height: 200px;
+    height: 250px;
     position: relative;
     margin-top: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    overflow: hidden;
 }
 
 .prediction-line {
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--forest-green);
-    animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    height: 4px;
+    background: var(--gradient-forest);
+    animation: drawLine 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    width: 0;
+    border-radius: 2px;
+}
+
+.prediction-line::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    background: var(--leaf-green);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+    animation: pulseGlow 2s ease-in-out infinite;
 }
 
 @keyframes drawLine {
     0% {
         width: 0;
+        opacity: 0;
+        transform: translateX(-20px);
     }
     100% {
-        width: 100%;
+        width: calc(100% - 40px);
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-/* Soil Sensor Network */
+/* Sensor Network - Enhanced */
 .sensor-network {
-    background: linear-gradient(135deg, var(--earth-brown), var(--soil-dark));
+    background: var(--gradient-charcoal);
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-deep);
+    overflow: hidden;
+}
+
+.sensor-network::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(121, 85, 72, 0.3) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 70% 80%,
+            rgba(121, 85, 72, 0.3) 0%,
+            transparent 50%
+        );
 }
 
 .sensor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-lg);
     margin-top: var(--space-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .sensor-node {
     text-align: center;
-    padding: var(--space-md);
+    padding: var(--space-lg);
     background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-bounce);
     position: relative;
+    overflow: hidden;
 }
 
-.sensor-node.active::before {
+.sensor-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-sun);
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+}
+
+.sensor-node:hover::before {
+    transform: translateX(0);
+}
+
+.sensor-node.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--leaf-green);
+}
+
+.sensor-node.active::after {
     content: '';
     position: absolute;
     top: -5px;
@@ -733,42 +1447,136 @@
     bottom: -5px;
     border: 2px solid var(--leaf-green);
     border-radius: inherit;
-    animation: pulseGlow 2s ease-in-out infinite;
+    animation: 
+        pulseGlow 2s ease-in-out infinite,
+        borderGlow 3s ease-in-out infinite;
 }
 
-/* Renewable Energy Mix */
+.sensor-node:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sensor-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    display: block;
+    animation: float 4s ease-in-out infinite;
+}
+
+.sensor-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--solar-yellow);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Energy Mix - Enhanced */
 .energy-mix {
-    background: linear-gradient(135deg, #0B3D91, #1565C0);
+    background: var(--gradient-ocean);
     color: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-deep);
+}
+
+.energy-mix::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+        );
 }
 
 .mix-chart {
     display: flex;
-    height: 200px;
     align-items: flex-end;
     gap: var(--space-md);
+    height: 250px;
     margin-top: var(--space-lg);
+    padding: 0 var(--space-md);
+    position: relative;
+    z-index: 1;
 }
 
 .mix-segment {
     flex: 1;
-    background: linear-gradient(to top, var(--sun-gold), var(--harvest-orange));
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    animation: heightGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    background: linear-gradient(
+        to top,
+        var(--sun-glow),
+        var(--solar-yellow),
+        var(--harvest-gold)
+    );
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 20px;
     transform-origin: bottom;
+    animation: heightGrow 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
 }
 
-/* Farmer Success Stories */
+.mix-segment::before {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mix-segment::after {
+    content: attr(data-value);
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mix-segment:nth-child(1) { animation-delay: 0.2s; }
+.mix-segment:nth-child(2) { animation-delay: 0.4s; }
+.mix-segment:nth-child(3) { animation-delay: 0.6s; }
+.mix-segment:nth-child(4) { animation-delay: 0.8s; }
+
+/* Success Stories - Enhanced */
 .success-story {
     background: white;
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
-    box-shadow: var(--shadow-cloud);
+    box-shadow: var(--shadow-medium);
     position: relative;
     overflow: hidden;
+    transition: all var(--transition-bounce);
+    border: 1px solid rgba(11, 61, 145, 0.1);
+}
+
+.success-story:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-deep);
 }
 
 .success-badge {
@@ -776,21 +1584,97 @@
     top: 20px;
     right: 20px;
     background: var(--gradient-sun);
-    color: var(--soil-dark);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    color: var(--dark-charcoal);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-pill);
     font-weight: 700;
     font-size: 0.9rem;
-    animation: bounce 2s infinite;
+    animation: 
+        bounce 2.5s infinite,
+        pulseGlow 3s ease-in-out infinite;
+    transform-origin: center;
+    z-index: 2;
 }
 
-/* Crop Quality Scanner */
+.success-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(
+        135deg,
+        rgba(253, 184, 19, 0.1) 0%,
+        rgba(76, 175, 80, 0.1) 100%
+    );
+    border-radius: 0 0 0 100%;
+}
+
+.success-content {
+    position: relative;
+    z-index: 1;
+}
+
+.success-metrics {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.success-metric {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-md);
+    background: rgba(46, 125, 50, 0.05);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.success-metric:hover {
+    background: rgba(46, 125, 50, 0.1);
+    transform: translateY(-3px);
+}
+
+.success-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Crop Quality Scanner - Enhanced */
 .quality-scanner {
-    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    background: linear-gradient(135deg, 
+        rgba(252, 228, 236, 0.95),
+        rgba(248, 187, 217, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.quality-scanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            45deg,
+            transparent 45%,
+            rgba(255, 255, 255, 0.2) 50%,
+            transparent 55%
+        );
+    background-size: 50px 50px;
+    animation: patternFlow 20s linear infinite;
+    opacity: 0.3;
 }
 
 .scanner-beam {
@@ -798,26 +1682,88 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--leaf-green), transparent);
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--leaf-green),
+        transparent
+    );
+    filter: blur(2px);
     animation: scanBeam 3s linear infinite;
+    z-index: 1;
 }
 
 @keyframes scanBeam {
     0% {
         transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
     }
     100% {
         transform: translateY(100%);
+        opacity: 0;
     }
 }
 
-/* Sustainable Packaging */
+.scanner-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.scanner-result {
+    text-align: center;
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(5px);
+    transition: all var(--transition-base);
+}
+
+.scanner-result:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Packaging Display - Enhanced */
 .packaging-display {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: linear-gradient(135deg, 
+        rgba(232, 245, 233, 0.95),
+        rgba(200, 230, 201, 0.85));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: var(--space-xl);
     position: relative;
+    box-shadow: var(--shadow-medium);
+}
+
+.packaging-display::before {
+    content: '♻️';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+    animation: spinSlow 20s linear infinite;
 }
 
 .packaging-item {
@@ -828,10 +1774,97 @@
     background: white;
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-md);
-    transition: all var(--transition-natural);
+    transition: all var(--transition-bounce);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.packaging-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-forest);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--transition-slow);
 }
 
 .packaging-item:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow-leaf);
+    transform: translateX(15px);
+    box-shadow: var(--shadow-medium);
+}
+
+.packaging-item:hover::before {
+    transform: scaleY(1);
+}
+
+.packaging-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-forest);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    flex-shrink: 0;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.packaging-content {
+    flex: 1;
+}
+
+.packaging-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+    color: var(--forest-green);
+}
+
+.packaging-stats {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-sm);
+}
+
+.packaging-stat {
+    font-size: 0.9rem;
+    color: var(--charcoal-gray);
+}
+
+.packaging-stat strong {
+    color: var(--forest-green);
+    font-weight: 700;
+}
+
+/* Enhanced Border Glow Animation */
+@keyframes borderGlow {
+    0%, 100% {
+        border-image-slice: 1;
+        opacity: 1;
+    }
+    50% {
+        border-image-slice: 2;
+        opacity: 0.8;
+    }
+}
+
+/* Enhanced Progress Pulse */
+@keyframes progressPulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 0 0 rgba(76, 175, 80, 0.4),
+            inset 0 2px 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 0 0 15px rgba(76, 175, 80, 0),
+            inset 0 2px 10px rgba(255, 255, 255, 0.3);
+    }
 }

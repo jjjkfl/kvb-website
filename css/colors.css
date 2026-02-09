@@ -1,0 +1,520 @@
+/* colors.css - KVB Green Energies Color System */
+
+:root {
+  /* ==================== */
+  /* PRIMARY COLOR PALETTE */
+  /* ==================== */
+  
+  /* Solar Energy Theme */
+  --solar-yellow: #FDB813;
+  --sun-glow: #FFD700;
+  --sunshine: #FFC107;
+  --sun-ray: #FFA000;
+  
+  /* Ocean & Sky Theme */
+  --deep-blue: #0B3D91;
+  --ocean-blue: #1565C0;
+  --sky-blue: #2196F3;
+  --water-blue: #03A9F4;
+  --light-blue: #E3F2FD;
+  
+  /* Nature & Agriculture Theme */
+  --eco-green: #3A7D44;
+  --forest-green: #2E7D32;
+  --leaf-green: #4CAF50;
+  --moss-green: #388E3C;
+  --spring-green: #8BC34A;
+  
+  /* Earth & Soil Theme */
+  --earth-brown: #795548;
+  --soil-dark: #5D4037;
+  --soil-light: #A1887F;
+  --clay-red: #D84315;
+  
+  /* Harvest Theme */
+  --harvest-gold: #FFA000;
+  --harvest-orange: #FF6F00;
+  --fruit-red: #F44336;
+  --berry-purple: #9C27B0;
+  
+  /* Neutral & UI Colors */
+  --dark-charcoal: #1C1C1C;
+  --charcoal-gray: #2D2D2D;
+  --slate-gray: #424242;
+  --medium-gray: #757575;
+  --light-gray: #BDBDBD;
+  --soft-white: #F9F9F9;
+  --pure-white: #FFFFFF;
+  --off-white: #FAFAFA;
+  
+  /* Accent Colors */
+  --accent-orange: #FF6F00;
+  --accent-teal: #009688;
+  --accent-indigo: #3F51B5;
+  --accent-amber: #FFC107;
+  --accent-lime: #CDDC39;
+  
+  /* Status Colors */
+  --success-green: #4CAF50;
+  --warning-orange: #FF9800;
+  --error-red: #F44336;
+  --info-blue: #2196F3;
+  
+  /* ==================== */
+  /* GRADIENT DEFINITIONS */
+  /* ==================== */
+  
+  /* Sun Gradients */
+  --gradient-sun: linear-gradient(135deg, var(--solar-yellow), var(--sun-glow), var(--harvest-gold));
+  --gradient-sunset: linear-gradient(135deg, var(--solar-yellow), var(--harvest-orange), var(--fruit-red));
+  --gradient-sunrise: linear-gradient(135deg, var(--deep-blue), var(--sky-blue), var(--solar-yellow));
+  
+  /* Ocean Gradients */
+  --gradient-ocean: linear-gradient(135deg, var(--deep-blue), var(--ocean-blue), var(--sky-blue));
+  --gradient-deep-sea: linear-gradient(135deg, var(--deep-blue), #0D47A1, var(--water-blue));
+  
+  /* Nature Gradients */
+  --gradient-forest: linear-gradient(135deg, var(--forest-green), var(--leaf-green), var(--spring-green));
+  --gradient-meadow: linear-gradient(135deg, var(--spring-green), #CDDC39, var(--leaf-green));
+  --gradient-harvest: linear-gradient(135deg, var(--harvest-gold), var(--harvest-orange), var(--fruit-red));
+  
+  /* Earth Gradients */
+  --gradient-earth: linear-gradient(135deg, var(--earth-brown), var(--soil-dark), var(--clay-red));
+  --gradient-soil: linear-gradient(135deg, #5D4037, var(--earth-brown), #8D6E63);
+  
+  /* Energy & Technology Gradients */
+  --gradient-energy: linear-gradient(135deg, var(--solar-yellow), var(--accent-teal), var(--sky-blue));
+  --gradient-tech: linear-gradient(135deg, var(--deep-blue), var(--accent-indigo), var(--accent-teal));
+  
+  /* Neutral Gradients */
+  --gradient-charcoal: linear-gradient(135deg, var(--dark-charcoal), var(--charcoal-gray), var(--slate-gray));
+  --gradient-light: linear-gradient(135deg, var(--pure-white), var(--soft-white), var(--light-blue));
+  
+  /* ==================== */
+  /* SEMANTIC COLOR VARIABLES */
+  /* ==================== */
+  
+  /* Background Colors */
+  --bg-primary: var(--pure-white);
+  --bg-secondary: var(--soft-white);
+  --bg-tertiary: var(--off-white);
+  --bg-dark: var(--dark-charcoal);
+  --bg-card: var(--pure-white);
+  --bg-section: var(--soft-white);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --bg-glass-dark: rgba(28, 28, 28, 0.9);
+  
+  /* Text Colors */
+  --text-primary: var(--dark-charcoal);
+  --text-secondary: var(--slate-gray);
+  --text-tertiary: var(--medium-gray);
+  --text-light: var(--pure-white);
+  --text-muted: var(--light-gray);
+  --text-success: var(--success-green);
+  --text-warning: var(--warning-orange);
+  --text-error: var(--error-red);
+  --text-info: var(--info-blue);
+  
+  /* Border Colors */
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-medium: rgba(0, 0, 0, 0.2);
+  --border-dark: rgba(0, 0, 0, 0.3);
+  --border-accent: var(--solar-yellow);
+  --border-success: var(--success-green);
+  --border-warning: var(--warning-orange);
+  --border-error: var(--error-red);
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-glow-yellow: rgba(253, 184, 19, 0.3);
+  --shadow-glow-green: rgba(76, 175, 80, 0.3);
+  --shadow-glow-blue: rgba(33, 150, 243, 0.3);
+  
+  /* Button Colors */
+  --btn-primary-bg: var(--gradient-sun);
+  --btn-primary-text: var(--dark-charcoal);
+  --btn-primary-hover: linear-gradient(135deg, var(--sun-glow), var(--solar-yellow), var(--sun-ray));
+  
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: var(--deep-blue);
+  --btn-secondary-border: var(--deep-blue);
+  --btn-secondary-hover: var(--deep-blue);
+  --btn-secondary-hover-text: var(--pure-white);
+  
+  --btn-success-bg: var(--success-green);
+  --btn-success-hover: var(--leaf-green);
+  
+  --btn-warning-bg: var(--warning-orange);
+  --btn-warning-hover: var(--harvest-orange);
+  
+  --btn-error-bg: var(--error-red);
+  --btn-error-hover: #D32F2F;
+  
+  /* Form Colors */
+  --form-bg: var(--pure-white);
+  --form-border: rgba(0, 0, 0, 0.1);
+  --form-border-focus: var(--sky-blue);
+  --form-placeholder: var(--light-gray);
+  --form-label: var(--charcoal-gray);
+  --form-error: var(--error-red);
+  --form-success: var(--success-green);
+  
+  /* Card Colors */
+  --card-bg: var(--pure-white);
+  --card-border: rgba(253, 184, 19, 0.1);
+  --card-shadow: var(--shadow-light);
+  --card-hover-shadow: var(--shadow-medium);
+  --card-accent-border: var(--gradient-sun);
+  
+  /* Navigation Colors */
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: var(--dark-charcoal);
+  --nav-text-hover: var(--solar-yellow);
+  --nav-bg-hover: rgba(253, 184, 19, 0.1);
+  --nav-border: rgba(11, 61, 145, 0.1);
+  
+  /* Footer Colors */
+  --footer-bg: var(--charcoal-gray);
+  --footer-text: var(--pure-white);
+  --footer-link: var(--soft-white);
+  --footer-link-hover: var(--solar-yellow);
+  --footer-border: rgba(255, 255, 255, 0.1);
+  
+  /* Status & Alert Colors */
+  --alert-success-bg: rgba(76, 175, 80, 0.1);
+  --alert-success-border: var(--success-green);
+  --alert-success-text: var(--forest-green);
+  
+  --alert-warning-bg: rgba(255, 152, 0, 0.1);
+  --alert-warning-border: var(--warning-orange);
+  --alert-warning-text: var(--harvest-orange);
+  
+  --alert-error-bg: rgba(244, 67, 54, 0.1);
+  --alert-error-border: var(--error-red);
+  --alert-error-text: var(--fruit-red);
+  
+  --alert-info-bg: rgba(33, 150, 243, 0.1);
+  --alert-info-border: var(--info-blue);
+  --alert-info-text: var(--ocean-blue);
+  
+  /* Chart & Data Visualization Colors */
+  --chart-1: var(--solar-yellow);
+  --chart-2: var(--leaf-green);
+  --chart-3: var(--sky-blue);
+  --chart-4: var(--harvest-orange);
+  --chart-5: var(--berry-purple);
+  --chart-6: var(--accent-teal);
+  --chart-7: var(--earth-brown);
+  --chart-8: var(--fruit-red);
+  
+  /* Icon Colors */
+  --icon-primary: var(--dark-charcoal);
+  --icon-secondary: var(--medium-gray);
+  --icon-accent: var(--solar-yellow);
+  --icon-success: var(--success-green);
+  --icon-warning: var(--warning-orange);
+  --icon-error: var(--error-red);
+  
+  /* Overlay Colors */
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+  --overlay-medium: rgba(0, 0, 0, 0.5);
+  --overlay-light: rgba(0, 0, 0, 0.3);
+  --overlay-sun: rgba(253, 184, 19, 0.2);
+  --overlay-green: rgba(76, 175, 80, 0.2);
+  --overlay-blue: rgba(33, 150, 243, 0.2);
+  
+  /* ==================== */
+  /* THEME-SPECIFIC COLORS */
+  /* ==================== */
+  
+  /* Solar Energy Theme */
+  --solar-panel-bg: linear-gradient(145deg, #FFFFFF, #F0F7F0);
+  --solar-panel-accent: var(--gradient-sun);
+  --solar-energy-glow: var(--shadow-glow-yellow);
+  
+  /* Agriculture Theme */
+  --farm-field-bg: linear-gradient(145deg, #F5F9F5, #E8F5E9);
+  --farm-field-accent: var(--gradient-forest);
+  --crop-growth: var(--gradient-meadow);
+  
+  /* Water & Irrigation Theme */
+  --water-bg: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+  --water-accent: var(--gradient-ocean);
+  --water-ripple: rgba(33, 150, 243, 0.3);
+  
+  /* Soil Health Theme */
+  --soil-bg: linear-gradient(135deg, var(--earth-brown), var(--soil-dark));
+  --soil-texture: rgba(121, 85, 72, 0.1);
+  
+  /* Renewable Energy Theme */
+  --energy-bg: linear-gradient(135deg, var(--deep-blue), #1565C0);
+  --energy-accent: var(--gradient-energy);
+  
+  /* Weather Theme */
+  --weather-sun: var(--solar-yellow);
+  --weather-cloud: #ECEFF1;
+  --weather-rain: #B3E5FC;
+  --weather-storm: #455A64;
+  
+  /* Seasonal Colors */
+  --spring-bg: linear-gradient(135deg, #C8E6C9, #A5D6A7);
+  --spring-text: #2E7D32;
+  
+  --summer-bg: linear-gradient(135deg, #FFF9C4, #FFF59D);
+  --summer-text: #F57F17;
+  
+  --autumn-bg: linear-gradient(135deg, #FFCC80, #FFB74D);
+  --autumn-text: #E65100;
+  
+  --winter-bg: linear-gradient(135deg, #BBDEFB, #90CAF9);
+  --winter-text: #1565C0;
+}
+
+/* ==================== */
+/* DARK MODE COLORS */
+/* ==================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background Colors */
+    --bg-primary: #121212;
+    --bg-secondary: #1E1E1E;
+    --bg-tertiary: #2D2D2D;
+    --bg-dark: #0A0A0A;
+    --bg-card: #1E1E1E;
+    --bg-section: #1A1A1A;
+    --bg-glass: rgba(30, 30, 30, 0.9);
+    --bg-glass-dark: rgba(10, 10, 10, 0.9);
+    
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #E0E0E0;
+    --text-tertiary: #B0B0B0;
+    --text-light: #FFFFFF;
+    --text-muted: #757575;
+    
+    /* Border Colors */
+    --border-light: rgba(255, 255, 255, 0.1);
+    --border-medium: rgba(255, 255, 255, 0.2);
+    --border-dark: rgba(255, 255, 255, 0.3);
+    
+    /* Shadow Colors */
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+    --shadow-dark: rgba(0, 0, 0, 0.7);
+    
+    /* Button Colors */
+    --btn-primary-text: #121212;
+    --btn-secondary-text: #FFFFFF;
+    --btn-secondary-hover-text: #121212;
+    
+    /* Form Colors */
+    --form-bg: #2D2D2D;
+    --form-border: rgba(255, 255, 255, 0.1);
+    --form-label: #E0E0E0;
+    
+    /* Card Colors */
+    --card-bg: #1E1E1E;
+    --card-border: rgba(253, 184, 19, 0.2);
+    
+    /* Navigation Colors */
+    --nav-bg: rgba(30, 30, 30, 0.95);
+    --nav-text: #FFFFFF;
+    --nav-bg-hover: rgba(253, 184, 19, 0.2);
+    --nav-border: rgba(253, 184, 19, 0.1);
+    
+    /* Footer Colors */
+    --footer-bg: #0A0A0A;
+    --footer-border: rgba(255, 255, 255, 0.05);
+    
+    /* Theme-specific Dark Mode Adjustments */
+    --solar-panel-bg: linear-gradient(145deg, #2D2D2D, #252525);
+    --farm-field-bg: linear-gradient(145deg, #1E1E1E, #252525);
+    --water-bg: linear-gradient(135deg, #1A237E, #0D47A1);
+    --soil-bg: linear-gradient(135deg, #3E2723, #5D4037);
+    --energy-bg: linear-gradient(135deg, #0A0A0A, #1A237E);
+    
+    --spring-bg: linear-gradient(135deg, #1B5E20, #2E7D32);
+    --summer-bg: linear-gradient(135deg, #F57F17, #FF9800);
+    --autumn-bg: linear-gradient(135deg, #E65100, #FF6F00);
+    --winter-bg: linear-gradient(135deg, #0D47A1, #1565C0);
+  }
+}
+
+/* ==================== */
+/* HIGH CONTRAST MODE */
+/* ==================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --solar-yellow: #FFD700;
+    --deep-blue: #000080;
+    --eco-green: #006400;
+    --forest-green: #008000;
+    --leaf-green: #00FF00;
+    --earth-brown: #8B4513;
+    --dark-charcoal: #000000;
+    --pure-white: #FFFFFF;
+    --accent-orange: #FF4500;
+    
+    --text-primary: #000000;
+    --text-light: #FFFFFF;
+    
+    --border-light: #000000;
+    --border-medium: #000000;
+    --border-dark: #000000;
+    
+    --btn-primary-text: #000000;
+    --btn-secondary-text: #000000;
+  }
+}
+
+/* ==================== */
+/* COLOR UTILITY CLASSES */
+/* ==================== */
+
+/* Background Colors */
+.bg-sun { background-color: var(--solar-yellow); }
+.bg-ocean { background-color: var(--deep-blue); }
+.bg-forest { background-color: var(--forest-green); }
+.bg-earth { background-color: var(--earth-brown); }
+.bg-harvest { background-color: var(--harvest-gold); }
+.bg-charcoal { background-color: var(--dark-charcoal); }
+.bg-white { background-color: var(--pure-white); }
+.bg-soft { background-color: var(--soft-white); }
+
+.bg-gradient-sun { background: var(--gradient-sun); }
+.bg-gradient-ocean { background: var(--gradient-ocean); }
+.bg-gradient-forest { background: var(--gradient-forest); }
+.bg-gradient-earth { background: var(--gradient-earth); }
+.bg-gradient-harvest { background: var(--gradient-harvest); }
+.bg-gradient-charcoal { background: var(--gradient-charcoal); }
+.bg-gradient-light { background: var(--gradient-light); }
+
+/* Text Colors */
+.text-sun { color: var(--solar-yellow); }
+.text-ocean { color: var(--deep-blue); }
+.text-forest { color: var(--forest-green); }
+.text-earth { color: var(--earth-brown); }
+.text-harvest { color: var(--harvest-gold); }
+.text-charcoal { color: var(--dark-charcoal); }
+.text-white { color: var(--pure-white); }
+.text-gray { color: var(--medium-gray); }
+
+.text-gradient-sun {
+  background: var(--gradient-sun);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-ocean {
+  background: var(--gradient-ocean);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-forest {
+  background: var(--gradient-forest);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border Colors */
+.border-sun { border-color: var(--solar-yellow); }
+.border-ocean { border-color: var(--deep-blue); }
+.border-forest { border-color: var(--forest-green); }
+.border-earth { border-color: var(--earth-brown); }
+.border-harvest { border-color: var(--harvest-gold); }
+
+.border-gradient-sun {
+  border: 2px solid transparent;
+  border-image: var(--gradient-sun) 1;
+}
+
+.border-gradient-ocean {
+  border: 2px solid transparent;
+  border-image: var(--gradient-ocean) 1;
+}
+
+.border-gradient-forest {
+  border: 2px solid transparent;
+  border-image: var(--gradient-forest) 1;
+}
+
+/* Shadow Classes */
+.shadow-sun { box-shadow: 0 0 30px var(--shadow-glow-yellow); }
+.shadow-forest { box-shadow: 0 0 30px var(--shadow-glow-green); }
+.shadow-ocean { box-shadow: 0 0 30px var(--shadow-glow-blue); }
+
+/* Status Colors */
+.text-success { color: var(--success-green); }
+.text-warning { color: var(--warning-orange); }
+.text-error { color: var(--error-red); }
+.text-info { color: var(--info-blue); }
+
+.bg-success { background-color: var(--success-green); }
+.bg-warning { background-color: var(--warning-orange); }
+.bg-error { background-color: var(--error-red); }
+.bg-info { background-color: var(--info-blue); }
+
+.border-success { border-color: var(--success-green); }
+.border-warning { border-color: var(--warning-orange); }
+.border-error { border-color: var(--error-red); }
+.border-info { border-color: var(--info-blue); }
+
+/* Overlay Classes */
+.overlay-dark { background-color: var(--overlay-dark); }
+.overlay-medium { background-color: var(--overlay-medium); }
+.overlay-light { background-color: var(--overlay-light); }
+.overlay-sun { background-color: var(--overlay-sun); }
+.overlay-green { background-color: var(--overlay-green); }
+.overlay-blue { background-color: var(--overlay-blue); }
+
+/* Glass Morphism */
+.glass-light {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+}
+
+.glass-dark {
+  background: var(--bg-glass-dark);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+}
+
+/* Chart Color Classes */
+.chart-1 { color: var(--chart-1); }
+.chart-2 { color: var(--chart-2); }
+.chart-3 { color: var(--chart-3); }
+.chart-4 { color: var(--chart-4); }
+.chart-5 { color: var(--chart-5); }
+.chart-6 { color: var(--chart-6); }
+.chart-7 { color: var(--chart-7); }
+.chart-8 { color: var(--chart-8); }
+
+/* Seasonal Classes */
+.spring-bg { background: var(--spring-bg); color: var(--spring-text); }
+.summer-bg { background: var(--summer-bg); color: var(--summer-text); }
+.autumn-bg { background: var(--autumn-bg); color: var(--autumn-text); }
+.winter-bg { background: var(--winter-bg); color: var(--winter-text); }
+
+/* Opacity Utilities */
+.opacity-10 { opacity: 0.1; }
+.opacity-20 { opacity: 0.2; }
+.opacity-30 { opacity: 0.3; }
+.opacity-40 { opacity: 0.4; }
+.opacity-50 { opacity: 0.5; }
+.opacity-60 { opacity: 0.6; }
+.opacity-70 { opacity: 0.7; }
+.opacity-80 { opacity: 0.8; }
+.opacity-90 { opacity: 0.9; }
+.opacity-100 { opacity: 1; }

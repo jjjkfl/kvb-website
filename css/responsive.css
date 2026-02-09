@@ -2,47 +2,79 @@
 
 /* Extra Small Devices (Mobile Portrait) */
 @media (max-width: 575.98px) {
-    /* Natural Mobile Adjustments */
-    .container {
-        padding: 0 var(--space-sm);
+    :root {
+        --space-xs: 0.4rem;
+        --space-sm: 0.8rem;
+        --space-md: 1.2rem;
+        --space-lg: 1.6rem;
+        --space-xl: 2rem;
+        --space-xxl: 2.5rem;
     }
     
-    .section {
-        padding: var(--space-xl) 0;
+    .container {
+        padding: 0 var(--space-md);
     }
     
     .hero {
         min-height: 100vh;
         background-attachment: scroll !important;
+        padding-top: 70px;
     }
     
-    .hero h1 {
+    .hero-content {
+        padding: 0 var(--space-md);
+    }
+    
+    .hero-title {
         font-size: 2.2rem;
         line-height: 1.2;
+        margin-bottom: var(--space-md);
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
+        margin-bottom: var(--space-xl);
+        opacity: 0.9;
     }
     
     .hero-buttons {
         flex-direction: column;
         gap: var(--space-sm);
+        width: 100%;
     }
     
     .hero-buttons .btn {
         width: 100%;
         padding: 1rem 1.5rem;
+        margin: 0.3rem 0;
     }
     
     /* Navigation for Mobile */
+    .header-container {
+        height: 70px;
+        padding: 0 var(--space-md);
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.8rem;
+    }
+    
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         padding: var(--space-lg);
         gap: 0;
@@ -53,6 +85,9 @@
         transition: all var(--transition-bounce);
         border-radius: 0 0 var(--radius-xl) var(--radius-xl);
         border-top: 3px solid var(--leaf-green);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        z-index: 1000;
     }
     
     .nav-menu.active {
@@ -63,79 +98,181 @@
     
     .nav-menu li {
         width: 100%;
+        border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
     }
     
     .nav-link {
         display: block;
         padding: var(--space-md) 0;
-        border-bottom: 1px solid rgba(46, 125, 50, 0.1);
         font-size: 1.1rem;
+        text-align: center;
+        transition: all var(--transition-base);
+    }
+    
+    .nav-link:hover {
+        color: var(--solar-yellow);
+        transform: translateX(5px);
     }
     
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: var(--gradient-sun);
+        border: none;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        position: relative;
         z-index: 1001;
+        transition: all var(--transition-base);
+    }
+    
+    .mobile-menu-btn:hover {
+        transform: scale(1.1);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .mobile-menu-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: white;
+        position: relative;
+        transition: all var(--transition-base);
+    }
+    
+    .mobile-menu-btn span::before,
+    .mobile-menu-btn span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        transition: all var(--transition-base);
+    }
+    
+    .mobile-menu-btn span::before {
+        top: -8px;
+    }
+    
+    .mobile-menu-btn span::after {
+        top: 8px;
+    }
+    
+    .mobile-menu-btn.active span {
+        background: transparent;
+    }
+    
+    .mobile-menu-btn.active span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .mobile-menu-btn.active span::after {
+        transform: rotate(-45deg);
+        top: 0;
     }
     
     /* Card Adjustments */
     .grid-2,
     .grid-3,
-    .grid-4 {
+    .grid-4,
+    .grid-auto {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
     
     .card,
     .solar-panel-card,
-    .farm-field-card {
+    .farm-field-card,
+    .weather-card,
+    .soil-health,
+    .harvest-yield {
         padding: var(--space-lg);
-        margin: 0 var(--space-sm);
+        margin: 0;
+        width: 100%;
     }
     
     /* Impact Counters */
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
     .counter-number {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .stats-counter {
         flex-direction: column;
         gap: var(--space-lg);
+        text-align: center;
     }
     
     /* Buttons */
     .btn {
         padding: 0.875rem 1.5rem;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        min-height: 48px;
     }
     
     /* WhatsApp Float */
     .whatsapp-float {
         bottom: var(--space-lg);
         right: var(--space-lg);
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
     }
     
-    .whatsapp-button {
-        padding: var(--space-sm);
-        font-size: 0;
+    .whatsapp-float span {
+        display: none;
     }
     
-    .whatsapp-button i {
+    .whatsapp-float.visible {
+        padding: 1rem;
+        border-radius: 50%;
+    }
+    
+    .whatsapp-icon {
         font-size: 1.5rem;
         margin: 0;
     }
     
     /* Back to Top */
     .back-to-top {
-        bottom: var(--space-lg);
+        bottom: calc(var(--space-lg) + 60px);
         left: var(--space-lg);
         width: 50px;
         height: 50px;
+        font-size: 1.2rem;
     }
     
     /* Footer */
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-xl);
+    }
+    
+    .footer-logo {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
+    }
+    
+    .footer-links li {
+        margin-bottom: var(--space-sm);
     }
     
     .footer-links li::before {
@@ -145,20 +282,142 @@
     /* Forms */
     .calculator-inputs,
     .dashboard-grid,
-    .planner-grid {
+    .planner-grid,
+    .weather-data,
+    .soil-metrics,
+    .energy-metrics {
         grid-template-columns: 1fr;
+    }
+    
+    .integration-flow {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .flow-step {
+        width: 100%;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .flow-step::before {
+        display: none;
+    }
+    
+    .flow-step::after {
+        content: '↓';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: var(--leaf-green);
+        animation: bounce 2s infinite;
+    }
+    
+    .flow-step:last-child::after {
+        display: none;
     }
     
     /* Animations Adjustments */
     .animate-on-scroll {
         animation-delay: 0s !important;
     }
+    
+    .stagger-children > * {
+        animation-delay: 0.1s !important;
+    }
+    
+    .stagger-children > *:nth-child(n+4) {
+        animation-delay: 0.2s !important;
+    }
+    
+    /* Prestige Wall */
+    .prestige-track {
+        gap: var(--space-xl);
+        animation: scroll 30s linear infinite;
+    }
+    
+    .prestige-client {
+        width: 140px;
+        height: 100px;
+        padding: var(--space-md);
+    }
+    
+    /* Timeline */
+    .crop-timeline {
+        padding-left: var(--space-lg);
+    }
+    
+    .timeline-milestone {
+        padding: var(--space-md);
+        margin-bottom: var(--space-lg);
+    }
+    
+    /* Seasonal Calendar */
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .season-card {
+        min-height: 180px;
+    }
+    
+    /* Energy Mix */
+    .mix-chart {
+        flex-direction: column;
+        height: auto;
+        gap: var(--space-md);
+    }
+    
+    .mix-segment {
+        width: 100%;
+        height: 40px;
+        border-radius: var(--radius-md);
+        margin-bottom: 30px;
+    }
+    
+    .mix-segment::before {
+        bottom: -25px;
+    }
+    
+    .mix-segment::after {
+        top: -25px;
+        left: auto;
+        right: 10px;
+        text-align: right;
+    }
+    
+    /* Success Metrics */
+    .success-metrics {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    /* Packaging Items */
+    .packaging-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+    
+    .packaging-stats {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
 }
 
 /* Small Devices (Mobile Landscape) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .container {
-        padding: 0 var(--space-md);
+        padding: 0 var(--space-lg);
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
     
     .grid-2 {
@@ -169,16 +428,69 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .hero h1 {
-        font-size: 2.8rem;
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .nav-menu {
         gap: var(--space-lg);
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .nav-link {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    /* Metrics */
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .metric-value {
+        font-size: 3rem;
+    }
+    
+    /* Integration Flow */
+    .integration-flow {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-xl);
+    }
+    
+    .flow-step {
+        width: calc(50% - var(--space-lg));
+        margin-bottom: var(--space-xl);
+    }
+    
+    .flow-step:nth-child(odd)::before {
+        display: block;
+        right: calc(-1 * var(--space-xl));
+        width: var(--space-xl);
+    }
+    
+    .flow-step:nth-child(even)::before {
+        display: none;
+    }
+    
+    .flow-step:nth-child(odd):after {
+        content: '↓';
+        position: absolute;
+        bottom: calc(-1 * var(--space-xl));
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: var(--leaf-green);
+        animation: bounce 2s infinite;
+    }
+    
+    .flow-step:nth-child(even) {
+        transform: translateY(var(--space-xl));
+    }
+    
+    .flow-step:nth-last-child(2):after {
+        display: none;
     }
 }
 
@@ -189,16 +501,28 @@
         padding: 0 var(--space-lg);
     }
     
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .hero h1 {
-        font-size: 3.2rem;
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .nav-menu {
         gap: var(--space-xl);
+    }
+    
+    .nav-link {
+        font-size: 1rem;
     }
     
     /* Enhanced Touch Targets */
@@ -212,6 +536,40 @@
         min-width: 44px;
         min-height: 44px;
     }
+    
+    /* Integration Flow */
+    .integration-flow {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .flow-step {
+        width: calc(33.333% - var(--space-xl));
+        margin-bottom: var(--space-xl);
+    }
+    
+    .flow-step:nth-child(1)::before,
+    .flow-step:nth-child(2)::before {
+        display: block;
+        right: calc(-1 * var(--space-xl));
+        width: var(--space-xl);
+    }
+    
+    .flow-step:nth-child(3)::before {
+        display: none;
+    }
+    
+    .flow-step:nth-child(1):after,
+    .flow-step:nth-child(2):after {
+        content: '→';
+        position: absolute;
+        top: 50%;
+        right: calc(-1 * var(--space-xl));
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: var(--leaf-green);
+        animation: bounce 2s infinite;
+    }
 }
 
 /* Large Devices (Small Desktops) */
@@ -220,8 +578,16 @@
         max-width: 960px;
     }
     
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
     .nav-menu {
         gap: var(--space-xl);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -231,31 +597,54 @@
         max-width: 1200px;
     }
     
-    .hero h1 {
+    .hero-title {
         font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
     }
 }
 
 /* 4K and Ultra-wide Screens */
 @media (min-width: 1600px) {
     .container {
-        max-width: 1400px;
+        max-width: 1500px;
+    }
+    
+    :root {
+        --space-xl: 4rem;
+        --space-xxl: 5rem;
     }
     
     h1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     
     h2 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     
-    .hero h1 {
-        font-size: 5.5rem;
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
     }
     
     .section {
         padding: var(--space-xxl) 0;
+    }
+    
+    .metric-value {
+        font-size: 4.5rem;
+    }
+    
+    .card,
+    .solar-panel-card,
+    .farm-field-card {
+        padding: var(--space-xxl);
     }
 }
 
@@ -263,6 +652,10 @@
 @media (max-width: 280px) {
     .container {
         padding: 0 var(--space-xs);
+    }
+    
+    :root {
+        font-size: 14px;
     }
     
     h1 {
@@ -278,8 +671,16 @@
         font-size: 0.9rem;
     }
     
-    .counter-number {
-        font-size: 2.5rem;
+    .metric-value {
+        font-size: 2.2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 }
 
@@ -287,11 +688,12 @@
 @media (max-height: 600px) and (orientation: landscape) {
     .hero {
         min-height: 120vh;
-        padding-top: 100px;
+        padding-top: 70px;
     }
     
-    .hero h1 {
+    .hero-title {
         font-size: 2.5rem;
+        margin-bottom: var(--space-sm);
     }
     
     .hero-subtitle {
@@ -299,8 +701,25 @@
         margin-bottom: var(--space-lg);
     }
     
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+    
+    .hero-buttons .btn {
+        flex: 1;
+        min-width: 180px;
+    }
+    
     .nav-menu {
         gap: var(--space-md);
+        padding: var(--space-sm) 0;
+    }
+    
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -310,17 +729,29 @@
     .btn {
         min-height: 48px;
         min-width: 48px;
+        padding: 1rem 2rem;
     }
     
     .nav-link {
         padding: var(--space-sm) var(--space-md);
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    /* Disable hover effects */
+    /* Reduce hover effects */
     .card:hover,
-    .btn:hover,
-    .nav-link:hover {
-        transform: none !important;
+    .solar-panel-card:hover,
+    .farm-field-card:hover {
+        transform: none;
+    }
+    
+    .card:active,
+    .solar-panel-card:active,
+    .farm-field-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
     }
     
     /* Better scrolling */
@@ -334,6 +765,18 @@
     textarea {
         font-size: 16px !important;
     }
+    
+    /* Touch-friendly sliders */
+    .slider-handle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Touch-friendly timeline */
+    .timeline-milestone {
+        padding: var(--space-lg);
+        margin: var(--space-lg) 0;
+    }
 }
 
 /* Reduced Motion Preferences */
@@ -344,8 +787,9 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        animation-delay: 0s !important;
-        transition-delay: 0s !important;
+        animation-delay: -1ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
     }
     
     html {
@@ -353,10 +797,59 @@
     }
     
     .animate-on-scroll,
-    .stagger-children > * {
+    .stagger-children > *,
+    .entrance-plant,
+    .entrance-sun,
+    .entrance-leaf,
+    .entrance-water,
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-slide-down,
+    .animate-slide-left,
+    .animate-slide-right {
+        animation: none !important;
         opacity: 1 !important;
         transform: none !important;
+        filter: none !important;
+        transition: none !important;
+    }
+    
+    .continuous-float,
+    .continuous-sway,
+    .continuous-spin,
+    .continuous-pulse,
+    .continuous-wave,
+    .loading-sun-rays,
+    .loading-plant,
+    .sunshine-effect::before,
+    .rain-effect::before,
+    .wind-effect::after,
+    .shimmer-effect::after,
+    .glow-effect::before {
         animation: none !important;
+    }
+    
+    .whatsapp-float,
+    .back-to-top {
+        transition: none !important;
+    }
+    
+    .metric-card:hover,
+    .dashboard-item:hover,
+    .weather-item:hover,
+    .soil-metric:hover,
+    .energy-metric:hover,
+    .sensor-node:hover,
+    .flow-step:hover,
+    .season-card:hover,
+    .packaging-item:hover,
+    .calculator-input:focus-within,
+    .slider-handle:hover,
+    .scanner-result:hover,
+    .success-metric:hover,
+    .community-story:hover,
+    .timeline-milestone:hover {
+        transform: none !important;
         transition: none !important;
     }
 }
@@ -364,18 +857,72 @@
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
     :root {
-        --forest-green: #006400;
-        --sun-gold: #FFD700;
-        --text-dark: #000000;
-        --text-light: #333333;
+        --solar-yellow: #FFD700;
+        --sun-glow: #FFFF00;
+        --deep-blue: #000080;
+        --ocean-blue: #0000CD;
+        --eco-green: #006400;
+        --forest-green: #008000;
+        --leaf-green: #00FF00;
+        --dark-charcoal: #000000;
+        --charcoal-gray: #333333;
+        --soft-white: #FFFFFF;
+        --pure-white: #FFFFFF;
+        --accent-orange: #FF4500;
+        --harvest-gold: #FF8C00;
+        --water-blue: #0000FF;
+        --earth-brown: #8B4513;
     }
     
     .btn-primary {
         border: 3px solid black;
+        color: black;
     }
     
-    .card {
+    .btn-secondary {
+        border: 3px solid var(--deep-blue);
+    }
+    
+    .btn-outline {
+        border: 3px solid var(--deep-blue);
+    }
+    
+    .card,
+    .solar-panel-card,
+    .farm-field-card,
+    .weather-card,
+    .soil-health,
+    .harvest-yield,
+    .energy-display,
+    .agri-dashboard,
+    .community-story,
+    .seasonal-calendar,
+    .carbon-calculator,
+    .irrigation-control,
+    .harvest-prediction,
+    .sensor-network,
+    .energy-mix,
+    .success-story,
+    .quality-scanner,
+    .packaging-display {
         border: 2px solid black;
+    }
+    
+    .metric-card {
+        border: 2px solid var(--solar-yellow);
+    }
+    
+    .nav-link {
+        text-decoration: underline;
+    }
+    
+    .form-control {
+        border: 2px solid black;
+    }
+    
+    .form-control:focus {
+        border-color: var(--leaf-green);
+        outline: 3px solid var(--leaf-green);
     }
 }
 
@@ -387,18 +934,81 @@
         --card-bg: linear-gradient(145deg, #3d3d3d, #2d2d2d);
         --text-dark: #ffffff;
         --text-light: #b0b0b0;
-        --soil-dark: #d7ccc8;
+        --charcoal-gray: #444444;
+        --earth-brown: #8d6e63;
+        --soil-dark: #a1887f;
     }
     
     body {
         color-scheme: dark;
+        background: var(--background);
+        color: var(--text-dark);
+    }
+    
+    .main-header {
+        background-color: rgba(40, 40, 40, 0.95);
+        border-bottom-color: rgba(253, 184, 19, 0.2);
     }
     
     .card,
     .solar-panel-card,
-    .farm-field-card {
-        background: var(--card-bg);
+    .farm-field-card,
+    .weather-card,
+    .agri-dashboard,
+    .community-story,
+    .seasonal-calendar,
+    .carbon-calculator,
+    .irrigation-control,
+    .harvest-prediction,
+    .quality-scanner,
+    .packaging-display {
+        background: linear-gradient(145deg, 
+            rgba(60, 60, 60, 0.95),
+            rgba(45, 45, 45, 0.85));
         color: var(--text-dark);
+        border-color: rgba(253, 184, 19, 0.1);
+    }
+    
+    .soil-health {
+        background: linear-gradient(135deg, 
+            #5d4037,
+            #4e342e);
+    }
+    
+    .energy-display {
+        background: linear-gradient(135deg, 
+            #0a2d5f,
+            #09305c);
+    }
+    
+    .impact-meter {
+        background: linear-gradient(135deg, 
+            #1b5e20,
+            #2e7d32);
+    }
+    
+    .tech-integration {
+        background: linear-gradient(135deg, 
+            rgba(60, 60, 60, 0.95),
+            rgba(45, 45, 45, 0.85));
+    }
+    
+    .water-conservation {
+        background: linear-gradient(135deg, 
+            rgba(25, 55, 85, 0.95),
+            rgba(20, 50, 80, 0.85));
+    }
+    
+    .sensor-network {
+        background: linear-gradient(135deg, 
+            #4e342e,
+            #3e2723);
+    }
+    
+    .energy-mix {
+        background: linear-gradient(135deg, 
+            #0a2d5f,
+            #09305c);
     }
     
     .form-control {
@@ -411,6 +1021,33 @@
         border-color: var(--leaf-green);
         background: #4d4d4d;
     }
+    
+    .calculator-input,
+    .dashboard-item,
+    .weather-item,
+    .soil-metric,
+    .energy-metric,
+    .sensor-node,
+    .flow-step,
+    .scanner-result,
+    .success-metric,
+    .packaging-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .timeline-milestone {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav-menu {
+        background: rgba(40, 40, 40, 0.98);
+    }
+    
+    .prestige-client {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 /* Print Styles */
@@ -420,14 +1057,23 @@
         color: black !important;
         box-shadow: none !important;
         text-shadow: none !important;
+        text-decoration: none !important;
     }
     
     .hero,
     .whatsapp-float,
     .back-to-top,
-    .main-nav,
+    .mobile-menu-btn,
     .main-footer,
-    .btn {
+    .btn,
+    .nav-menu,
+    .prestige-scroll,
+    .live-feed,
+    .slider-handle,
+    .scanner-beam,
+    .water-drop,
+    .shimmer-effect::after,
+    .glow-effect::before {
         display: none !important;
     }
     
@@ -436,25 +1082,142 @@
         padding: 0 !important;
     }
     
+    .main-header {
+        position: static !important;
+        box-shadow: none !important;
+        background: white !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .header-container {
+        height: auto !important;
+        justify-content: center !important;
+    }
+    
+    .logo {
+        color: black !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-content {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        margin: 2rem 0;
+    }
+    
+    .hero-title {
+        color: black !important;
+        font-size: 2rem !important;
+        background: none !important;
+        -webkit-text-fill-color: black !important;
+    }
+    
+    .hero-subtitle {
+        color: black !important;
+        opacity: 1 !important;
+    }
+    
+    .section {
+        padding: 1rem 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    .section-title {
+        font-size: 1.5rem !important;
+        color: black !important;
+    }
+    
+    .section-title::after {
+        background: black !important;
+    }
+    
+    .card,
+    .solar-panel-card,
+    .farm-field-card,
+    .weather-card,
+    .soil-health,
+    .harvest-yield,
+    .energy-display,
+    .agri-dashboard,
+    .community-story,
+    .seasonal-calendar,
+    .carbon-calculator,
+    .irrigation-control,
+    .harvest-prediction,
+    .sensor-network,
+    .energy-mix,
+    .success-story,
+    .quality-scanner,
+    .packaging-display {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ddd !important;
+        padding: 1rem !important;
+        margin: 1rem 0 !important;
+        break-inside: avoid;
+    }
+    
+    .metric-card {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        padding: 1rem !important;
+        margin: 0.5rem !important;
+    }
+    
+    .metric-value {
+        color: black !important;
+        font-size: 2rem !important;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-auto {
+        display: block !important;
+    }
+    
     a {
         text-decoration: underline !important;
+        color: #0000EE !important;
     }
     
     a[href]::after {
         content: " (" attr(href) ")";
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
     }
     
     .page-break {
         page-break-before: always;
     }
     
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
         page-break-after: avoid;
     }
     
     img {
         max-width: 100% !important;
         page-break-inside: avoid;
+    }
+    
+    table {
+        page-break-inside: avoid;
+    }
+    
+    .charts,
+    .graphs,
+    .visualizations {
+        display: none !important;
+    }
+    
+    .no-print {
+        display: none !important;
     }
 }
 
@@ -466,6 +1229,12 @@
     
     .hero-buttons {
         flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem auto;
     }
 }
 
@@ -481,6 +1250,17 @@
     .hero-buttons {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-buttons .btn {
+        flex: none;
+        min-width: 200px;
+        margin: 0.5rem;
+    }
+    
+    .nav-menu {
+        gap: var(--space-md);
     }
 }
 
@@ -504,11 +1284,27 @@
     
     .integration-flow {
         flex-direction: column;
-        gap: var(--space-lg);
+        gap: var(--space-xl);
     }
     
     .flow-step {
         width: 100%;
+        margin-bottom: var(--space-xl);
+    }
+    
+    .flow-step:after {
+        content: '↓';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: var(--leaf-green);
+        animation: bounce 2s infinite;
+    }
+    
+    .flow-step:last-child:after {
+        display: none;
     }
     
     .audience-selector {
@@ -519,46 +1315,184 @@
         width: 100%;
         margin-bottom: var(--space-sm);
     }
+    
+    /* Weather Data */
+    .weather-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Soil Metrics */
+    .soil-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Energy Metrics */
+    .energy-metrics {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .energy-metric {
+        width: 100%;
+    }
+    
+    /* Dashboard Grid */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Calendar Grid */
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Sensor Grid */
+    .sensor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Scanner Results */
+    .scanner-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Success Metrics */
+    .success-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
 }
 
 /* Performance Optimizations */
 @media (max-width: 1024px) {
     .parallax-layer {
         animation: none !important;
+        transform: none !important;
     }
     
     .complex-animation {
         animation: fadeIn 0.5s ease !important;
+    }
+    
+    .water-flow,
+    .pattern-flow,
+    .light-beam {
+        animation-duration: 2s !important;
+    }
+    
+    .pulse-animation,
+    .glow-animation,
+    .float-animation {
+        animation-iteration-count: 2 !important;
     }
 }
 
 /* Battery Saver Mode */
 @media (prefers-reduced-data: reduce) {
     .hero {
-        background: var(--gradient-forest) !important;
+        background: var(--gradient-ocean) !important;
+        min-height: 60vh !important;
     }
     
+    .hero-video video,
     .hero::before,
-    .body::before {
-        display: none;
+    .hero::after,
+    .body::before,
+    .body::after {
+        display: none !important;
     }
     
     .background-image {
-        display: none;
+        display: none !important;
     }
     
     video,
-    .gif {
-        display: none;
+    .gif,
+    .lottie-animation,
+    .canvas-animation {
+        display: none !important;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+    
+    .water-conservation::before,
+    .soil-health::before,
+    .weather-card::before,
+    .energy-display::before,
+    .carbon-calculator::before,
+    .harvest-prediction::before,
+    .packaging-display::before,
+    .quality-scanner::before {
+        display: none !important;
+    }
+    
+    .water-drop,
+    .scanner-beam,
+    .shimmer-effect::after,
+    .glow-effect::before,
+    .sunshine-effect::before,
+    .rain-effect::before,
+    .wind-effect::after {
+        display: none !important;
+    }
+    
+    .irrigation-system::before,
+    .irrigation-system::after,
+    .harvest-yield::before,
+    .harvest-yield::after,
+    .impact-meter::before,
+    .tech-integration::before {
+        display: none !important;
     }
 }
 
 /* Very Slow Connections */
 @media (update: slow) {
-    .animate-on-scroll {
+    .animate-on-scroll,
+    .stagger-children > *,
+    .entrance-animation {
         transition: none !important;
         animation: none !important;
         opacity: 1 !important;
         transform: none !important;
+        filter: none !important;
+    }
+    
+    .continuous-animation,
+    .loading-animation {
+        animation: none !important;
+    }
+    
+    .hover-animation:hover,
+    .focus-animation:focus {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .metric-card:hover,
+    .dashboard-item:hover,
+    .weather-item:hover,
+    .soil-metric:hover,
+    .energy-metric:hover,
+    .sensor-node:hover,
+    .flow-step:hover,
+    .season-card:hover,
+    .packaging-item:hover {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .btn:hover,
+    .nav-link:hover,
+    .whatsapp-float:hover,
+    .back-to-top:hover {
+        transform: none !important;
+        transition: none !important;
     }
 }
