@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KVB Green Energies</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Same navigation as index.html -->
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero contact-hero">
+        <div class="container">
+            <h1 class="page-title">Contact KVB Green Energies</h1>
+            <p class="page-subtitle">Get in touch with India's leading clean energy technology company</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="contact-options-grid">
+                <a href="#request-demo" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Request Demo</h3>
+                    <p>Schedule a live demonstration of our solutions</p>
+                </a>
+                
+                <a href="#technical-inquiry" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Inquiry</h3>
+                    <p>Get technical specifications and engineering support</p>
+                </a>
+                
+                <a href="#government-partnership" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Government Partnership</h3>
+                    <p>Explore collaborations with government institutions</p>
+                </a>
+                
+                <a href="#investor-inquiry" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investor Inquiry</h3>
+                    <p>Learn about investment opportunities</p>
+                </a>
+                
+                <a href="#farmer-support" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Farmer Support</h3>
+                    <p>Get assistance for agricultural solutions</p>
+                </a>
+                
+                <a href="#general-inquiry" class="contact-option">
+                    <div class="option-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>General Inquiry</h3>
+                    <p>Contact us for any other questions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Demo Form -->
+    <section id="request-demo" class="section section-dark">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2 class="section-title">Request a Demo</h2>
+                    <p class="section-subtitle">Experience our technology first-hand</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="demo-name">Full Name *</label>
+                            <input type="text" id="demo-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-organization">Organization *</label>
+                            <input type="text" id="demo-organization" name="organization" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="demo-email">Email Address *</label>
+                            <input type="email" id="demo-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-phone">Phone Number *</label>
+                            <input type="tel" id="demo-phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="demo-solution">Solution Interested In *</label>
+                        <select id="demo-solution" name="solution" required>
+                            <option value="">Select a solution</option>
+                            <option value="solar-steam-cooking">Solar Steam Cooking System</option>
+                            <option value="scheffler-dish">Solar Scheffler Dish</option>
+                            <option value="solar-dryer">Hybrid Solar Dryer</option>
+                            <option value="energy-storage">Energy Storage Systems</option>
+                            <option value="smart-agriculture">Smart Agriculture Solutions</option>
+                            <option value="multiple">Multiple Solutions</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="demo-purpose">Purpose of Demo *</label>
+                        <select id="demo-purpose" name="purpose" required>
+                            <option value="">Select purpose</option>
+                            <option value="evaluation">Evaluation for Purchase</option>
+                            <option value="research">Research Study</option>
+                            <option value="student-project">Student Project</option>
+                            <option value="government-project">Government Project</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="demo-location">Location/Address *</label>
+                        <textarea id="demo-location" name="location" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="demo-date">Preferred Demo Date</label>
+                        <input type="date" id="demo-date" name="date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="demo-message">Additional Requirements</label>
+                        <textarea id="demo-message" name="message" rows="4" placeholder="Please specify any specific requirements or questions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Submit Demo Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Inquiry Form -->
+    <section id="technical-inquiry" class="section section-light">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2 class="section-title">Technical Inquiry</h2>
+                    <p class="section-subtitle">Get detailed technical specifications and engineering support</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tech-name">Name *</label>
+                            <input type="text" id="tech-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tech-role">Role/Designation *</label>
+                            <input type="text" id="tech-role" name="role" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tech-company">Company/Institution *</label>
+                            <input type="text" id="tech-company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tech-industry">Industry *</label>
+                            <select id="tech-industry" name="industry" required>
+                                <option value="">Select industry</option>
+                                <option value="education">Education/University</option>
+                                <option value="government">Government</option>
+                                <option value="defense">Defense</option>
+                                <option value="food-processing">Food Processing</option>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tech-product">Product/System of Interest *</label>
+                        <select id="tech-product" name="product" required>
+                            <option value="">Select product</option>
+                            <option value="solar-steam">Solar Steam Cooking System</option>
+                            <option value="scheffler">Solar Scheffler Dish</option>
+                            <option value="parabolic">Parabolic Cooker</option>
+                            <option value="industrial">Industrial Solar Thermal</option>
+                            <option value="ptc">PTC Thermal System</option>
+                            <option value="sand-battery">Sand Battery Storage</option>
+                            <option value="biomass">Biomass Hybrid</option>
+                            <option value="dryer">Solar Tunnel Dryer</option>
+                            <option value="ai-crop">AI Crop Detection</option>
+                            <option value="microgreen">Microgreen System</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tech-requirements">Technical Requirements *</label>
+                        <textarea id="tech-requirements" name="requirements" rows="4" required placeholder="Please describe your specific technical requirements, capacity needs, temperature requirements, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tech-documents">Documents Required</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="documents[]" value="brochure">
+                                <span>Product Brochure</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="documents[]" value="specs">
+                                <span>Technical Specifications</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="documents[]" value="drawings">
+                                <span>Engineering Drawings</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="documents[]" value="certificates">
+                                <span>Certificates & Test Reports</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="documents[]" value="case-studies">
+                                <span>Case Studies</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tech-deadline">Project Deadline</label>
+                        <input type="date" id="tech-deadline" name="deadline">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tech-email">Email *</label>
+                            <input type="email" id="tech-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tech-phone">Phone *</label>
+                            <input type="tel" id="tech-phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Submit Technical Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Corporate Office</h3>
+                    <address>
+                        KVB Green Energies<br>
+                        #123, Innovation Park<br>
+                        Whitefield, Bengaluru<br>
+                        Karnataka - 560066, India
+                    </address>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <p>
+                        <strong>Sales:</strong> +91 98765 43210<br>
+                        <strong>Technical:</strong> +91 98765 43211<br>
+                        <strong>Support:</strong> +91 98765 43212
+                    </p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Addresses</h3>
+                    <p>
+                        <strong>General:</strong> info@kvbgreenenergies.com<br>
+                        <strong>Sales:</strong> sales@kvbgreenenergies.com<br>
+                        <strong>Technical:</strong> tech@kvbgreenenergies.com
+                    </p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>
+                        <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
+                        <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br>
+                        <strong>Sunday:</strong> Closed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Us</h2>
+                <p class="section-subtitle">Visit our office or connect with our regional representatives</p>
+            </div>
+            
+            <div class="map-container">
+                <!-- Google Maps Embed -->
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <h3>Bengaluru Corporate Office</h3>
+                        <p>Our headquarters in Bengaluru serves as the innovation and operations center.</p>
+                        <div class="map-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>#123, Innovation Park, Whitefield, Bengaluru, Karnataka - 560066</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="regional-offices">
+                    <h3>Regional Presence</h3>
+                    <div class="regional-grid">
+                        <div class="regional-office">
+                            <h4>Goa</h4>
+                            <p>Project Office for Western India operations</p>
+                        </div>
+                        <div class="regional-office">
+                            <h4>Pune</h4>
+                            <p>Technical Support Center</p>
+                        </div>
+                        <div class="regional-office">
+                            <h4>Hubli</h4>
+                            <p>Manufacturing & Service Center</p>
+                        </div>
+                        <div class="regional-office">
+                            <h4>Chennai</h4>
+                            <p>Southern India Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="section section-gradient emergency-contact">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-icon">
+                    <i class="fas fa-life-ring"></i>
+                </div>
+                <div class="emergency-text">
+                    <h2>Need Immediate Assistance?</h2>
+                    <p>For urgent technical support or emergency service requests, call our 24/7 support line</p>
+                    <div class="emergency-number">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43299</span>
+                    </div>
+                </div>
+                <div class="emergency-action">
+                    <a href="https://wa.me/919876543299" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

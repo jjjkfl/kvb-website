@@ -1,0 +1,837 @@
+/* components.css - Agriculture Components */
+
+/* Solar Panel Card */
+.solar-panel-card {
+    background: linear-gradient(145deg, #ffffff, #f0f7f0);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: 
+        0 20px 40px rgba(11, 61, 145, 0.1),
+        inset 0 0 0 1px rgba(253, 184, 19, 0.1);
+    transition: all var(--transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.solar-panel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+}
+
+.solar-panel-card:hover::before {
+    transform: translateX(0);
+}
+
+.solar-panel-card:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 
+        0 40px 80px rgba(11, 61, 145, 0.2),
+        inset 0 0 0 1px rgba(253, 184, 19, 0.2);
+}
+
+/* Farm Field Card */
+.farm-field-card {
+    background: linear-gradient(145deg, #f5f9f5, #e8f5e9);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.farm-field-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--forest-green), var(--leaf-green), var(--sun-gold));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.farm-field-card:hover::before {
+    opacity: 1;
+}
+
+.farm-field-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Water Irrigation System */
+.irrigation-system {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.irrigation-system::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 50%, rgba(33, 150, 243, 0.1) 50%),
+        linear-gradient(90deg, rgba(33, 150, 243, 0.1) 50%, transparent 50%);
+    background-size: 20px 100%;
+    animation: waterFlow 10s linear infinite;
+    opacity: 0.5;
+}
+
+/* Crop Growth Timeline */
+.crop-timeline {
+    position: relative;
+    padding-left: var(--space-xl);
+}
+
+.crop-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--leaf-green), var(--forest-green), var(--earth-brown));
+    border-radius: 2px;
+}
+
+.timeline-milestone {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    padding-left: var(--space-lg);
+}
+
+.timeline-milestone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    background: var(--leaf-green);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--leaf-green);
+    animation: pulseGlow 2s infinite;
+}
+
+/* Weather Forecast Card */
+.weather-card {
+    background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-card::before {
+    content: '☀️';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 8rem;
+    opacity: 0.1;
+    animation: sunGlow 5s ease-in-out infinite;
+}
+
+.weather-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.weather-item {
+    text-align: center;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+/* Soil Health Monitor */
+.soil-health {
+    background: linear-gradient(135deg, var(--earth-brown), var(--soil-dark));
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.soil-health::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/patterns/soil-texture.png');
+    opacity: 0.1;
+    animation: patternFlow 20s linear infinite;
+}
+
+.soil-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.soil-metric {
+    text-align: center;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(5px);
+}
+
+/* Harvest Yield Display */
+.harvest-yield {
+    background: linear-gradient(135deg, var(--harvest-orange), #ffb74d);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.harvest-yield::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: sunPulse 3s ease-in-out infinite;
+}
+
+.yield-chart {
+    height: 200px;
+    position: relative;
+    margin-top: var(--space-lg);
+}
+
+.yield-bar {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to top, var(--forest-green), var(--leaf-green));
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    animation: heightGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: bottom;
+}
+
+/* Renewable Energy Display */
+.energy-display {
+    background: linear-gradient(135deg, #0B3D91, #1565C0);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.energy-display::before {
+    content: '⚡';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.energy-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--space-lg);
+    gap: var(--space-md);
+}
+
+.energy-metric {
+    text-align: center;
+    flex: 1;
+}
+
+.energy-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: block;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+}
+
+/* Smart Agriculture Dashboard */
+.agri-dashboard {
+    background: var(--card-bg);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-deep);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.dashboard-item {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-natural);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-sun);
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+}
+
+.dashboard-item:hover::before {
+    transform: translateX(0);
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-leaf);
+}
+
+/* Live Farm Feed */
+.live-feed {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    height: 400px;
+}
+
+.live-feed-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: var(--space-xl);
+    color: white;
+    transform: translateY(100%);
+    transition: transform var(--transition-slow);
+}
+
+.live-feed:hover .live-feed-overlay {
+    transform: translateY(0);
+}
+
+/* Crop Rotation Planner */
+.crop-planner {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.planner-season {
+    text-align: center;
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-natural);
+}
+
+.planner-season:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-leaf);
+}
+
+/* Sustainable Impact Meter */
+.impact-meter {
+    background: linear-gradient(135deg, var(--forest-green), var(--leaf-green));
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-track {
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: var(--space-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
+    border-radius: 10px;
+    animation: progressGrow 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: lightBeam 2s linear infinite;
+}
+
+/* Community Impact Stories */
+.community-story {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-cloud);
+}
+
+.story-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--leaf-green);
+    margin-bottom: var(--space-lg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.story-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: var(--space-lg);
+    position: relative;
+    padding-left: var(--space-lg);
+}
+
+.story-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 4rem;
+    color: var(--leaf-green);
+    opacity: 0.3;
+}
+
+/* Technology Integration Display */
+.tech-integration {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.integration-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-lg);
+    position: relative;
+}
+
+.flow-step {
+    text-align: center;
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    width: 120px;
+    position: relative;
+    z-index: 2;
+    transition: all var(--transition-natural);
+}
+
+.flow-step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-deep);
+}
+
+.flow-step::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    width: 60px;
+    height: 2px;
+    background: var(--leaf-green);
+    z-index: 1;
+}
+
+.flow-step:last-child::before {
+    display: none;
+}
+
+/* Education & Training Module */
+.training-module {
+    background: linear-gradient(135deg, #fff3e0, #ffecb3);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.module-progress {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: var(--space-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sun-gold), var(--harvest-orange));
+    border-radius: 5px;
+    animation: progressGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Seasonal Planning Calendar */
+.seasonal-calendar {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-cloud);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.season-card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-natural);
+    position: relative;
+    overflow: hidden;
+}
+
+.season-card.spring {
+    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+}
+
+.season-card.summer {
+    background: linear-gradient(135deg, #fff9c4, #fff59d);
+}
+
+.season-card.autumn {
+    background: linear-gradient(135deg, #ffcc80, #ffb74d);
+}
+
+.season-card.winter {
+    background: linear-gradient(135deg, #bbdefb, #90caf9);
+}
+
+.season-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* Water Conservation Display */
+.water-conservation {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.water-drop {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--water-blue);
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.2;
+    animation: waterDrop 3s ease-in-out infinite;
+}
+
+@keyframes waterDrop {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+/* Carbon Footprint Calculator */
+.carbon-calculator {
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.calculator-input {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.calculator-result {
+    background: var(--forest-green);
+    color: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-top: var(--space-lg);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Smart Irrigation Control */
+.irrigation-control {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.control-slider {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, var(--water-blue), var(--leaf-green));
+    border-radius: 10px;
+    margin: var(--space-lg) 0;
+    position: relative;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--shadow-deep);
+    cursor: grab;
+    transition: all var(--transition-natural);
+}
+
+.slider-handle:active {
+    cursor: grabbing;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* Harvest Prediction Model */
+.harvest-prediction {
+    background: linear-gradient(135deg, #fff3e0, #ffecb3);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.prediction-chart {
+    height: 200px;
+    position: relative;
+    margin-top: var(--space-lg);
+}
+
+.prediction-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--forest-green);
+    animation: drawLine 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes drawLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Soil Sensor Network */
+.sensor-network {
+    background: linear-gradient(135deg, var(--earth-brown), var(--soil-dark));
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.sensor-node {
+    text-align: center;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    position: relative;
+}
+
+.sensor-node.active::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--leaf-green);
+    border-radius: inherit;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Renewable Energy Mix */
+.energy-mix {
+    background: linear-gradient(135deg, #0B3D91, #1565C0);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.mix-chart {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.mix-segment {
+    flex: 1;
+    background: linear-gradient(to top, var(--sun-gold), var(--harvest-orange));
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    animation: heightGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: bottom;
+}
+
+/* Farmer Success Stories */
+.success-story {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-cloud);
+    position: relative;
+    overflow: hidden;
+}
+
+.success-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--gradient-sun);
+    color: var(--soil-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    animation: bounce 2s infinite;
+}
+
+/* Crop Quality Scanner */
+.quality-scanner {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.scanner-beam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--leaf-green), transparent);
+    animation: scanBeam 3s linear infinite;
+}
+
+@keyframes scanBeam {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Sustainable Packaging */
+.packaging-display {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.packaging-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    transition: all var(--transition-natural);
+}
+
+.packaging-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-leaf);
+}
