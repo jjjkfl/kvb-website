@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Partnerships | KVB Green Energies</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audience Navigation -->
+    <div class="audience-nav">
+        <div class="container">
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="client">Potential Client</button>
+            <button class="audience-btn" data-audience="partner">Partner</button>
+            <button class="audience-btn" data-audience="government">Government Official</button>
+            <button class="audience-btn" data-audience="investor">Investor</button>
+            <button class="audience-btn" data-audience="farmer">Farmer</button>
+        </div>
+    </div>
+
+    <!-- Header (Same as homepage) -->
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Partner with India's Renewable Energy Leader</h1>
+                <p class="hero-subtitle">Whether you're an institution, farmer, industry, or investor, let's build sustainable solutions together</p>
+                
+                <div class="contact-stats">
+                    <div class="stat">
+                        <div class="stat-icon">📞</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Call Us</div>
+                            <div class="stat-value">+91 12345 67890</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-icon">✉️</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Email Us</div>
+                            <div class="stat-value">info@kvbgrenenergies.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-icon">📍</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Visit Us</div>
+                            <div class="stat-value">Headquarters & R&D Center</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-hero-image">
+                <div class="image-container">
+                    <img src="assets/images/contact/team-meeting.jpg" alt="KVB Team Meeting">
+                    <div class="image-overlay">
+                        <div class="overlay-text">150+ Successful Partnerships</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Form Selection -->
+    <section class="form-selection">
+        <div class="container">
+            <h2 class="section-title">How Can We Help You?</h2>
+            <p class="section-subtitle">Select your inquiry type for tailored assistance</p>
+            
+            <div class="form-options">
+                <div class="form-option active" data-form="demo">
+                    <div class="option-icon">🎬</div>
+                    <h3>Request Demo</h3>
+                    <p>Schedule a live product demonstration or site visit</p>
+                </div>
+                
+                <div class="form-option" data-form="technical">
+                    <div class="option-icon">🔧</div>
+                    <h3>Technical Inquiry</h3>
+                    <p>Technical specifications, customization, or support</p>
+                </div>
+                
+                <div class="form-option" data-form="government">
+                    <div class="option-icon">🏛️</div>
+                    <h3>Government Partnership</h3>
+                    <p>Institutional projects, tenders, and collaborations</p>
+                </div>
+                
+                <div class="form-option" data-form="investor">
+                    <div class="option-icon">📈</div>
+                    <h3>Investor Inquiry</h3>
+                    <p>Investment opportunities and company information</p>
+                </div>
+                
+                <div class="form-option" data-form="farmer">
+                    <div class="option-icon">🌾</div>
+                    <h3>Farmer Support</h3>
+                    <p>Agricultural solutions, subsidies, and training</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Forms Container -->
+    <section class="forms-container">
+        <div class="container">
+            <!-- Request Demo Form -->
+            <div class="contact-form active" id="demo-form">
+                <div class="form-header">
+                    <h2>Request Product Demo</h2>
+                    <p>Schedule a live demonstration or site visit at your location</p>
+                </div>
+                
+                <form id="demoRequestForm" data-form-type="demo">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="demo-name">Full Name *</label>
+                            <input type="text" id="demo-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-organization">Organization *</label>
+                            <input type="text" id="demo-organization" name="organization" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-email">Email Address *</label>
+                            <input type="email" id="demo-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-phone">Phone Number *</label>
+                            <input type="tel" id="demo-phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="demo-location">Location (City, State) *</label>
+                            <input type="text" id="demo-location" name="location" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="demo-interest">Product of Interest *</label>
+                            <select id="demo-interest" name="interest" required>
+                                <option value="">Select product</option>
+                                <option value="solar-cooking">Solar Steam Cooking Systems</option>
+                                <option value="solar-thermal">Solar Thermal Systems</option>
+                                <option value="solar-drying">Hybrid Solar Dryers</option>
+                                <option value="energy-storage">Energy Storage Solutions</option>
+                                <option value="ai-agriculture">AI Agriculture Systems</option>
+                                <option value="microgreen">Microgreen Automation</option>
+                                <option value="multiple">Multiple Products</option>
+                                <option value="custom">Custom Solution</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="demo-purpose">Purpose of Demo *</label>
+                            <select id="demo-purpose" name="purpose" required>
+                                <option value="">Select purpose</option>
+                                <option value="institutional">Institutional Use</option>
+                                <option value="commercial">Commercial/Industrial</option>
+                                <option value="community">Community Kitchen</option>
+                                <option value="agriculture">Agricultural Processing</option>
+                                <option value="research">Research & Development</option>
+                                <option value="investment">Investment Evaluation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="demo-scale">Estimated Scale/Size</label>
+                            <textarea id="demo-scale" name="scale" rows="2" 
+                                      placeholder="E.g., Number of meals per day, drying capacity, etc."></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="demo-message">Additional Requirements</label>
+                            <textarea id="demo-message" name="message" rows="3" 
+                                      placeholder="Specific requirements, timeline, or questions"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label>Preferred Demo Type</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="demo_type" value="virtual">
+                                    <span>Virtual Demo (Online)</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="demo_type" value="site-visit">
+                                    <span>Site Visit (Our Location)</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="demo_type" value="installation-visit">
+                                    <span>Visit Existing Installation</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary btn-large">
+                            Request Demo
+                        </button>
+                        <p class="form-note">
+                            Our team will contact you within 24 hours to schedule the demo.
+                            For urgent inquiries, call <strong>+91 12345 67890</strong>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Technical Inquiry Form -->
+            <div class="contact-form" id="technical-form">
+                <div class="form-header">
+                    <h2>Technical Inquiry</h2>
+                    <p>Get detailed technical specifications, customization options, and engineering support</p>
+                </div>
+                
+                <form id="technicalInquiryForm" data-form-type="technical">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tech-name">Full Name *</label>
+                            <input type="text" id="tech-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tech-role">Technical Role *</label>
+                            <input type="text" id="tech-role" name="role" required 
+                                   placeholder="E.g., Project Engineer, Technical Head">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tech-organization">Organization *</label>
+                            <input type="text" id="tech-organization" name="organization" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tech-email">Email Address *</label>
+                            <input type="email" id="tech-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="tech-product">Product/System *</label>
+                            <select id="tech-product" name="product" required>
+                                <option value="">Select product</option>
+                                <option value="solar-steam">Solar Steam Cooking System</option>
+                                <option value="scheffler">Solar Scheffler Dish</option>
+                                <option value="parabolic">Parabolic Cookers</option>
+                                <option value="industrial">Industrial Solar Thermal</option>
+                                <option value="ptc">PTC Thermal Systems</option>
+                                <option value="sand-battery">Sand Battery Storage</option>
+                                <option value="biomass">Biomass Hybrid Heating</option>
+                                <option value="dryer">Hybrid Solar Dryer</option>
+                                <option value="ai-crop">AI Crop Detection</option>
+                                <option value="microgreen">Microgreen System</option>
+                                <option value="custom">Custom Solution</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="tech-inquiry">Technical Inquiry Type *</label>
+                            <select id="tech-inquiry" name="inquiry_type" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="specifications">Technical Specifications</option>
+                                <option value="customization">Customization Requirements</option>
+                                <option value="integration">System Integration</option>
+                                <option value="performance">Performance Data</option>
+                                <option value="installation">Installation Details</option>
+                                <option value="maintenance">Maintenance Requirements</option>
+                                <option value="comparison">Product Comparison</option>
+                                <option value="other">Other Technical Question</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="tech-requirements">Detailed Requirements *</label>
+                            <textarea id="tech-requirements" name="requirements" rows="4" required 
+                                      placeholder="Please provide detailed technical requirements, specifications needed, or specific questions"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="tech-files">Attach Technical Documents (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="tech-files" name="files" 
+                                       accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.dxf,.jpg,.png" multiple>
+                                <label for="tech-files" class="file-upload-label">
+                                    <span class="upload-icon">📎</span>
+                                    <span class="upload-text">Click to upload technical drawings, specifications, or requirements</span>
+                                </label>
+                                <div class="file-list" id="tech-file-list"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label>Preferred Response Format</label>
+                            <div class="radio-group">
+                                <label class="radio">
+                                    <input type="radio" name="response_format" value="email" checked>
+                                    <span>Email with Technical Documents</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="response_format" value="call">
+                                    <span>Technical Call with Engineer</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="response_format" value="meeting">
+                                    <span>Online Technical Meeting</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary btn-large">
+                            Submit Technical Inquiry
+                        </button>
+                        <p class="form-note">
+                            Our technical team will respond within 48 hours with detailed specifications.
+                            For urgent technical support, call <strong>+91 12345 67890 (Ext. 2)</strong>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Government Partnership Form -->
+            <div class="contact-form" id="government-form">
+                <div class="form-header">
+                    <h2>Government & Institutional Partnership</h2>
+                    <p>Collaborate on government projects, tenders, and institutional initiatives</p>
+                </div>
+                
+                <form id="governmentForm" data-form-type="government">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="gov-name">Full Name *</label>
+                            <input type="text" id="gov-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gov-designation">Designation *</label>
+                            <input type="text" id="gov-designation" name="designation" required 
+                                   placeholder="E.g., Project Officer, Department Head">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gov-department">Department/Organization *</label>
+                            <input type="text" id="gov-department" name="department" required 
+                                   placeholder="E.g., Ministry, Department, Institution">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gov-email">Official Email *</label>
+                            <input type="email" id="gov-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gov-phone">Official Phone *</label>
+                            <input type="tel" id="gov-phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gov-state">State/UT *</label>
+                            <input type="text" id="gov-state" name="state" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="gov-partnership">Type of Partnership *</label>
+                            <select id="gov-partnership" name="partnership_type" required>
+                                <option value="">Select partnership type</option>
+                                <option value="tender">Government Tender/Bid</option>
+                                <option value="project">Institutional Project</option>
+                                <option value="pilot">Pilot Project/ Demonstration</option>
+                                <option value="research">Research Collaboration</option>
+                                <option value="policy">Policy Consultation</option>
+                                <option value="training">Training & Capacity Building</option>
+                                <option value="subsidy">Subsidy Program Implementation</option>
+                                <option value="mou">MoU/Formal Agreement</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="gov-project">Project/Initiative Details *</label>
+                            <textarea id="gov-project" name="project_details" rows="4" required 
+                                      placeholder="Please describe the project, initiative, or collaboration opportunity"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="gov-scale">Project Scale & Budget</label>
+                            <textarea id="gov-scale" name="scale_budget" rows="2" 
+                                      placeholder="Approximate scale, number of units, budget range, timeline"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="gov-documents">Relevant Documents (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="gov-documents" name="documents" 
+                                       accept=".pdf,.doc,.docx,.xls,.xlsx" multiple>
+                                <label for="gov-documents" class="file-upload-label">
+                                    <span class="upload-icon">📄</span>
+                                    <span class="upload-text">Upload RFP, tender documents, project briefs</span>
+                                </label>
+                                <div class="file-list" id="gov-file-list"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label>Preferred Next Steps</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="next_steps" value="meeting">
+                                    <span>High-level Meeting</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="next_steps" value="proposal">
+                                    <span>Detailed Proposal</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="next_steps" value="site-visit">
+                                    <span>Site Visit/Demonstration</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="next_steps" value="tender">
+                                    <span>Tender/Bid Submission</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary btn-large">
+                            Submit Partnership Request
+                        </button>
+                        <p class="form-note">
+                            Our government relations team will contact you within 24 hours.
+                            We have experience with MNRE, defense, and various state government projects.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Additional forms for investor and farmer would follow similar structure -->
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">🏢</div>
+                    <h3>Headquarters & R&D Center</h3>
+                    <div class="contact-details">
+                        <p>KVB Green Energies Pvt. Ltd.</p>
+                        <p>Plot No. 123, Industrial Area</p>
+                        <p>City, State - 560001</p>
+                        <p>India</p>
+                    </div>
+                    <div class="contact-action">
+                        <a href="#" class="btn-small get-directions">Get Directions →</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone & Support</h3>
+                    <div class="contact-details">
+                        <p><strong>General Inquiries:</strong> +91 12345 67890</p>
+                        <p><strong>Technical Support:</strong> +91 12345 67891</p>
+                        <p><strong>Government Relations:</strong> +91 12345 67892</p>
+                        <p><strong>Farmer Support:</strong> +91 12345 67893</p>
+                    </div>
+                    <div class="contact-action">
+                        <a href="tel:+911234567890" class="btn-small">Call Now</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Contacts</h3>
+                    <div class="contact-details">
+                        <p><strong>General:</strong> info@kvbgrenenergies.com</p>
+                        <p><strong>Technical:</strong> technical@kvbgrenenergies.com</p>
+                        <p><strong>Government:</strong> govt@kvbgrenenergies.com</p>
+                        <p><strong>Investors:</strong> investors@kvbgrenenergies.com</p>
+                        <p><strong>Careers:</strong> careers@kvbgrenenergies.com</p>
+                    </div>
+                    <div class="contact-action">
+                        <a href="mailto:info@kvbgrenenergies.com" class="btn-small">Send Email</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Business Hours</h3>
+                    <div class="contact-details">
+                        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM</p>
+                        <p><strong>Sunday:</strong> Closed</p>
+                        <p><strong>Emergency Support:</strong> 24/7 Available</p>
+                    </div>
+                    <div class="contact-action">
+                        <a href="#" class="btn-small schedule-call">Schedule Call</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="regional-offices">
+        <div class="container">
+            <h2 class="section-title">Our Regional Presence</h2>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-location">South India</div>
+                    <div class="office-details">
+                        <p><strong>Coverage:</strong> Karnataka, Tamil Nadu, Kerala, Andhra Pradesh, Telangana</p>
+                        <p><strong>Contact:</strong> +91 98765 43210</p>
+                        <p><strong>Email:</strong> south@kvbgrenenergies.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-location">West India</div>
+                    <div class="office-details">
+                        <p><strong>Coverage:</strong> Maharashtra, Goa, Gujarat</p>
+                        <p><strong>Contact:</strong> +91 98765 43211</p>
+                        <p><strong>Email:</strong> west@kvbgrenenergies.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-location">North India</div>
+                    <div class="office-details">
+                        <p><strong>Coverage:</strong> Delhi, Rajasthan, Punjab, Haryana, Uttar Pradesh</p>
+                        <p><strong>Contact:</strong> +91 98765 43212</p>
+                        <p><strong>Email:</strong> north@kvbgrenenergies.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-location">East India</div>
+                    <div class="office-details">
+                        <p><strong>Coverage:</strong> West Bengal, Odisha, Bihar, Jharkhand</p>
+                        <p><strong>Contact:</strong> +91 98765 43213</p>
+                        <p><strong>Email:</strong> east@kvbgrenenergies.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership FAQ -->
+    <section class="partnership-faq">
+        <div class="container">
+            <h2 class="section-title">Partnership Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the typical response time for inquiries?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We respond to all inquiries within 24 hours. Technical inquiries receive detailed responses within 48 hours. Government partnership requests are prioritized and typically receive initial contact within 4-6 working hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you provide site visits and demonstrations?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer multiple demonstration options:</p>
+                        <ul>
+                            <li>Virtual online demos (available within 48 hours)</li>
+                            <li>Site visits to our R&D center (scheduled weekly)</li>
+                            <li>Visits to existing installations (subject to client approval)</li>
+                            <li>On-site demonstrations at your location (for qualified projects)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What government certifications do you hold?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are certified and empaneled with:</p>
+                        <ul>
+                            <li>MNRE (Ministry of New & Renewable Energy) Certified</li>
+                            <li>UNIDO (United Nations Industrial Development Organization) Empaneled</li>
+                            <li>UHS (Performance Testing) Validated</li>
+                            <li>Various state government empanelments (GEDA, MEDA, etc.)</li>
+                            <li>Defense establishment approved vendor</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is your project implementation timeline?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Typical project timelines:</p>
+                        <ul>
+                            <li>Small systems (up to 100 meals/day): 4-6 weeks</li>
+                            <li>Medium systems (100-500 meals/day): 8-12 weeks</li>
+                            <li>Large systems (500+ meals/day): 12-16 weeks</li>
+                            <li>Custom/Industrial systems: 16-24 weeks</li>
+                            <li>All timelines include survey, design, manufacturing, and installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact CTA -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-contact-content">
+                <h2>Need Immediate Assistance?</h2>
+                <p>Use our quick contact options for faster response</p>
+                
+                <div class="quick-options">
+                    <a href="https://wa.me/911234567890" class="quick-option whatsapp" target="_blank">
+                        <div class="option-icon">💬</div>
+                        <div class="option-text">
+                            <strong>WhatsApp Chat</strong>
+                            <span>Instant messaging with our team</span>
+                        </div>
+                    </a>
+                    
+                    <a href="tel:+911234567890" class="quick-option phone">
+                        <div class="option-icon">📞</div>
+                        <div class="option-text">
+                            <strong>Call Now</strong>
+                            <span>Speak directly with our experts</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="quick-option callback" id="request-callback">
+                        <div class="option-icon">⏰</div>
+                        <div class="option-text">
+                            <strong>Request Callback</strong>
+                            <span>We'll call you at your preferred time</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

@@ -3,480 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients & Partnerships - KVB Green Energies</title>
+    <title>Case Studies | KVB Green Energies - Real Project Success Stories</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/case-studies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <!-- Same navigation as index.html -->
-    </nav>
-
-    <!-- Clients Hero -->
-    <section class="page-hero clients-hero">
+    <!-- Audience Navigation -->
+    <div class="audience-nav">
         <div class="container">
-            <h1 class="page-title">Clients & Partnerships</h1>
-            <p class="page-subtitle">Trusted by India's Most Prestigious Institutions</p>
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="client">Potential Client</button>
+            <button class="audience-btn" data-audience="government">Government Official</button>
+            <button class="audience-btn" data-audience="investor">Investor</button>
+            <button class="audience-btn" data-audience="partner">Partner</button>
+            <button class="audience-btn" data-audience="researcher">Researcher</button>
+        </div>
+    </div>
+
+    <!-- Header (Same as homepage) -->
+
+    <!-- Case Studies Hero -->
+    <section class="case-studies-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Proof of Execution: Real Success Stories</h1>
+                <p class="hero-subtitle">150+ installations across India showcasing measurable impact and ROI</p>
+                
+                <div class="hero-filters">
+                    <div class="filter-group">
+                        <label for="sector-filter">Filter by Sector:</label>
+                        <select id="sector-filter">
+                            <option value="all">All Sectors</option>
+                            <option value="defense">Defense & Military</option>
+                            <option value="education">Educational Institutions</option>
+                            <option value="religious">Religious Organizations</option>
+                            <option value="government">Government Departments</option>
+                            <option value="agriculture">Agriculture & Farming</option>
+                            <option value="industry">Food Industry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="solution-filter">Filter by Solution:</label>
+                        <select id="solution-filter">
+                            <option value="all">All Solutions</option>
+                            <option value="cooking">Solar Cooking Systems</option>
+                            <option value="drying">Solar Drying Systems</option>
+                            <option value="thermal">Solar Thermal Systems</option>
+                            <option value="storage">Energy Storage</option>
+                            <option value="ai">AI Agriculture</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="impact-filter">Filter by Impact:</label>
+                        <select id="impact-filter">
+                            <option value="all">All Impact Levels</option>
+                            <option value="high">High Impact (70%+ Savings)</option>
+                            <option value="medium">Medium Impact (40-70% Savings)</option>
+                            <option value="pilot">Pilot Projects</option>
+                            <option value="large-scale">Large Scale Deployments</option>
+                        </select>
+                    </div>
+                    
+                    <button id="reset-filters" class="btn-small">Reset Filters</button>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏗️</div>
+                        <div class="stat-content">
+                            <div class="stat-value">150+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <div class="stat-value">₹ 10Cr+</div>
+                            <div class="stat-label">Client Savings</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-content">
+                            <div class="stat-value">1250+</div>
+                            <div class="stat-label">Tons CO₂ Reduced</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <div class="stat-value">4.8/5</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Client Categories -->
-    <section class="section section-light">
+    <!-- Case Studies Grid -->
+    <section class="case-studies-grid">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Esteemed Clients</h2>
-                <p class="section-subtitle">Serving diverse sectors with renewable energy solutions</p>
-            </div>
-            
-            <div class="client-categories-tabs">
-                <div class="category-tabs">
-                    <button class="category-tab active" data-category="all">All Clients</button>
-                    <button class="category-tab" data-category="defense">Defense</button>
-                    <button class="category-tab" data-category="government">Government</button>
-                    <button class="category-tab" data-category="education">Education & Research</button>
-                    <button class="category-tab" data-category="religious">Religious Institutions</button>
-                    <button class="category-tab" data-category="agriculture">Agriculture & Food Processing</button>
+            <div class="grid-header">
+                <h2 class="section-title">Featured Case Studies</h2>
+                <div class="view-controls">
+                    <button class="view-toggle active" data-view="grid">Grid View</button>
+                    <button class="view-toggle" data-view="list">List View</button>
+                    <button class="view-toggle" data-view="map">Map View</button>
                 </div>
             </div>
             
-            <!-- Client Map -->
-            <div class="client-map-container">
-                <div class="map-visual">
-                    <div class="india-map">
-                        <!-- Simplified India map with client locations -->
-                        <div class="map-point" style="top: 30%; left: 45%;" data-location="goa">
-                            <div class="point"></div>
-                            <div class="location-name">Goa</div>
-                        </div>
-                        <div class="map-point" style="top: 35%; left: 50%;" data-location="karnataka">
-                            <div class="point"></div>
-                            <div class="location-name">Karnataka</div>
-                        </div>
-                        <div class="map-point" style="top: 40%; left: 55%;" data-location="tamil-nadu">
-                            <div class="point"></div>
-                            <div class="location-name">Tamil Nadu</div>
-                        </div>
-                        <div class="map-point" style="top: 25%; left: 48%;" data-location="maharashtra">
-                            <div class="point"></div>
-                            <div class="location-name">Maharashtra</div>
-                        </div>
+            <div class="cases-container grid-view active" id="grid-view">
+                <div class="case-card" data-sector="defense" data-solution="cooking" data-impact="high" data-roi="3.2">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/army-chennai.jpg" alt="Indian Army Chennai Installation">
+                        <div class="case-badge defense">Defense</div>
+                        <div class="case-roi">3.2 Year ROI</div>
                     </div>
-                </div>
-                <div class="map-legend">
-                    <h3>Projects Across India</h3>
-                    <p>KVB systems are deployed in multiple states, serving diverse sectors with reliable renewable energy solutions.</p>
-                    <div class="legend-items">
-                        <div class="legend-item">
-                            <span class="legend-color defense"></span>
-                            <span>Defense Establishments</span>
+                    
+                    <div class="case-content">
+                        <h3>Indian Army, Chennai</h3>
+                        <p class="case-location">Chennai, Tamil Nadu</p>
+                        <p class="case-summary">500-meal solar steam cooking system for army mess</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">65%</div>
+                                <div class="metric-label">LPG Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">₹ 18L</div>
+                                <div class="metric-label">Annual Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">120T</div>
+                                <div class="metric-label">CO₂ Reduction</div>
+                            </div>
                         </div>
-                        <div class="legend-item">
-                            <span class="legend-color government"></span>
-                            <span>Government Institutions</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Solar Cooking</span>
+                            <span class="tag">Large Scale</span>
+                            <span class="tag">High Impact</span>
                         </div>
-                        <div class="legend-item">
-                            <span class="legend-color education"></span>
-                            <span>Educational Institutes</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color religious"></span>
-                            <span>Religious Institutions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Grid -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="clients-grid" id="clients-container">
-                <!-- Defense Clients -->
-                <div class="client-card" data-category="defense" data-location="goa">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/indian-army.png" alt="Indian Army">
-                    </div>
-                    <div class="client-content">
-                        <h3>Indian Army</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Multiple Locations</span>
-                        </div>
-                        <p>Solar cooking systems for army kitchens, reducing LPG dependency and enhancing operational sustainability.</p>
-                        <div class="client-projects">
-                            <span class="project-count">12 Projects</span>
-                            <span class="project-type">Solar Cooking</span>
-                        </div>
+                        
+                        <button class="btn-small view-case-details" data-case="army-chennai">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
                 
-                <div class="client-card" data-category="defense" data-location="goa">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/ins-mandovi.png" alt="INS Mandovi">
+                <div class="case-card" data-sector="religious" data-solution="cooking" data-impact="high" data-roi="4.1">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/temple-hubli.jpg" alt="Sri Siddharodhmath Installation">
+                        <div class="case-badge religious">Religious</div>
+                        <div class="case-roi">4.1 Year ROI</div>
                     </div>
-                    <div class="client-content">
-                        <h3>INS Mandovi</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Goa</span>
+                    
+                    <div class="case-content">
+                        <h3>Sri Siddharodhmath, Hubli</h3>
+                        <p class="case-location">Hubli, Karnataka</p>
+                        <p class="case-summary">3000-meal community kitchen serving devotees</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">70%</div>
+                                <div class="metric-label">Fuel Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">3000</div>
+                                <div class="metric-label">Meals/Day</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">150T</div>
+                                <div class="metric-label">CO₂/Year</div>
+                            </div>
                         </div>
-                        <p>Naval base solar cooking system serving 500+ personnel daily with 85% LPG savings.</p>
-                        <div class="client-projects">
-                            <span class="project-count">1 Project</span>
-                            <span class="project-type">Solar Steam Cooking</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Community Kitchen</span>
+                            <span class="tag">Solar Steam</span>
+                            <span class="tag">High Volume</span>
                         </div>
+                        
+                        <button class="btn-small view-case-details" data-case="temple-hubli">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
                 
-                <!-- Government Clients -->
-                <div class="client-card" data-category="government" data-location="maharashtra">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/yashada.png" alt="YASHADA">
+                <div class="case-card" data-sector="education" data-solution="drying" data-impact="medium" data-roi="2.8">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/coffee-board.jpg" alt="Coffee Board Installation">
+                        <div class="case-badge agriculture">Agriculture</div>
+                        <div class="case-roi">2.8 Year ROI</div>
                     </div>
-                    <div class="client-content">
-                        <h3>YASHADA, Pune</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Maharashtra</span>
+                    
+                    <div class="case-content">
+                        <h3>Coffee Board, Balehonnur</h3>
+                        <p class="case-location">Balehonnur, Karnataka</p>
+                        <p class="case-summary">Solar tunnel dryer for coffee bean processing</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">60%</div>
+                                <div class="metric-label">Drying Time</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Quality Improvement</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Fuel Free</div>
+                            </div>
                         </div>
-                        <p>Training and demonstration facility for government officials on renewable energy adoption.</p>
-                        <div class="client-projects">
-                            <span class="project-count">1 Project</span>
-                            <span class="project-type">Training Center</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Solar Drying</span>
+                            <span class="tag">Agriculture</span>
+                            <span class="tag">Quality Upgrade</span>
                         </div>
+                        
+                        <button class="btn-small view-case-details" data-case="coffee-board">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
                 
-                <div class="client-card" data-category="government" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/nabard.png" alt="NABARD">
+                <div class="case-card" data-sector="defense" data-solution="cooking" data-impact="high" data-roi="3.5">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/ins-mandovi.jpg" alt="INS Mandovi Installation">
+                        <div class="case-badge defense">Defense</div>
+                        <div class="case-roi">3.5 Year ROI</div>
                     </div>
-                    <div class="client-content">
-                        <h3>NABARD</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Bagalkot, Karnataka</span>
+                    
+                    <div class="case-content">
+                        <h3>INS Mandovi, Goa</h3>
+                        <p class="case-location">Goa</p>
+                        <p class="case-summary">Naval base solar kitchen with coastal durability</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">70%</div>
+                                <div class="metric-label">Fuel Reduction</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">99%</div>
+                                <div class="metric-label">Uptime</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">95T</div>
+                                <div class="metric-label">CO₂/Year</div>
+                            </div>
                         </div>
-                        <p>Solar drying systems for farmer producer organizations under government subsidy programs.</p>
-                        <div class="client-projects">
-                            <span class="project-count">8 Projects</span>
-                            <span class="project-type">Solar Drying</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Coastal Installation</span>
+                            <span class="tag">High Reliability</span>
+                            <span class="tag">Defense</span>
                         </div>
+                        
+                        <button class="btn-small view-case-details" data-case="ins-mandovi">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
                 
-                <!-- Education & Research -->
-                <div class="client-card" data-category="education" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/uas-bengaluru.png" alt="UAS Bengaluru">
+                <div class="case-card" data-sector="education" data-solution="cooking" data-impact="medium" data-roi="4.5">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/uas-bengaluru.jpg" alt="UAS Bengaluru Installation">
+                        <div class="case-badge education">Education</div>
+                        <div class="case-roi">4.5 Year ROI</div>
                     </div>
-                    <div class="client-content">
+                    
+                    <div class="case-content">
                         <h3>UAS Bengaluru</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Bengaluru, Karnataka</span>
+                        <p class="case-location">Bengaluru, Karnataka</p>
+                        <p class="case-summary">University mess solar cooking for 1000 students</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">55%</div>
+                                <div class="metric-label">LPG Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">1000</div>
+                                <div class="metric-label">Students</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">85T</div>
+                                <div class="metric-label">CO₂/Year</div>
+                            </div>
                         </div>
-                        <p>Research collaboration and agricultural technology testing facility.</p>
-                        <div class="client-projects">
-                            <span class="project-count">3 Projects</span>
-                            <span class="project-type">Research & Testing</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Educational</span>
+                            <span class="tag">Research Collaboration</span>
+                            <span class="tag">Student Mess</span>
                         </div>
+                        
+                        <button class="btn-small view-case-details" data-case="uas-bengaluru">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
                 
-                <div class="client-card" data-category="education" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/uhs.png" alt="UHS Bagalkot">
+                <div class="case-card" data-sector="government" data-solution="thermal" data-impact="high" data-roi="3.8">
+                    <div class="case-image">
+                        <img src="assets/images/case-studies/yashada-pune.jpg" alt="YASHADA Installation">
+                        <div class="case-badge government">Government</div>
+                        <div class="case-roi">3.8 Year ROI</div>
                     </div>
-                    <div class="client-content">
-                        <h3>UHS Bagalkot</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Bagalkot, Karnataka</span>
+                    
+                    <div class="case-content">
+                        <h3>YASHADA, Pune</h3>
+                        <p class="case-location">Pune, Maharashtra</p>
+                        <p class="case-summary">Government training institute solar thermal system</p>
+                        
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">60%</div>
+                                <div class="metric-label">Energy Savings</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">300</div>
+                                <div class="metric-label">Trainees/Day</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">110T</div>
+                                <div class="metric-label">CO₂/Year</div>
+                            </div>
                         </div>
-                        <p>Performance testing and certification center for solar thermal systems.</p>
-                        <div class="client-projects">
-                            <span class="project-count">Certification Partner</span>
-                            <span class="project-type">Testing Facility</span>
+                        
+                        <div class="case-tags">
+                            <span class="tag">Government</span>
+                            <span class="tag">Training Institute</span>
+                            <span class="tag">Solar Thermal</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="client-card" data-category="education" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/kle.png" alt="KLE Tech University">
-                    </div>
-                    <div class="client-content">
-                        <h3>KLE Tech University</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Hubli, Karnataka</span>
-                        </div>
-                        <p>Joint research projects in solar thermal engineering and student internship programs.</p>
-                        <div class="client-projects">
-                            <span class="project-count">Research Partner</span>
-                            <span class="project-type">Academic Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Religious Institutions -->
-                <div class="client-card" data-category="religious" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/siddaganga-math.png" alt="Sri Siddaganga Math">
-                    </div>
-                    <div class="client-content">
-                        <h3>Sri Siddaganga Math</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Tumkur, Karnataka</span>
-                        </div>
-                        <p>Large-scale solar cooking system serving 2000+ devotees daily, eliminating firewood use.</p>
-                        <div class="client-projects">
-                            <span class="project-count">1 Project</span>
-                            <span class="project-type">Community Cooking</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="client-card" data-category="religious" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/siddharodhmath.png" alt="Sri Siddharodhmath">
-                    </div>
-                    <div class="client-content">
-                        <h3>Sri Siddharodhmath</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Hubli, Karnataka</span>
-                        </div>
-                        <p>Solar cooking system for community kitchen, reducing operational costs by 70%.</p>
-                        <div class="client-projects">
-                            <span class="project-count">1 Project</span>
-                            <span class="project-type">Solar Cooking</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Agriculture & Food Processing -->
-                <div class="client-card" data-category="agriculture" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/coffee-board.png" alt="Coffee Board">
-                    </div>
-                    <div class="client-content">
-                        <h3>Coffee Board of India</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Balehonnur, Karnataka</span>
-                        </div>
-                        <p>Solar tunnel dryers for coffee bean processing, improving quality and reducing drying time.</p>
-                        <div class="client-projects">
-                            <span class="project-count">4 Projects</span>
-                            <span class="project-type">Solar Drying</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="client-card" data-category="agriculture" data-location="tamil-nadu">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/sugati-ingredients.png" alt="Sugati Ingredients">
-                    </div>
-                    <div class="client-content">
-                        <h3>Sugati Ingredients</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Challakere, Karnataka</span>
-                        </div>
-                        <p>Solar drying systems for food ingredient processing with hybrid backup.</p>
-                        <div class="client-projects">
-                            <span class="project-count">2 Projects</span>
-                            <span class="project-type">Industrial Drying</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="client-card" data-category="agriculture" data-location="karnataka">
-                    <div class="client-logo">
-                        <img src="assets/images/clients/nithya-foods.png" alt="Nithya Foods">
-                    </div>
-                    <div class="client-content">
-                        <h3>Nithya Foods</h3>
-                        <div class="client-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Puttur, Karnataka</span>
-                        </div>
-                        <p>Food processing unit with solar thermal systems for cooking and drying applications.</p>
-                        <div class="client-projects">
-                            <span class="project-count">1 Project</span>
-                            <span class="project-type">Food Processing</span>
-                        </div>
+                        
+                        <button class="btn-small view-case-details" data-case="yashada-pune">
+                            View Detailed Case Study
+                        </button>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center">
-                <button id="show-more-clients" class="btn btn-primary btn-large">Show More Clients</button>
+            <!-- List View -->
+            <div class="cases-container list-view" id="list-view">
+                <div class="case-list">
+                    <!-- Case study list items would be generated by JS -->
+                </div>
+            </div>
+            
+            <!-- Map View -->
+            <div class="cases-container map-view" id="map-view">
+                <div id="case-studies-map"></div>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-icon defense"></span>
+                        <span>Defense & Military</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon education"></span>
+                        <span>Educational</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon religious"></span>
+                        <span>Religious</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon government"></span>
+                        <span>Government</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon agriculture"></span>
+                        <span>Agriculture</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button id="load-more-cases" class="btn-secondary">Load More Case Studies</button>
+                <p class="case-count">Showing 6 of 150+ case studies</p>
             </div>
         </div>
     </section>
 
-    <!-- Partnership Statements -->
-    <section class="section section-light">
+    <!-- Case Study Details Template (Hidden) -->
+    <div class="case-details-template" style="display: none;">
+        <!-- Template content will be populated by JavaScript -->
+    </div>
+
+    <!-- ROI Comparison -->
+    <section class="roi-comparison">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Partnership Testimonials</h2>
-                <p class="section-subtitle">What our institutional partners say about working with KVB</p>
+            <h2 class="section-title">ROI Comparison Across Sectors</h2>
+            
+            <div class="roi-chart-container">
+                <canvas id="roi-comparison-chart"></canvas>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The solar cooking system at our naval base has not only reduced our LPG consumption by 85% but also enhanced our energy security. The system has been reliable and low-maintenance."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="assets/images/testimonials/navy-officer.jpg" alt="Naval Officer">
-                        </div>
-                        <div class="author-info">
-                            <h4>Commander (Retd.) R. Sharma</h4>
-                            <p>Former Base Commander, INS Mandovi</p>
-                        </div>
+            <div class="roi-insights">
+                <div class="insight-card">
+                    <div class="insight-icon">⚡</div>
+                    <div class="insight-content">
+                        <h4>Fastest ROI</h4>
+                        <p>Agricultural drying systems: 2-3 years</p>
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"As a research institution, we value innovation and reliability. KVB's solar drying technology has exceeded our expectations in both performance and durability. The collaboration has been productive."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="assets/images/testimonials/research-director.jpg" alt="Research Director">
-                        </div>
-                        <div class="author-info">
-                            <h4>Dr. Anjali Mehta</h4>
-                            <p>Director, Coffee Board Research Station</p>
-                        </div>
+                <div class="insight-card">
+                    <div class="insight-icon">💰</div>
+                    <div class="insight-content">
+                        <h4>Highest Savings</h4>
+                        <p>Defense establishments: ₹ 15-25L/year</p>
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The solar cooking system has transformed our community kitchen operations. We've eliminated firewood completely, creating a cleaner environment and reducing costs significantly."</p>
+                <div class="insight-card">
+                    <div class="insight-icon">🌍</div>
+                    <div class="insight-content">
+                        <h4>Maximum Environmental Impact</h4>
+                        <p>Religious institutions: 100-150 tons CO₂/year</p>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="assets/images/testimonials/math-administrator.jpg" alt="Math Administrator">
-                        </div>
-                        <div class="author-info">
-                            <h4>Swami Prakashananda</h4>
-                            <p>Administrator, Sri Siddaganga Math</p>
-                        </div>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-icon">📈</div>
+                    <div class="insight-content">
+                        <h4>Best Long-term Value</h4>
+                        <p>25+ year lifespan with minimal maintenance</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partnership Types -->
-    <section class="section section-dark">
+    <!-- Testimonial Carousel -->
+    <section class="case-testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Types of Partnerships</h2>
-                <p class="section-subtitle">Collaborate with KVB for mutual growth and impact</p>
-            </div>
+            <h2 class="section-title">Client Testimonials</h2>
             
-            <div class="partnership-types">
-                <div class="partnership-card">
-                    <div class="partnership-icon">
-                        <i class="fas fa-handshake"></i>
+            <div class="testimonial-carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">"The solar steam cooking system has transformed our community kitchen. We're saving significantly on LPG costs while serving thousands daily with clean energy."</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/temple-director.jpg" alt="Temple Director">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Sri Siddharodhmath, Hubli</div>
+                                <div class="author-role">Religious Institution</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Government Projects</h3>
-                    <p>Execute large-scale renewable energy projects under government schemes and programs.</p>
-                    <ul>
-                        <li>MNRE-approved systems</li>
-                        <li>Subsidy facilitation</li>
-                        <li>Turnkey project execution</li>
-                    </ul>
                 </div>
                 
-                <div class="partnership-card">
-                    <div class="partnership-icon">
-                        <i class="fas fa-university"></i>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">"As an agricultural university, we needed reliable, sustainable solutions. KVB's solar drying systems have been instrumental in our research and farmer training programs."</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/university-professor.jpg" alt="University Professor">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">UAS Bengaluru</div>
+                                <div class="author-role">Agricultural University</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Academic Collaborations</h3>
-                    <p>Joint research, student projects, and technology development with educational institutions.</p>
-                    <ul>
-                        <li>Research funding</li>
-                        <li>Internship programs</li>
-                        <li>Technology transfer</li>
-                    </ul>
                 </div>
                 
-                <div class="partnership-card">
-                    <div class="partnership-icon">
-                        <i class="fas fa-industry"></i>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">"The system has proven highly reliable even in coastal conditions. It has significantly enhanced our energy security while reducing operational costs."</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/navy-officer.jpg" alt="Navy Officer">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">INS Mandovi, Goa</div>
+                                <div class="author-role">Naval Base</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Industry Partnerships</h3>
-                    <p>Technology licensing, manufacturing partnerships, and distribution networks.</p>
-                    <ul>
-                        <li>OEM partnerships</li>
-                        <li>Distribution agreements</li>
-                        <li>Service partnerships</li>
-                    </ul>
                 </div>
                 
-                <div class="partnership-card">
-                    <div class="partnership-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="carousel-controls">
+                    <button class="carousel-prev">←</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <h3>International Collaborations</h3>
-                    <p>Export partnerships, technology transfer, and joint ventures for global markets.</p>
-                    <ul>
-                        <li>Export opportunities</li>
-                        <li>Technology licensing</li>
-                        <li>Joint R&D</li>
-                    </ul>
+                    <button class="carousel-next">→</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Become a Partner CTA -->
-    <section class="section section-gradient">
+    <!-- Case Study CTA -->
+    <section class="case-study-cta">
         <div class="container">
-            <div class="partner-cta">
-                <div class="cta-content">
-                    <h2>Become a KVB Partner</h2>
-                    <p>Join our network of institutional partners and contribute to India's renewable energy transition.</p>
-                </div>
+            <div class="cta-content">
+                <h2>Ready for Your Success Story?</h2>
+                <p>See how KVB can deliver measurable results for your organization</p>
+                
                 <div class="cta-buttons">
-                    <a href="contact.html#government-partnership" class="btn btn-primary btn-large">
-                        <i class="fas fa-landmark"></i> Government Partnership
-                    </a>
-                    <a href="contact.html#investor-inquiry" class="btn btn-secondary btn-large">
-                        <i class="fas fa-chart-line"></i> Investor Inquiry
-                    </a>
-                    <a href="contact.html#general-inquiry" class="btn btn-outline btn-large">
-                        <i class="fas fa-handshake"></i> General Partnership
-                    </a>
+                    <a href="contact-partnerships.html#demo" class="btn-primary">Schedule Site Visit</a>
+                    <a href="contact-partnerships.html#technical" class="btn-secondary">Request Custom Proposal</a>
+                    <a href="#" class="btn-secondary" id="download-case-studies">Download Case Study Pack</a>
+                </div>
+                
+                <div class="cta-stats">
+                    <div class="stat">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3-5</div>
+                        <div class="stat-label">Years Average ROI</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">25+</div>
+                        <div class="stat-label">Years System Lifespan</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
+    <!-- Footer (Same as homepage) -->
 
+    <!-- Leaflet JS for Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Chart.js for ROI Comparison -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Scripts -->
     <script src="js/main.js"></script>
-    <script src="js/clients.js"></script>
+    <script src="js/case-studies.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>

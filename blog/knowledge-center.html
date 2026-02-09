@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Center | KVB Green Energies - Solar Energy & Smart Agriculture Resources</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/knowledge-center.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audience Navigation -->
+    <div class="audience-nav">
+        <div class="container">
+            <span>I am a:</span>
+            <button class="audience-btn" data-audience="farmer">Farmer</button>
+            <button class="audience-btn" data-audience="engineer">Engineer</button>
+            <button class="audience-btn" data-audience="student">Student/Researcher</button>
+            <button class="audience-btn" data-audience="institution">Institution</button>
+            <button class="audience-btn" data-audience="industry">Industry Professional</button>
+        </div>
+    </div>
+
+    <!-- Header (Same as homepage) -->
+
+    <!-- Knowledge Center Hero -->
+    <section class="knowledge-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Knowledge Center</h1>
+                <p class="hero-subtitle">Expert resources on solar energy, smart agriculture, and sustainable technology</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="knowledge-search" placeholder="Search articles, guides, and resources...">
+                        <button class="search-button">🔍</button>
+                    </div>
+                    <div class="search-tags">
+                        <span class="tag">Solar Cooking</span>
+                        <span class="tag">Energy Storage</span>
+                        <span class="tag">Solar Drying</span>
+                        <span class="tag">AI Agriculture</span>
+                        <span class="tag">Government Policy</span>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">250+</div>
+                        <div class="stat-label">Articles & Guides</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Technical Papers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10,000+</div>
+                        <div class="stat-label">Monthly Readers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">15+</div>
+                        <div class="stat-label">Expert Authors</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="knowledge-categories">
+                    <div class="category-bubble large" data-category="solar-cooking">
+                        <div class="bubble-icon">🔥</div>
+                        <div class="bubble-text">Solar Cooking</div>
+                    </div>
+                    <div class="category-bubble medium" data-category="solar-drying">
+                        <div class="bubble-icon">🌾</div>
+                        <div class="bubble-text">Solar Drying</div>
+                    </div>
+                    <div class="category-bubble small" data-category="energy-storage">
+                        <div class="bubble-icon">🔋</div>
+                        <div class="bubble-text">Energy Storage</div>
+                    </div>
+                    <div class="category-bubble medium" data-category="smart-agriculture">
+                        <div class="bubble-icon">🤖</div>
+                        <div class="bubble-text">Smart Agriculture</div>
+                    </div>
+                    <div class="category-bubble large" data-category="technical">
+                        <div class="bubble-icon">⚙️</div>
+                        <div class="bubble-text">Technical Guides</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="featured-content">
+        <div class="container">
+            <h2 class="section-title">Featured Resources</h2>
+            
+            <div class="featured-grid">
+                <div class="featured-card main-feature">
+                    <div class="featured-badge">Latest Research</div>
+                    <div class="featured-image">
+                        <img src="assets/images/knowledge/sand-battery-research.jpg" alt="Sand Battery Research">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Sand Battery Technology: The Future of Thermal Storage</h3>
+                        <p class="featured-excerpt">Complete guide to sand-based thermal energy storage systems -工作原理, efficiency, and implementation</p>
+                        <div class="featured-meta">
+                            <span class="meta-category">Energy Storage</span>
+                            <span class="meta-date">Published: March 15, 2024</span>
+                            <span class="meta-read">15 min read</span>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="knowledge-center/sand-battery-guide.html" class="btn-small">Read Article</a>
+                            <button class="btn-small btn-outline download-article" data-article="sand-battery">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-sidebar">
+                    <div class="sidebar-card">
+                        <div class="sidebar-header">
+                            <h3>Most Popular</h3>
+                        </div>
+                        <div class="sidebar-list">
+                            <a href="#" class="sidebar-item">
+                                <div class="item-rank">1</div>
+                                <div class="item-content">
+                                    <h4>Solar Cooking ROI Calculator Guide</h4>
+                                    <p>How to calculate savings for your institution</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="sidebar-item">
+                                <div class="item-rank">2</div>
+                                <div class="item-content">
+                                    <h4>Government Subsidy Programs 2024</h4>
+                                    <p>Complete guide to renewable energy subsidies</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="sidebar-item">
+                                <div class="item-rank">3</div>
+                                <div class="item-content">
+                                    <h4>Farmer's Guide to Solar Drying</h4>
+                                    <p>Step-by-step implementation guide</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="sidebar-item">
+                                <div class="item-rank">4</div>
+                                <div class="item-content">
+                                    <h4>AI in Agriculture: Practical Applications</h4>
+                                    <p>How AI is transforming farming</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <div class="sidebar-header">
+                            <h3>Quick Guides</h3>
+                        </div>
+                        <div class="guide-list">
+                            <a href="#" class="guide-item">
+                                <div class="guide-icon">📋</div>
+                                <div class="guide-text">Site Survey Checklist</div>
+                            </a>
+                            <a href="#" class="guide-item">
+                                <div class="guide-icon">💰</div>
+                                <div class="guide-text">ROI Calculation Template</div>
+                            </a>
+                            <a href="#" class="guide-item">
+                                <div class="guide-icon">🛠️</div>
+                                <div class="guide-text">Maintenance Schedule</div>
+                            </a>
+                            <a href="#" class="guide-item">
+                                <div class="guide-icon">📊</div>
+                                <div class="guide-text">Performance Monitoring</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="knowledge-categories-tabs">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="cat-tab active" data-category="all">All Articles</button>
+                <button class="cat-tab" data-category="solar-cooking">Solar Cooking</button>
+                <button class="cat-tab" data-category="solar-drying">Solar Drying</button>
+                <button class="cat-tab" data-category="energy-storage">Energy Storage</button>
+                <button class="cat-tab" data-category="smart-agriculture">Smart Agriculture</button>
+                <button class="cat-tab" data-category="technical">Technical Guides</button>
+                <button class="cat-tab" data-category="policy">Government Policy</button>
+                <button class="cat-tab" data-category="farmer">Farmer Education</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-grid">
+        <div class="container">
+            <div class="articles-container">
+                <div class="article-card" data-category="solar-cooking" data-audience="institution">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/institutional-cooking.jpg" alt="Institutional Solar Cooking">
+                        <div class="article-category">Solar Cooking</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Complete Guide to Institutional Solar Cooking</h3>
+                        <p class="article-excerpt">Everything institutions need to know about implementing solar cooking systems - from planning to maintenance.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By KVB Engineering Team</div>
+                            <div class="meta-date">Feb 28, 2024</div>
+                            <div class="meta-read">12 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">Institutions</span>
+                            <span class="tag">Implementation</span>
+                            <span class="tag">ROI</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="institutional-cooking">💾</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-category="solar-drying" data-audience="farmer">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/farmer-drying.jpg" alt="Farmer Solar Drying">
+                        <div class="article-category">Solar Drying</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Solar Drying for Small Farmers: Complete Setup Guide</h3>
+                        <p class="article-excerpt">Step-by-step guide for farmers to implement solar drying systems and increase income by 40%.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By Agriculture Expert</div>
+                            <div class="meta-date">Feb 20, 2024</div>
+                            <div class="meta-read">8 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">Farmers</span>
+                            <span class="tag">Income</span>
+                            <span class="tag">Setup Guide</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="farmer-drying">💾</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-category="energy-storage" data-audience="engineer">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/thermal-storage.jpg" alt="Thermal Storage Systems">
+                        <div class="article-category">Energy Storage</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Advanced Thermal Storage Systems: Technical Deep Dive</h3>
+                        <p class="article-excerpt">Technical analysis of different thermal storage technologies and their applications in renewable energy.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By Chief Technology Officer</div>
+                            <div class="meta-date">Feb 15, 2024</div>
+                            <div class="meta-read">18 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">Technical</span>
+                            <span class="tag">Engineering</span>
+                            <span class="tag">Advanced</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="thermal-storage">💾</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-category="policy" data-audience="institution">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/government-subsidy.jpg" alt="Government Subsidy Guide">
+                        <div class="article-category">Government Policy</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>2024 Government Subsidy Programs for Solar Thermal</h3>
+                        <p class="article-excerpt">Complete guide to available subsidies, eligibility criteria, and application process for solar thermal projects.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By Policy Expert</div>
+                            <div class="meta-date">Feb 10, 2024</div>
+                            <div class="meta-read">10 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">Subsidy</span>
+                            <span class="tag">Government</span>
+                            <span class="tag">Funding</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="subsidy-guide">💾</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-category="smart-agriculture" data-audience="farmer">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/ai-agriculture.jpg" alt="AI in Agriculture">
+                        <div class="article-category">Smart Agriculture</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>AI-Powered Crop Quality Detection: Practical Implementation</h3>
+                        <p class="article-excerpt">How farmers can use AI technology to improve crop quality and increase market value.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By AI Research Team</div>
+                            <div class="meta-date">Feb 5, 2024</div>
+                            <div class="meta-read">14 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Technology</span>
+                            <span class="tag">Quality</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="ai-agriculture">💾</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-category="technical" data-audience="engineer">
+                    <div class="article-image">
+                        <img src="assets/images/knowledge/maintenance-guide.jpg" alt="Maintenance Guide">
+                        <div class="article-category">Technical Guides</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Comprehensive Maintenance Guide for Solar Thermal Systems</h3>
+                        <p class="article-excerpt">Detailed maintenance schedules, troubleshooting guides, and best practices for system longevity.</p>
+                        <div class="article-meta">
+                            <div class="meta-author">By Service Team</div>
+                            <div class="meta-date">Jan 30, 2024</div>
+                            <div class="meta-read">16 min read</div>
+                        </div>
+                        <div class="article-tags">
+                            <span class="tag">Maintenance</span>
+                            <span class="tag">Technical</span>
+                            <span class="tag">Best Practices</span>
+                        </div>
+                        <div class="article-actions">
+                            <a href="#" class="read-article">Read Article →</a>
+                            <button class="save-article" data-article="maintenance-guide">💾</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button id="load-more-articles" class="btn-secondary">Load More Articles</button>
+                <p class="article-count">Showing 6 of 250+ articles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Library -->
+    <section class="resource-library">
+        <div class="container">
+            <h2 class="section-title">Downloadable Resources</h2>
+            
+            <div class="resource-tabs">
+                <button class="resource-tab active" data-resource="whitepapers">Whitepapers</button>
+                <button class="resource-tab" data-resource="guides">Technical Guides</button>
+                <button class="resource-tab" data-resource="case-studies">Case Studies</button>
+                <button class="resource-tab" data-resource="templates">Templates</button>
+                <button class="resource-tab" data-resource="videos">Video Tutorials</button>
+            </div>
+            
+            <div class="resource-content active" id="whitepapers-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📄</div>
+                        <div class="resource-content">
+                            <h3>Solar Thermal Technology Whitepaper 2024</h3>
+                            <p class="resource-description">Comprehensive analysis of solar thermal technology advancements and market trends</p>
+                            <div class="resource-meta">
+                                <span class="meta-pages">45 pages</span>
+                                <span class="meta-size">4.2 MB</span>
+                                <span class="meta-date">March 2024</span>
+                            </div>
+                            <div class="resource-actions">
+                                <a href="#" class="btn-small download-resource" data-resource="thermal-whitepaper">Download PDF</a>
+                                <button class="btn-small btn-outline preview-resource">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <div class="resource-content">
+                            <h3>Energy Storage Market Analysis</h3>
+                            <p class="resource-description">Detailed market analysis of thermal energy storage systems in India</p>
+                            <div class="resource-meta">
+                                <span class="meta-pages">32 pages</span>
+                                <span class="meta-size">3.1 MB</span>
+                                <span class="meta-date">February 2024</span>
+                            </div>
+                            <div class="resource-actions">
+                                <a href="#" class="btn-small download-resource" data-resource="storage-analysis">Download PDF</a>
+                                <button class="btn-small btn-outline preview-resource">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">🌾</div>
+                        <div class="resource-content">
+                            <h3>Smart Agriculture Implementation Guide</h3>
+                            <p class="resource-description">Step-by-step guide for implementing smart agriculture technologies</p>
+                            <div class="resource-meta">
+                                <span class="meta-pages">28 pages</span>
+                                <span class="meta-size">2.8 MB</span>
+                                <span class="meta-date">January 2024</span>
+                            </div>
+                            <div class="resource-actions">
+                                <a href="#" class="btn-small download-resource" data-resource="agriculture-guide">Download PDF</a>
+                                <button class="btn-small btn-outline preview-resource">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Authors -->
+    <section class="expert-authors">
+        <div class="container">
+            <h2 class="section-title">Our Expert Authors</h2>
+            
+            <div class="authors-grid">
+                <div class="author-card">
+                    <div class="author-image">
+                        <img src="assets/images/authors/cto.jpg" alt="Chief Technology Officer">
+                    </div>
+                    <div class="author-content">
+                        <h3>Dr. Rajesh Kumar</h3>
+                        <p class="author-title">Chief Technology Officer</p>
+                        <p class="author-expertise">Solar Thermal Systems, Energy Storage</p>
+                        <div class="author-stats">
+                            <span class="stat">25+ Articles</span>
+                            <span class="stat">15 Years Experience</span>
+                        </div>
+                        <div class="author-latest">
+                            <strong>Latest Article:</strong> Advanced Thermal Storage Systems
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="author-card">
+                    <div class="author-image">
+                        <img src="assets/images/authors/agriculture-expert.jpg" alt="Agriculture Expert">
+                    </div>
+                    <div class="author-content">
+                        <h3>Dr. Priya Sharma</h3>
+                        <p class="author-title">Agriculture Technology Lead</p>
+                        <p class="author-expertise">Smart Agriculture, Solar Drying</p>
+                        <div class="author-stats">
+                            <span class="stat">18+ Articles</span>
+                            <span class="stat">12 Years Experience</span>
+                        </div>
+                        <div class="author-latest">
+                            <strong>Latest Article:</strong> AI in Agriculture Applications
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="author-card">
+                    <div class="author-image">
+                        <img src="assets/images/authors/engineering-head.jpg" alt="Engineering Head">
+                    </div>
+                    <div class="author-content">
+                        <h3>Anil Patel</h3>
+                        <p class="author-title">Head of Engineering</p>
+                        <p class="author-expertise">System Design, Implementation</p>
+                        <div class="author-stats">
+                            <span class="stat">22+ Articles</span>
+                            <span class="stat">18 Years Experience</span>
+                        </div>
+                        <div class="author-latest">
+                            <strong>Latest Article:</strong> Institutional Solar Cooking Guide
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="knowledge-newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with Latest Knowledge</h2>
+                <p>Subscribe to our newsletter for new articles, research papers, and industry insights</p>
+                
+                <form id="knowledge-newsletter" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" name="categories" value="solar-cooking" checked>
+                            <span>Solar Cooking</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="categories" value="solar-drying" checked>
+                            <span>Solar Drying</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="categories" value="energy-storage">
+                            <span>Energy Storage</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="categories" value="smart-agriculture">
+                            <span>Smart Agriculture</span>
+                        </label>
+                    </div>
+                </form>
+                
+                <div class="newsletter-stats">
+                    <div class="stat">
+                        <div class="stat-value">10,000+</div>
+                        <div class="stat-label">Subscribers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">Weekly</div>
+                        <div class="stat-label">Updates</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">Expert</div>
+                        <div class="stat-label">Content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge CTA -->
+    <section class="knowledge-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Custom Research or Technical Guidance?</h2>
+                <p>Our experts can provide customized technical guidance, research papers, or training for your specific needs</p>
+                
+                <div class="cta-buttons">
+                    <a href="contact-partnerships.html#technical" class="btn-primary">Request Technical Consultation</a>
+                    <a href="contact-partnerships.html#research" class="btn-secondary">Research Collaboration</a>
+                    <a href="#" class="btn-secondary" id="download-knowledge-pack">Download Complete Knowledge Pack</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/knowledge-center.js"></script>
+</body>
+</html>
